@@ -1,0 +1,2056 @@
+<!DOCTYPE html>
+<html lang="ja" data-google-analytics-opt-out="">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>株式会社サイプレス</title>
+
+    <!-- 最初に jQuery を読み込む -->
+    <script
+      src="https://code.jquery.com/jquery-3.7.1.js"
+      integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- lodash を追加 -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+
+    <!-- eir_common.js を最初にロード -->
+    <script
+      charset="utf-8"
+      src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/core/eir_common.js"
+      defer
+    ></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="/assets/css/pages/top.css" />
+    <link rel="stylesheet" href="/assets/css/pages/common.css" />
+
+    <!-- 遅延読み込みするスクリプト -->
+    <script src="/assets/js/main.js" defer></script>
+    <script src="/assets/js/accordion.js" defer></script>
+  </head>
+
+  <body id="pagetop" class="" cz-shortcut-listen="true">
+    <header class="l-header">
+      <h1 hidden="">株式会社 株式会社サイプレス</h1>
+      <div class="l-header__logo">
+        <a href="/">
+          <img
+            src="/assets/images/common/logo.svg"
+            alt="株式会社 株式会社サイプレス"
+            class="l-header__logo-image"
+            width="592"
+            height="156"
+          />
+        </a>
+      </div>
+      <nav class="l-nav" id="js-menu-nav">
+        <div class="l-nav__inner">
+          <ul class="l-nav__list">
+            <li class="l-nav__item">
+              <a href="/company.html" class="l-nav__link">企業情報</a>
+            </li>
+            <li
+              class="l-nav__item l-nav__link-parent js-accordion-menu"
+              style="--open-height: 249px; --collapse-height: 0px"
+            >
+              <a href="/ir/" class="l-nav__link">IR情報</a>
+              <div class="l-nav-nest js-accordion-body">
+                <div class="l-nav-nest__inner">
+                  <a href="/ir/" class="l-nav-nest__parent">
+                    IR情報
+                    <span class="l-nav-nest__parent-icon c-icon__arrow">
+                      <svg
+                        class="l-nav-nest__parent-svg"
+                        width="19"
+                        height="14"
+                      >
+                        <use xlink:href="#arrow"></use>
+                      </svg>
+                    </span>
+                  </a>
+                  <ul class="l-nav-nest__primary">
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/news/" class="l-nav-nest__primary-link"
+                        >IRニュース
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/material/" class="l-nav-nest__primary-link"
+                        >IR資料
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/highlight/" class="l-nav-nest__primary-link"
+                        >財務ハイライト
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/monthly/" class="l-nav-nest__primary-link"
+                        >月次売上
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/governance/" class="l-nav-nest__primary-link"
+                        >コーポレートガバナンス
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a
+                        href="/ir/shareholder/"
+                        class="l-nav-nest__primary-link"
+                        >株主優待情報
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a href="/ir/disclosure/" class="l-nav-nest__primary-link"
+                        >ディスクロージャーポリシー
+                        <span class="l-nav-nest__primary-icon c-icon__arrow">
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="19"
+                            height="14"
+                          >
+                            <use xlink:href="#arrow"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__primary-item">
+                      <a
+                        href="/assets/pdf/20240625kabunushi.pdf"
+                        target="_blank"
+                        class="l-nav-nest__primary-link"
+                        >株主総会のご報告
+                        <span
+                          class="l-nav-nest__primary-icon is-pc c-icon__pdf"
+                        >
+                          <svg
+                            class="l-nav-nest__primary-svg"
+                            width="15"
+                            height="20"
+                          >
+                            <use xlink:href="#icon-pdf"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                  <ul class="l-nav-nest__secondary">
+                    <li class="l-nav-nest__secondary-item">
+                      <a
+                        href="/ir/disclaimer/"
+                        class="l-nav-nest__secondary-link"
+                        >免責事項</a
+                      >
+                    </li>
+                    <li class="l-nav-nest__secondary-item">
+                      <a
+                        href="https://kmasterplus.pronexus.co.jp/main/corp/9/8/9850/index.html"
+                        target="_blank"
+                        class="l-nav-nest__secondary-link"
+                        >公告掲載
+                        <span class="l-nav-nest__secondary-icon">
+                          <svg
+                            class="l-nav-nest__secondary-svg"
+                            width="10"
+                            height="10"
+                          >
+                            <use xlink:href="#icon-external"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                    <li class="l-nav-nest__secondary-item">
+                      <a
+                        href="https://finance.yahoo.co.jp/quote/9850.T"
+                        target="_blank"
+                        class="l-nav-nest__secondary-link"
+                        >株価情報
+                        <span class="l-nav-nest__secondary-icon">
+                          <svg
+                            class="l-nav-nest__secondary-svg"
+                            width="10"
+                            height="10"
+                          >
+                            <use xlink:href="#icon-external"></use>
+                          </svg>
+                        </span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="l-nav__item">
+              <a href="/news/" class="l-nav__link">新着情報</a>
+            </li>
+            <li class="l-nav__item">
+              <a href="/recruit/" class="l-nav__link">採用情報</a>
+            </li>
+            <li class="l-nav__item">
+              <a href="/recruit/" class="l-nav__link">ブランド紹介</a>
+            </li>
+          </ul>
+          <a href="/company/en/" class="l-nav__english">EN</a>
+          <a href="/recruit/#entry" class="l-nav__button l-nav__button--entry"
+            ><span class="l-nav__button-label">採用エントリー</span></a
+          >
+          <a href="/contact/" class="l-nav__button l-nav__button--contact"
+            ><span class="l-nav__button-label">お問い合わせ</span></a
+          >
+        </div>
+      </nav>
+      <button class="l-header__menu" id="js-menu-button">
+        <span class="l-header__menu-label">Menu</span>
+        <span class="l-header__menu-icon">
+          <span class="l-header__menu-rect"></span>
+        </span>
+      </button>
+    </header>
+
+    <section class="p-main">
+      <div class="p-main-visual is-animated">
+        <div class="p-main-visual__text">
+          <h2 class="p-main-visual__sticky">食の喜びを<br />全ての人へ</h2>
+        </div>
+        <div class="p-main-visual__inner">
+          <div
+            class="p-main-visual__slider swiper swiper-no-swiping swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden"
+          >
+            <div
+              class="swiper-wrapper"
+              id="swiper-wrapper-18db77f54ba84aa3"
+              aria-live="off"
+              style="transition-duration: 0ms"
+            >
+              <div
+                class="swiper-slide p-main-visual__slider-item swiper-slide-duplicate swiper-slide-duplicate-next"
+                data-swiper-slide-index="3"
+                style="
+                  width: 2322px;
+                  opacity: 1;
+                  transform: translate3d(0px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+                role="group"
+                aria-label="4 / 4"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_4.jpg    1x,
+                      /assets/images/top/mv_4@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_4_sp.jpg"
+                    srcset="/assets/images/top/mv_4_sp@2x.jpg 2x"
+                    alt="メインビジュアル4"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+              <div
+                class="swiper-slide p-main-visual__slider-item"
+                data-swiper-slide-index="0"
+                style="
+                  width: 2322px;
+                  opacity: 1;
+                  transform: translate3d(-2322px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+                role="group"
+                aria-label="1 / 4"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_1.jpg    1x,
+                      /assets/images/top/mv_1@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_1_sp.jpg"
+                    srcset="/assets/images/top/mv_1_sp@2x.jpg 2x"
+                    alt="メインビジュアル1"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+              <div
+                class="swiper-slide p-main-visual__slider-item swiper-slide-prev"
+                data-swiper-slide-index="1"
+                style="
+                  width: 2322px;
+                  opacity: 1;
+                  transform: translate3d(-4644px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+                role="group"
+                aria-label="2 / 4"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_2.jpg    1x,
+                      /assets/images/top/mv_2@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_2_sp.jpg"
+                    srcset="/assets/images/top/mv_2_sp@2x.jpg 2x"
+                    alt="メインビジュアル2"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+              <div
+                class="swiper-slide p-main-visual__slider-item swiper-slide-visible swiper-slide-active"
+                data-swiper-slide-index="2"
+                style="
+                  width: 2322px;
+                  opacity: 1;
+                  transform: translate3d(-6966px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+                role="group"
+                aria-label="3 / 4"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_3.jpg    1x,
+                      /assets/images/top/mv_3@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_3_sp.jpg"
+                    srcset="/assets/images/top/mv_3_sp@2x.jpg 2x"
+                    alt="メインビジュアル3"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+              <div
+                class="swiper-slide p-main-visual__slider-item swiper-slide-next"
+                data-swiper-slide-index="3"
+                style="
+                  width: 2322px;
+                  opacity: 0;
+                  transform: translate3d(-9288px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+                role="group"
+                aria-label="4 / 4"
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_4.jpg    1x,
+                      /assets/images/top/mv_4@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_4_sp.jpg"
+                    srcset="/assets/images/top/mv_4_sp@2x.jpg 2x"
+                    alt="メインビジュアル4"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+              <div
+                class="swiper-slide p-main-visual__slider-item swiper-slide-duplicate"
+                data-swiper-slide-index="0"
+                role="group"
+                aria-label="1 / 4"
+                style="
+                  width: 2322px;
+                  opacity: 0;
+                  transform: translate3d(-11610px, 0px, 0px);
+                  transition-duration: 0ms;
+                "
+              >
+                <picture>
+                  <source
+                    media="(min-width: 768px)"
+                    srcset="
+                      /assets/images/top/mv_1.jpg    1x,
+                      /assets/images/top/mv_1@2x.jpg 2x
+                    "
+                    width="882"
+                    height="720"
+                  />
+                  <img
+                    src="/assets/images/top/mv_1_sp.jpg"
+                    srcset="/assets/images/top/mv_1_sp@2x.jpg 2x"
+                    alt="メインビジュアル1"
+                    class="p-main-visual__image"
+                    decoding="async"
+                    width="375"
+                    height="360"
+                  />
+                </picture>
+              </div>
+            </div>
+            <span
+              class="swiper-notification"
+              aria-live="assertive"
+              aria-atomic="true"
+            ></span>
+          </div>
+        </div>
+      </div>
+      <div class="p-main-intro js-scroll-effect">
+        <div class="p-main-intro__inner js-scroll-effect" id="js-sticky-root">
+          <p class="p-main-intro__text">
+            わたしたちは、<br />
+            様々なシーンであなたのLifeに<br
+              class="c-break-sp"
+            />寄り添います。<br />
+            提供する側と受ける側は対等であり、<br
+              class="c-break-sp"
+            />尊重し合う関係である<br />
+            茶の湯の精神に基づいた<br
+              class="c-break-sp"
+            />“おもてなし”の気持ちで、<br />
+            あなたに信頼される<br
+              class="c-break-sp"
+            />ブランド作りを行ってまいります。<br />
+            商品やサービスを通じて、<br
+              class="c-break-sp"
+            />あなたのより良いLifeを彩るため、<br />
+            高い付加価値を提供し続けます。
+
+            <a href="/company/" class="p-main-intro__more c-arrow-link">
+              <span class="c-arrow-link__icon">
+                <svg class="c-arrow-link__svg" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </span>
+              <span class="c-arrow-link__label">View More</span>
+            </a>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <div class="l-container" style="overflow: hidden">
+      <section class="p-business js-scroll-effect">
+        <header class="p-business__title c-section-title">
+          <span class="c-section-title__jpn"
+            >株式会社サイプレスグループの事業</span
+          >
+          <h2 class="c-section-title__eng">Business</h2>
+        </header>
+        <div class="p-business__grid">
+          <a
+            href="https://www.gourmet-kineya.co.jp/"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_1.jpg"
+              srcset="/assets/images/top/business_1@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--1"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">食の喜びを全ての人へ</h3>
+            </div>
+          </a>
+
+          <a
+            href="http://www.aascatering.co.jp/html/home2.html"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_2.jpg"
+              srcset="/assets/images/top/business_2@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--2"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">
+                さまざまな働き方に応えた 安心して働ける組織体系
+              </h3>
+            </div>
+          </a>
+
+          <a
+            href="https://www.asahi-wf.jp/"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_3.jpg"
+              srcset="/assets/images/top/business_3@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--3"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">
+                新鮮な食材は毎朝豊洲で 徹底管理された仕入れを行う
+              </h3>
+            </div>
+          </a>
+
+          <a
+            href="https://www.suitetsu.com/"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_5.jpg"
+              srcset="/assets/images/top/business_5@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--5"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">公共施設のコントラクト事業</h3>
+            </div>
+          </a>
+
+          <a
+            href="http://www.yukimura-g.co.jp/"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_6.jpg"
+              srcset="/assets/images/top/business_6@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--6"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">
+                豊洲市場内にある加工場で加工し即時出荷
+              </h3>
+            </div>
+          </a>
+
+          <a
+            href="https://kizu-ichiba.com/"
+            target="_blank"
+            class="p-business__item"
+          >
+            <img
+              src="/assets/images/top/business_7.jpg"
+              srcset="/assets/images/top/business_7@2x.jpg"
+              alt=""
+              class="p-business__image"
+            />
+            <div class="p-business__overlay"></div>
+            <div class="p-business__logo">
+              <img
+                src="/assets/images/top/icon_business_1.svg"
+                alt=""
+                class="p-business__logo-icon p-business__logo--6"
+              />
+            </div>
+            <div class="p-business__text">
+              <h3 class="p-business__name">
+                和食を中心にした日常外食のブランド展開
+              </h3>
+            </div>
+          </a>
+        </div>
+        <div class="p-business__more">
+          <a href="/company#group" class="c-arrow-link">
+            <span class="c-arrow-link__icon">
+              <svg class="c-arrow-link__svg" width="19" height="14">
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </span>
+            <span class="c-arrow-link__label">View More</span>
+          </a>
+        </div>
+      </section>
+
+      <section class="p-products js-scroll-effect">
+        <div class="p-products__inner">
+          <div class="p-products__visual">
+            <div
+              class="p-products__slider swiper swiper-fade swiper-initialized swiper-horizontal swiper-pointer-events swiper-watch-progress swiper-backface-hidden"
+            >
+              <div
+                class="swiper-wrapper"
+                id="swiper-wrapper-10106563b4716c5a57"
+                aria-live="off"
+                style="transition-duration: 0ms"
+              >
+                <div
+                  class="p-products__slide swiper-slide swiper-slide-duplicate swiper-slide-prev"
+                  data-swiper-slide-index="2"
+                  style="
+                    width: 1029px;
+                    opacity: 1;
+                    transform: translate3d(0px, 0px, 0px);
+                    transition-duration: 0ms;
+                  "
+                  role="group"
+                  aria-label="3 / 3"
+                >
+                  <img
+                    src="/assets/images/top/products_slide2.jpg"
+                    alt=""
+                    class="p-products__slide-image"
+                  />
+                </div>
+                <div
+                  class="p-products__slide swiper-slide swiper-slide-visible swiper-slide-active"
+                  data-swiper-slide-index="0"
+                  style="
+                    width: 1029px;
+                    opacity: 1;
+                    transform: translate3d(-1029px, 0px, 0px);
+                    transition-duration: 0ms;
+                  "
+                  role="group"
+                  aria-label="1 / 3"
+                >
+                  <img
+                    src="/assets/images/top/products_slide2.jpg"
+                    srcset="/assets/images/top/products_slide2@2x.jpg 2x"
+                    alt=""
+                    class="p-products__slide-image"
+                  />
+                </div>
+                <div
+                  class="p-products__slide swiper-slide swiper-slide-next"
+                  data-swiper-slide-index="1"
+                  style="
+                    width: 1029px;
+                    opacity: 0;
+                    transform: translate3d(-2058px, 0px, 0px);
+                    transition-duration: 0ms;
+                  "
+                  role="group"
+                  aria-label="2 / 3"
+                >
+                  <img
+                    src="/assets/images/top/products_slide2.jpg"
+                    alt=""
+                    class="p-products__slide-image"
+                  />
+                </div>
+                <div
+                  class="p-products__slide swiper-slide swiper-slide-duplicate-prev"
+                  data-swiper-slide-index="2"
+                  style="
+                    width: 1029px;
+                    opacity: 0;
+                    transform: translate3d(-3087px, 0px, 0px);
+                    transition-duration: 0ms;
+                  "
+                  role="group"
+                  aria-label="3 / 3"
+                >
+                  <img
+                    src="/assets/images/top/products_slide2.jpg"
+                    alt=""
+                    class="p-products__slide-image"
+                  />
+                </div>
+                <div
+                  class="p-products__slide swiper-slide swiper-slide-duplicate swiper-slide-duplicate-active"
+                  data-swiper-slide-index="0"
+                  role="group"
+                  aria-label="1 / 3"
+                  style="
+                    width: 1029px;
+                    opacity: 0;
+                    transform: translate3d(-4116px, 0px, 0px);
+                    transition-duration: 0ms;
+                  "
+                >
+                  <img
+                    src="/assets/images/top/products_slide2.jpg"
+                    srcset="/assets/images/top/products_slide2@2x.jpg 2x"
+                    alt=""
+                    class="p-products__slide-image"
+                  />
+                </div>
+              </div>
+              <span
+                class="swiper-notification"
+                aria-live="assertive"
+                aria-atomic="true"
+              ></span>
+            </div>
+          </div>
+
+          <header class="c-section-title p-products__title">
+            <span class="c-section-title__jpn">商品・サービス</span>
+            <h2 class="c-section-title__eng">Products</h2>
+          </header>
+
+          <ul class="p-products__list">
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <img
+                    src="/assets/images/top/product_1.jpg"
+                    srcset="/assets/images/top/product_1@2x.jpg 2x"
+                    alt="金胡麻木うどん"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      /assets/images/top/product_2_sp.jpg    1x,
+                      /assets/images/top/product_2_sp@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="/assets/images/top/product_2.jpg"
+                    srcset="/assets/images/top/product_2@2x.jpg 2x"
+                    alt="７Days Fruits"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <img
+                    src="/assets/images/top/product_3.jpg"
+                    srcset="/assets/images/top/product_3@2x.jpg 2x"
+                    alt="株式会社サイプレスのおせち"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      /assets/images/top/product_4_sp.jpg    1x,
+                      /assets/images/top/product_4_sp@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="/assets/images/top/product_4.jpg"
+                    srcset="/assets/images/top/product_4@2x.jpg 2x"
+                    alt="solegeジェラート"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <source
+                    media="(max-width: 767px)"
+                    srcset="
+                      /assets/images/top/product_5_sp.jpg    1x,
+                      /assets/images/top/product_5_sp@2x.jpg 2x
+                    "
+                  />
+                  <img
+                    src="/assets/images/top/product_5.jpg"
+                    srcset="/assets/images/top/product_5@2x.jpg 2x"
+                    alt="ときめく！お取り寄せ"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+            <li class="p-products__item">
+              <div class="p-products__image">
+                <picture>
+                  <img
+                    src="/assets/images/top/product_6.jpg"
+                    srcset="/assets/images/top/product_6@2x.jpg 2x"
+                    alt="はーしみスイーツ"
+                    decoding="async"
+                    class="p-products__image-thumbnail"
+                  />
+                </picture>
+              </div>
+            </li>
+          </ul>
+
+          <div
+            class="p-products__accordion js-accordion-container"
+            style="--open-height: 603px; --collapse-height: 0px"
+          >
+            <ul
+              class="p-products__list p-products__list--collapsed js-accordion-body"
+            >
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_7.jpg"
+                      srcset="/assets/images/top/product_7@2x.jpg 2x"
+                      alt="金胡麻木うどん"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_2_sp.jpg    1x,
+                        /assets/images/top/product_2_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_8.jpg"
+                      srcset="/assets/images/top/product_8@2x.jpg 2x"
+                      alt="７Days Fruits"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_9.jpg"
+                      srcset="/assets/images/top/product_9@2x.jpg 2x"
+                      alt="株式会社サイプレスのおせち"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_4_sp.jpg    1x,
+                        /assets/images/top/product_4_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_10.jpg"
+                      srcset="/assets/images/top/product_10@2x.jpg 2x"
+                      alt="solegeジェラート"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_5_sp.jpg    1x,
+                        /assets/images/top/product_5_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_11.jpg"
+                      srcset="/assets/images/top/product_12@2x.jpg 2x"
+                      alt="ときめく！お取り寄せ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_13.jpg"
+                      srcset="/assets/images/top/product_13@2x.jpg 2x"
+                      alt="はーしみスイーツ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_14.jpg"
+                      srcset="/assets/images/top/product_15@2x.jpg 2x"
+                      alt="金胡麻木うどん"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_2_sp.jpg    1x,
+                        /assets/images/top/product_2_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_16.jpg"
+                      srcset="/assets/images/top/product_16@2x.jpg 2x"
+                      alt="７Days Fruits"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_17.jpg"
+                      srcset="/assets/images/top/product_17@2x.jpg 2x"
+                      alt="株式会社サイプレスのおせち"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_4_sp.jpg    1x,
+                        /assets/images/top/product_4_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_18.jpg"
+                      srcset="/assets/images/top/product_18@2x.jpg 2x"
+                      alt="solegeジェラート"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_5_sp.jpg    1x,
+                        /assets/images/top/product_5_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_19.jpg"
+                      srcset="/assets/images/top/product_19@2x.jpg 2x"
+                      alt="ときめく！お取り寄せ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_20.jpg"
+                      srcset="/assets/images/top/product_20@2x.jpg 2x"
+                      alt="はーしみスイーツ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_21.jpg"
+                      srcset="/assets/images/top/product_21@2x.jpg 2x"
+                      alt="金胡麻木うどん"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_2_sp.jpg    1x,
+                        /assets/images/top/product_2_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_22.jpg"
+                      srcset="/assets/images/top/product_22@2x.jpg 2x"
+                      alt="７Days Fruits"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_23.jpg"
+                      srcset="/assets/images/top/product_23@2x.jpg 2x"
+                      alt="株式会社サイプレスのおせち"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_4_sp.jpg    1x,
+                        /assets/images/top/product_4_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_24.jpg"
+                      srcset="/assets/images/top/product_24@2x.jpg 2x"
+                      alt="solegeジェラート"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_5_sp.jpg    1x,
+                        /assets/images/top/product_5_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_25.jpg"
+                      srcset="/assets/images/top/product_25@2x.jpg 2x"
+                      alt="ときめく！お取り寄せ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_26.jpg"
+                      srcset="/assets/images/top/product_26@2x.jpg 2x"
+                      alt="はーしみスイーツ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_27.jpg"
+                      srcset="/assets/images/top/product_27@2x.jpg 2x"
+                      alt="金胡麻木うどん"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_2_sp.jpg    1x,
+                        /assets/images/top/product_2_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_28.jpg"
+                      srcset="/assets/images/top/product_28@2x.jpg 2x"
+                      alt="７Days Fruits"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <img
+                      src="/assets/images/top/product_29.jpg"
+                      srcset="/assets/images/top/product_29@2x.jpg 2x"
+                      alt="株式会社サイプレスのおせち"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_4_sp.jpg    1x,
+                        /assets/images/top/product_4_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_30.jpg"
+                      srcset="/assets/images/top/product_30@2x.jpg 2x"
+                      alt="solegeジェラート"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+              <li class="p-products__item">
+                <div class="p-products__image">
+                  <picture>
+                    <source
+                      media="(max-width: 767px)"
+                      srcset="
+                        /assets/images/top/product_5_sp.jpg    1x,
+                        /assets/images/top/product_5_sp@2x.jpg 2x
+                      "
+                    />
+                    <img
+                      src="/assets/images/top/product_31.jpg"
+                      srcset="/assets/images/top/product_31@2x.jpg 2x"
+                      alt="ときめく！お取り寄せ"
+                      decoding="async"
+                      class="p-products__image-thumbnail"
+                    />
+                  </picture>
+                </div>
+              </li>
+            </ul>
+
+            <div class="p-products__toggle js-accordion-menu">
+              <button class="p-products__toggle-button">
+                <span class="p-products__toggle-label">もっとみる</span>
+                <span class="p-products__toggle-icon"></span>
+              </button>
+            </div>
+          </div>
+
+          <a href="/contact/" class="p-products__contact c-arrow-button">
+            <span class="c-arrow-button__label"
+              >商品や出店などの<br
+                class="p-products__contact-break"
+              />お問い合わせはこちら</span
+            >
+            <span class="c-arrow-button__icon c-arrow-link__icon">
+              <svg
+                class="c-arrow-button__svg c-arrow-link__svg"
+                width="19"
+                height="14.37"
+              >
+                <use xlink:href="#arrow"></use>
+              </svg>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <section class="p-data js-scroll-effect">
+        <div class="p-data__inner">
+          <header class="p-data__title c-section-title">
+            <span class="c-section-title__jpn"
+              >数字で見る株式会社サイプレス</span
+            >
+            <h2 class="c-section-title__eng">Data</h2>
+          </header>
+          <ul class="p-data__list">
+            <li class="p-data__item js-scroll-effect">
+              <h3 class="p-data__item-name p-data__item-name--data1">
+                売上高構成比
+              </h3>
+              <figure class="p-data__graph">
+                <img
+                  src="/assets/images/top/data_graph.png"
+                  srcset="/assets/images/top/data_graph@2x.png 2x"
+                  width="314"
+                  height="330"
+                  alt="売上高構成比のグラフ"
+                  class="p-data__graph-image"
+                />
+              </figure>
+              <div class="p-data__item-column">
+                <p class="p-data__item-label">レストラン事業</p>
+                <p class="p-data__item-num p-data__item-num--3">
+                  <strong class="p-data__item-count js-countup" data-num="62.8"
+                    >0</strong
+                  >%
+                </p>
+              </div>
+              <span class="p-data__item-annotation">2024年3月末現在</span>
+            </li>
+
+            <li class="p-data__item">
+              <h3 class="p-data__item-name p-data__item-name--data2">店舗数</h3>
+              <p
+                class="p-data__item-num p-data__item-num--jpn p-data__item-num--4"
+              >
+                <strong class="p-data__item-count js-countup" data-num="119"
+                  >0</strong
+                ><br />店舗
+              </p>
+
+              <span class="p-data__item-annotation">2024年3月末現在</span>
+            </li>
+
+            <li class="p-data__item">
+              <h3 class="p-data__item-name p-data__item-name--data3">売上高</h3>
+              <p
+                class="p-data__item-num p-data__item-num--jpn p-data__item-num--5"
+              >
+                <strong class="p-data__item-count js-countup" data-num="102"
+                  >0</strong
+                >億円
+              </p>
+              <span class="p-data__item-annotation">2024年3月末現在</span>
+            </li>
+
+            <li class="p-data__item">
+              <h3 class="p-data__item-name p-data__item-name--data4">
+                従業員数
+              </h3>
+              <p
+                class="p-data__item-num p-data__item-num--jpn p-data__item-num--5"
+              >
+                <strong class="p-data__item-count js-countup" data-num="400"
+                  >0</strong
+                >名
+              </p>
+              <span class="p-data__item-annotation">2024年3月末現在</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="p-recruit js-scroll-effect">
+        <div class="p-recruit__inner">
+          <div class="p-recruit__column js-scroll-effect">
+            <header class="p-recruit__title c-section-title">
+              <span class="c-section-title__jpn">採用情報</span>
+              <h2 class="c-section-title__eng">Join us</h2>
+            </header>
+            <p class="p-recruit__introduction">
+              株式会社サイプレスは外食産業にとどまらず、<br />様々なビジネスに挑戦し続けています。<br />私たちとスクラムを組み、<br />一緒に挑戦してくれる人材を待っています。
+            </p>
+            <a href="/recruit/" class="p-recruit__more c-arrow-link">
+              <span class="c-arrow-link__icon">
+                <svg class="c-arrow-link__svg" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </span>
+              <span class="c-arrow-link__label">View More</span>
+            </a>
+          </div>
+          <div class="p-recruit__images js-scroll-effect">
+            <img
+              src="/assets/images/top/recruit_image_1.jpg"
+              srcset="/assets/images/top/recruit_image_1@2x.jpg 2x"
+              alt=""
+              decoding="async"
+              class="p-recruit__images-item1"
+            />
+            <img
+              src="/assets/images/top/recruit_image_2.jpg"
+              srcset="/assets/images/top/recruit_image_2@2x.jpg 2x"
+              alt=""
+              decoding="async"
+              class="p-recruit__images-item2"
+            />
+          </div>
+        </div>
+      </section>
+      <section class="p-news">
+        <div class="p-news__inner">
+          <header class="p-news__title c-section-title">
+            <span class="c-section-title__jpn">新着情報</span>
+            <h2 class="c-section-title__eng">News</h2>
+          </header>
+          <div class="p-news__grid">
+            <article class="p-news__item">
+              <div class="p-news__thumbnail">
+                <img
+                  src="/assets/images/top/news_thumbnail_2.jpg"
+                  alt="岩手県初出店！銀座惣菜店 イオン盛岡南店4/23(水)OPEN！"
+                  class="p-news__thumbnail-image"
+                />
+              </div>
+              <p class="p-news__meta">
+                <time class="p-news__date" datetime="20250227">2025.03.07</time>
+                <span class="p-news__tag">お知らせ</span>
+              </p>
+              <h3 class="p-news__headline">
+                岩手県初出店！銀座惣菜店 イオン盛岡南店4/23(水)OPEN！
+              </h3>
+              <a
+                href="https://ssl4.eir-parts.net/doc/9850/ir_material2/245853/00.pdf"
+                target="_blank"
+                class="p-news__link"
+              >
+                <svg class="p-news__link-arrow" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+            <article class="p-news__item">
+              <div class="p-news__thumbnail">
+                <img
+                  src="/assets/images/top/news_thumbnail_3.jpg"
+                  alt="岩手県初出店！築地食堂源ちゃん イオン盛岡南店4/23(水)OPEN！"
+                  class="p-news__thumbnail-image"
+                />
+              </div>
+              <p class="p-news__meta">
+                <time class="p-news__date" datetime="20250218">2025.03.07</time>
+                <span class="p-news__tag">お知らせ</span>
+              </p>
+              <h3 class="p-news__headline">
+                岩手県初出店！築地食堂源ちゃん イオン盛岡南店4/23(水)OPEN！
+              </h3>
+              <a
+                href="/contents/pdf/kizu0218.pdf"
+                target="_blank"
+                class="p-news__link"
+              >
+                <svg class="p-news__link-arrow" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+            <article class="p-news__item">
+              <div class="p-news__thumbnail">
+                <img
+                  src="/assets/images/top/news_thumbnail_2.jpg"
+                  alt="青森2号店！銀座惣菜店 シーナシーナ弘前店4月OPEN！"
+                  class="p-news__thumbnail-image"
+                />
+              </div>
+              <p class="p-news__meta">
+                <time class="p-news__date" datetime="20250209">2025.03.07</time>
+                <span class="p-news__tag">お知らせ</span>
+              </p>
+              <h3 class="p-news__headline">
+                青森2号店！銀座惣菜店 シーナシーナ弘前店4月OPEN！
+              </h3>
+              <a
+                href="/contents/pdf/%E5%AD%90%E4%BC%9A%E7%A4%BE%E3%82%86%E3%81%8D%E3%82%80%E3%82%89%E5%A3%B1%E7%95%AA%E4%BA%AD+%E7%81%AB%E7%81%BD%E3%81%AE%E3%81%8A%E8%A9%AB%E3%81%B3%E3%81%A8%E3%81%8A%E7%9F%A5%E3%82%89%E3%81%9B.pdf"
+                target="_blank"
+                class="p-news__link"
+              >
+                <svg class="p-news__link-arrow" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </a>
+            </article>
+
+            <article class="p-news__item">
+              <div class="p-news__thumbnail">
+                <img
+                  src="/assets/images/top/news_thumbnail_5.jpg"
+                  alt="合弁会社「NIPPON WAGYU INTERNATIONAL」～ 関西国際空港よりシンガポール向け和牛お土産販売を開始 ～ "
+                  class="p-news__thumbnail-image"
+                />
+              </div>
+              <p class="p-news__meta">
+                <time class="p-news__date" datetime="20250128">2025.01.28</time>
+                <span class="p-news__tag">リリース</span>
+              </p>
+              <h3 class="p-news__headline">
+                《新業態》立喰い寿司ABURI百貫 ペリエ海浜幕張店 3/10(月)OPEN！
+              </h3>
+              <a
+                href="https://prtimes.jp/main/html/rd/p/000000056.000090386.html"
+                target="_blank"
+                class="p-news__link"
+              >
+                <svg class="p-news__link-arrow" width="19" height="14">
+                  <use xlink:href="#arrow"></use>
+                </svg>
+              </a>
+            </article>
+          </div>
+          <a href="/news/" class="p-news__more c-view-more">View all</a>
+        </div>
+      </section>
+      <section class="p-ir">
+        <div class="p-ir__inner">
+          <header class="p-ir__title c-section-title">
+            <span class="c-section-title__jpn">IRニュース</span>
+            <h2 class="c-section-title__eng">IR News</h2>
+          </header>
+
+          <!-- E-IR Parts -->
+          <div
+            class="eir eir_area_area_top_001 eir_page_file_top_001"
+            data-area-name="area_top_001"
+          >
+            <div class="eirDataArea s_eirBlock">
+              <section class="eirBlock s_eirBlock eirGroup">
+                <div class="s_eirQuarterBlock">
+                  <ul class="s_eirList">
+                    <li
+                      class="eirItem s_eirList_item s_eirList_item-all_link cat-news-ir_material cat-sub-ir_material5 cat-num-4 s_eirList_item-pdf s_eirList_item-q_0 s_eirList_item-thum_false s_eirList_item-past"
+                    >
+                      <a
+                        href="https://ssl4.eir-parts.net/doc/9850/ir_material5/245168/00.pdf"
+                        target="_blank"
+                        class="eirItem_title_link s_eirModule_eirItem s_eirItem"
+                      >
+                        <div
+                          class="eirItem_head eirItem_date s_eirModule_date s_eirList_item_date"
+                        >
+                          <time class="s_eirModule_date_time">2025.02.14</time>
+                        </div>
+
+                        <div
+                          class="eirItem_category s_eirModule_category s_eirList_item_category"
+                        >
+                          <span
+                            class="s_eirModule_category_icon s_eirList_item_category_icon"
+                            >お知らせ</span
+                          >
+                          <span
+                            class="s_eirModule_category_image s_eirList_item_category_image"
+                          ></span>
+                        </div>
+
+                        <div
+                          class="eirItem_title s_eirModule_titleBox s_eirList_item_titleBox"
+                        >
+                          <div class="s_eirModule_title s_titleBox_title">
+                            <span
+                              class="s_eirModule_title_link s_titleBox_title_link"
+                            >
+                              <span
+                                class="s_eirModule_title_label s_titleBox_title_link_label"
+                                >Summary of Consolidated Financial Results for
+                                the Nine Months Ended December 31, 2024</span
+                              >
+                              <span
+                                class="s_eirModule_title_static s_titleBox_title_link_static"
+                              ></span>
+                            </span>
+                          </div>
+                          <div
+                            class="eirItem_type s_eirModule_type s_titleBox_type"
+                          >
+                            <span
+                              class="s_eirModule_type_icon s_eirModule_type_icon-pdf s_titleBox_type_icon"
+                              >PDF</span
+                            >
+                            <figure
+                              class="s_eirModule_type_figure s_titleBox_type_figure"
+                            >
+                              <img
+                                class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf s_titleBox_type_figure_image"
+                                src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                              />
+                            </figure>
+                          </div>
+
+                          <div
+                            class="eirItem_size s_eirModule_size s_titleBox_size"
+                          >
+                            <span class="s_eirModule_size_item">（136KB）</span>
+                          </div>
+                        </div>
+
+                        <div
+                          class="eirItem_type s_eirModule_type s_eirList_item_type"
+                        >
+                          <span
+                            class="s_eirModule_type_icon s_eirModule_type_icon-pdf"
+                            >PDF</span
+                          >
+                          <figure class="s_eirModule_type_figure">
+                            <img
+                              class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf"
+                              src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                            />
+                          </figure>
+                        </div>
+
+                        <div
+                          class="eirItem_size s_eirModule_size s_eirList_item_size"
+                        >
+                          <span class="s_eirModule_size_item">（136KB）</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="eirItem s_eirList_item s_eirList_item-all_link cat-news-tanshin cat-sub-id181 cat-num-0 s_eirList_item-pdf s_eirList_item-q_30 s_eirList_item-thum_false s_eirList_item-past"
+                    >
+                      <a
+                        href="https://ssl4.eir-parts.net/doc/9850/tdnet/2564428/00.pdf"
+                        target="_blank"
+                        class="eirItem_title_link s_eirModule_eirItem s_eirItem"
+                      >
+                        <div
+                          class="eirItem_head eirItem_date s_eirModule_date s_eirList_item_date"
+                        >
+                          <time class="s_eirModule_date_time">2025.02.13</time>
+                        </div>
+
+                        <div
+                          class="eirItem_category s_eirModule_category s_eirList_item_category"
+                        >
+                          <span
+                            class="s_eirModule_category_icon s_eirList_item_category_icon"
+                            >決算</span
+                          >
+                          <span
+                            class="s_eirModule_category_image s_eirList_item_category_image"
+                          ></span>
+                        </div>
+
+                        <div
+                          class="eirItem_title s_eirModule_titleBox s_eirList_item_titleBox"
+                        >
+                          <div class="s_eirModule_title s_titleBox_title">
+                            <span
+                              class="s_eirModule_title_link s_titleBox_title_link"
+                            >
+                              <span
+                                class="s_eirModule_title_label s_titleBox_title_link_label"
+                                >2025年3月期第3四半期決算短信〔日本基準〕（連結）</span
+                              >
+                              <span
+                                class="s_eirModule_title_static s_titleBox_title_link_static"
+                              ></span>
+                            </span>
+                          </div>
+                          <div
+                            class="eirItem_type s_eirModule_type s_titleBox_type"
+                          >
+                            <span
+                              class="s_eirModule_type_icon s_eirModule_type_icon-pdf s_titleBox_type_icon"
+                              >PDF</span
+                            >
+                            <figure
+                              class="s_eirModule_type_figure s_titleBox_type_figure"
+                            >
+                              <img
+                                class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf s_titleBox_type_figure_image"
+                                src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                              />
+                            </figure>
+                          </div>
+
+                          <div
+                            class="eirItem_size s_eirModule_size s_titleBox_size"
+                          >
+                            <span class="s_eirModule_size_item">（200KB）</span>
+                          </div>
+                        </div>
+
+                        <div
+                          class="eirItem_type s_eirModule_type s_eirList_item_type"
+                        >
+                          <span
+                            class="s_eirModule_type_icon s_eirModule_type_icon-pdf"
+                            >PDF</span
+                          >
+                          <figure class="s_eirModule_type_figure">
+                            <img
+                              class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf"
+                              src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                            />
+                          </figure>
+                        </div>
+
+                        <div
+                          class="eirItem_size s_eirModule_size s_eirList_item_size"
+                        >
+                          <span class="s_eirModule_size_item">（200KB）</span>
+                        </div>
+                      </a>
+                    </li>
+                    <li
+                      class="eirItem s_eirList_item s_eirList_item-all_link cat-news-ir_material cat-sub-ir_material5 cat-num-4 s_eirList_item-pdf s_eirList_item-q_0 s_eirList_item-thum_false s_eirList_item-past"
+                    >
+                      <a
+                        href="https://ssl4.eir-parts.net/doc/9850/ir_material5/240755/00.pdf"
+                        target="_blank"
+                        class="eirItem_title_link s_eirModule_eirItem s_eirItem"
+                      >
+                        <div
+                          class="eirItem_head eirItem_date s_eirModule_date s_eirList_item_date"
+                        >
+                          <time class="s_eirModule_date_time">2024.11.18</time>
+                        </div>
+
+                        <div
+                          class="eirItem_category s_eirModule_category s_eirList_item_category"
+                        >
+                          <span
+                            class="s_eirModule_category_icon s_eirList_item_category_icon"
+                            >お知らせ</span
+                          >
+                          <span
+                            class="s_eirModule_category_image s_eirList_item_category_image"
+                          ></span>
+                        </div>
+
+                        <div
+                          class="eirItem_title s_eirModule_titleBox s_eirList_item_titleBox"
+                        >
+                          <div class="s_eirModule_title s_titleBox_title">
+                            <span
+                              class="s_eirModule_title_link s_titleBox_title_link"
+                            >
+                              <span
+                                class="s_eirModule_title_label s_titleBox_title_link_label"
+                                >Summary of Consolidated Financial Results for
+                                the Six Months Ended September 30, 2024</span
+                              >
+                              <span
+                                class="s_eirModule_title_static s_titleBox_title_link_static"
+                              ></span>
+                            </span>
+                          </div>
+                          <div
+                            class="eirItem_type s_eirModule_type s_titleBox_type"
+                          >
+                            <span
+                              class="s_eirModule_type_icon s_eirModule_type_icon-pdf s_titleBox_type_icon"
+                              >PDF</span
+                            >
+                            <figure
+                              class="s_eirModule_type_figure s_titleBox_type_figure"
+                            >
+                              <img
+                                class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf s_titleBox_type_figure_image"
+                                src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                              />
+                            </figure>
+                          </div>
+
+                          <div
+                            class="eirItem_size s_eirModule_size s_titleBox_size"
+                          >
+                            <span class="s_eirModule_size_item">（152KB）</span>
+                          </div>
+                        </div>
+
+                        <div
+                          class="eirItem_type s_eirModule_type s_eirList_item_type"
+                        >
+                          <span
+                            class="s_eirModule_type_icon s_eirModule_type_icon-pdf"
+                            >PDF</span
+                          >
+                          <figure class="s_eirModule_type_figure">
+                            <img
+                              class="eirItem_type_icon_image s_eirModule_type_figure_image s_eirModule_type_figure_image-pdf"
+                              src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/app/img/filetype_icon/pdf.png"
+                            />
+                          </figure>
+                        </div>
+
+                        <div
+                          class="eirItem_size s_eirModule_size s_eirList_item_size"
+                        >
+                          <span class="s_eirModule_size_item">（152KB）</span>
+                        </div>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </section>
+            </div>
+          </div>
+          <script
+            type="text/javascript"
+            src="/assets/js/eir/eir_v5.js"
+            charset="utf-8"
+          ></script>
+          <script type="text/javascript">
+            scriptLoader.setSrc(eirPassCore + "eir_common.js");
+            scriptLoader.load(function () {
+              setParts("file_top_001");
+            }, showMaintenanceMessage);
+          </script>
+          <!-- /E-IR Parts -->
+
+          <a href="/ir/news/" class="p-ir__more c-view-more">View all</a>
+        </div>
+      </section>
+    </div>
+
+    <div class="c-pagetop">
+      <a href="#pagetop" class="c-pagetop__link js-anchor-link">
+        <svg class="c-pagetop__link-svg" width="19" height="14">
+          <use xlink:href="#arrow"></use>
+        </svg>
+      </a>
+    </div>
+    <footer class="l-footer">
+      <div class="l-footer__inner">
+        <h2 class="l-footer__logo">株式会社 株式会社サイプレス</h2>
+        <ul class="l-footer-menu">
+          <li class="l-footer-menu__item">
+            <a href="/company/" class="l-footer-menu__link">企業情報</a>
+          </li>
+          <li class="l-footer-menu__item">
+            <a href="/news/" class="l-footer-menu__link">新着情報</a>
+          </li>
+          <li class="l-footer-menu__item">
+            <a href="/recruit/" class="l-footer-menu__link">採用情報</a>
+          </li>
+          <li class="l-footer-menu__item">
+            <a href="/contact/" class="l-footer-menu__link">お問い合わせ</a>
+          </li>
+          <li
+            class="l-footer-menu__item l-footer-menu__item--rowspan l-footer-menu__item--parent js-accordion-menu"
+            style="--open-height: 218px; --collapse-height: 0px"
+          >
+            <a href="/ir/" class="l-footer-menu__link">IR情報</a>
+            <ul class="l-footer-menu__nest js-accordion-body">
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/news/" class="l-footer-menu__nest-link"
+                  >IRニュース</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/governance/" class="l-footer-menu__nest-link"
+                  >コーポレートガバナンス</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/material/" class="l-footer-menu__nest-link"
+                  >決算短信</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/material2/" class="l-footer-menu__nest-link"
+                  >有価証券報告書</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/material3/" class="l-footer-menu__nest-link"
+                  >年次報告書</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/monthly/" class="l-footer-menu__nest-link"
+                  >月次売上</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/highlight/" class="l-footer-menu__nest-link"
+                  >業績ハイライト</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/highlight2/" class="l-footer-menu__nest-link"
+                  >財政状況</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/highlight3/" class="l-footer-menu__nest-link"
+                  >キャッシュフローの状況</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/shareholder/" class="l-footer-menu__nest-link"
+                  >株主優待情報</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a
+                  href="/assets/pdf/20240625kabunushi.pdf"
+                  target="_blank"
+                  class="l-footer-menu__nest-link"
+                >
+                  株主総会のご報告
+                  <span class="l-footer-menu__nest-icon">
+                    <svg class="l-footer-menu__nest-svg" width="15" height="20">
+                      <use xlink:href="#icon-pdf"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/disclosure/" class="l-footer-menu__nest-link"
+                  >ディスクロージャーポリシー</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a href="/ir/disclaimer/" class="l-footer-menu__nest-link"
+                  >免責事項</a
+                >
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a
+                  href="https://kmasterplus.pronexus.co.jp/main/corp/9/8/9850/index.html"
+                  target="_blank"
+                  class="l-footer-menu__nest-link"
+                >
+                  公告掲載
+                  <span class="l-footer-menu__nest-icon">
+                    <svg class="l-footer-menu__nest-svg" width="10" height="10">
+                      <use xlink:href="#icon-external"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+              <li class="l-footer-menu__nest-item">
+                <a
+                  href="https://finance.yahoo.co.jp/quote/9850.T"
+                  target="_blank"
+                  class="l-footer-menu__nest-link"
+                >
+                  株価情報
+                  <span class="l-footer-menu__nest-icon">
+                    <svg class="l-footer-menu__nest-svg" width="10" height="10">
+                      <use xlink:href="#icon-external"></use>
+                    </svg>
+                  </span>
+                </a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <div class="l-footer__bottom">
+          <div class="l-footer__link">
+            <a href="/contact/privacy/" class="l-footer__link-item"
+              >個人情報の取扱いについて</a
+            >
+            <a href="/contact/socialmedia/" class="l-footer__link-item"
+              >ソーシャルメディアポリシー</a
+            >
+            <a href="/contact/policy/" class="l-footer__link-item"
+              >サイトポリシー</a
+            >
+          </div>
+          <small class="l-footer__copyright"
+            >© CYPRESS HOLDINGS CO., LTD.</small
+          >
+        </div>
+      </div>
+    </footer>
+
+    <div class="c-splash" id="js-splash">
+      <img
+        src="/assets/images/common/splash_logo.svg"
+        alt=""
+        decoding="async"
+        class="c-splash__logo is-play"
+        id="js-splash-logo"
+      />
+      <div class="c-splash__effect is-play" id="js-splash-effect"></div>
+    </div>
+    <svg>
+      <symbol id="arrow" viewBox="0 0 19 14">
+        <g transform="translate(13606 13692.797)">
+          <path
+            d="M-13587.6-13748.514h-18.527v-.987h18.527Z"
+            transform="translate(0.129 63.396)"
+          ></path>
+          <path
+            d="M-13594.036-13741.428l-.7-.7,6.486-6.486-6.486-6.486.7-.7,7.185,7.185Z"
+            transform="translate(-0.149 63.001)"
+          ></path>
+        </g>
+      </symbol>
+      <symbol id="icon-pdf" viewBox="0 0 15 20.004">
+        <path
+          d="M14.449,3.728,11.172.451A1.875,1.875,0,0,0,9.848-.1H1.875A1.881,1.881,0,0,0,0,1.779v16.25A1.875,1.875,0,0,0,1.875,19.9h11.25A1.875,1.875,0,0,0,15,18.029V5.056a1.884,1.884,0,0,0-.551-1.328Zm-.883.887a.615.615,0,0,1,.164.289H10V1.173a.615.615,0,0,1,.289.164Zm-.441,14.039H1.875a.627.627,0,0,1-.625-.625V1.779a.627.627,0,0,1,.625-.625H8.75V5.216a.935.935,0,0,0,.938.938H13.75V18.029A.627.627,0,0,1,13.125,18.654Zm-.859-6.688c-.527-.52-2.148-.359-2.879-.262A4.089,4.089,0,0,1,7.625,9.494a5.708,5.708,0,0,0,.25-2.535.914.914,0,0,0-1.742-.266,6.571,6.571,0,0,0,.328,3.039,37.607,37.607,0,0,1-1.645,3.461C4,13.611,2.7,14.337,2.52,15.24c-.137.656.895,1.539,2.074.25a10.452,10.452,0,0,0,1.223-1.777,22.708,22.708,0,0,1,3.2-.937,5.96,5.96,0,0,0,2.523.777.947.947,0,0,0,.723-1.586ZM3.313,15.443A5.456,5.456,0,0,1,4.7,13.849C3.836,15.228,3.313,15.47,3.313,15.443ZM7.031,6.759c.34,0,.3,1.465.082,1.859A3.8,3.8,0,0,1,7.031,6.759ZM5.922,12.982a18.323,18.323,0,0,0,1.125-2.488,5.089,5.089,0,0,0,1.371,1.621A14.279,14.279,0,0,0,5.922,12.982Zm5.992-.23s-.227.273-1.7-.355C11.816,12.279,12.078,12.646,11.914,12.752Z"
+          transform="translate(0 0.1)"
+        ></path>
+      </symbol>
+      <symbol id="icon-external" viewBox="0 0 10 10">
+        <path
+          d="M6.889,4.667V5.778H4.111v6.111h6.111V9.111h1.111v3.333a.556.556,0,0,1-.556.556H3.556A.556.556,0,0,1,3,12.444V5.222a.556.556,0,0,1,.556-.556ZM13,3V7.444H11.889V4.9L7.559,9.226l-.786-.786L11.1,4.111H8.556V3Z"
+          transform="translate(-3 -3)"
+        ></path>
+      </symbol>
+    </svg>
+  </body>
+</html>
