@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+      :root {
+        --font1: "Poppins";
+        --font2: "Playfair Display";
+        --dark: #221608;
+      }
+
+      body {
+        margin: 0;
+        background-color: #f7f0ea;
+        font-family: var(--font1);
+        overflow-x: hidden;
+      }
+
+      .flex,
+      .flex__col {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .flex__col {
+        flex-direction: column;
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      main {
+        width: 100%;
+      }
+
+      .menu {
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: calc(100% - 80px);
+        justify-content: space-between;
+        margin: 40px 0;
+        transform: translatex(-50%);
+      }
+
+      .menu a {
+        font-size: 1vw;
+        font-weight: 600;
+        color: var(--dark);
+        text-decoration: none;
+      }
+
+      .menu ul {
+        gap: 20px 60px;
+      }
+
+      .intro {
+        position: relative;
+        width: calc(100% - 80px);
+        min-height: 100vh;
+        gap: 80px;
+      }
+
+      .intro h1 {
+        width: 50%;
+        font-weight: 700;
+        font-size: 4.8vw;
+        line-height: 100%;
+        text-transform: uppercase;
+      }
+
+      .intro img {
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+        right: 50%;
+        width: 33%;
+        height: auto;
+        aspect-ratio: 9/14;
+        object-fit: cover;
+        opacity: 0.2;
+        transform: translateY(-50%);
+      }
+
+      .intro p {
+        width: 50%;
+        font-size: 1.6vw;
+      }
+
+      .intro p a {
+        color: #000;
+      }
+
+      .list__item {
+        position: relative;
+        width: 100vw;
+        height: calc(100vh - 40px);
+        align-items: flex-end;
+        padding-bottom: 40px;
+      }
+
+      .list__item__title,
+      .list__item__titleOutline {
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 50%;
+        font-family: var(--font2);
+        font-size: 21vw;
+        font-weight: 700;
+        line-height: 80%;
+        color: var(--dark);
+        text-align: center;
+        transform: translate(-50%, -50%);
+      }
+
+      .list__item__titleOutline {
+        z-index: 3;
+        color: transparent;
+        -webkit-text-stroke: 2px var(--dark);
+      }
+
+      .list__item img {
+        position: absolute;
+        z-index: 2;
+        top: 50%;
+        left: 50%;
+        width: 33%;
+        height: auto;
+        aspect-ratio: 9/14;
+        object-fit: cover;
+        transform: translate(-50%, -50%);
+      }
+
+      ul.list__item__infos {
+        width: calc(100% - 80px);
+        justify-content: space-between;
+      }
+
+      .list__item__infos li {
+        font-size: 1vw;
+      }
+
+      .list__item__infos li span {
+        color: #818181;
+      }
+
+      .list__item__type,
+      .list__item__project {
+        position: absolute;
+        top: 50%;
+        font-size: 1vw;
+        writing-mode: vertical-lr;
+        text-orientation: upright;
+        transform: translateY(-50%);
+        color: #818181;
+      }
+
+      .list__item__type {
+        left: 36px;
+      }
+
+      .list__item__project {
+        right: 36px;
+      }
+
+      @media (min-width: 1900px) {
+        .list__item__title,
+        .list__item__titleOutline {
+          font-size: 450px;
+        }
+
+        .list__item img,
+        .intro__img {
+          width: auto;
+          height: 80%;
+        }
+      }
+    </style>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+  </head>
+  <body>
+    <main class="flex__col">
+      <nav class="menu flex">
+        <a href="#" class="menu__left">
+          トップページスクロールトリガーサンプル
+        </a>
+        <!-- <ul class="menu__right flex">
+          <li><a href="#">Work</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul> -->
+      </nav>
+      <section class="intro flex">
+        <h1>食の喜びを<br />全ての人へ</h1>
+        <img src="assets/images/top/main_bg01.jpg" />
+        <p>
+          一人でも多くのお客様に「美味しさ」を届け笑顔にすること。
+          サイプレスに関わる全ての関係企業の利益のためにスタッフ一丸となり企業努力をすること。
+          それがサイプレスが目指す、創造的で健全な成長と発展を目指した企業活動です。<br />
+
+          そして「サイプレス・プロジェクト・K」を掲げ、1000店舗を目指し、地域や社会に貢献し、檜のごとくどっしりと地に根をおろし、美味しさと信頼の枝づくりを目指します。
+        </p>
+      </section>
+      <section class="list flex__col">
+        <div class="list__item flex">
+          <img src="assets/images/top/mv_1@2x.jpg" />
+          <div class="list__item__title">EAT to</div>
+          <div class="list__item__titleOutline">EAT to</div>
+          <!-- <ul class="list__item__infos flex">
+          <li><span>AGENCY</span> OKADA AGENTS</li>
+          <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+          <li><span>CLIENT</span> ROBERTO STUDIO</li>
+          <li><span>YEAR</span> 2023</li>
+        </ul>
+        <div class="list__item__type">WEBSITE</div>
+        <div class="list__item__project">PORTFOLIO</div> -->
+        </div>
+        <div class="list__item flex">
+          <img src="assets/images/top/mv_2@2x.jpg" />
+          <div class="list__item__title">live.</div>
+          <div class="list__item__titleOutline">live.</div>
+          <!-- <ul class="list__item__infos flex">
+        <li><span>AGENCY</span> OKADA AGENTS</li>
+        <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+        <li><span>CLIENT</span> ROBERTO STUDIO</li>
+        <li><span>YEAR</span> 2023</li>
+      </ul>
+      <div class="list__item__type">WEBSITE</div>
+      <div class="list__item__project">PORTFOLIO</div> -->
+        </div>
+        <div class="list__item flex">
+          <img src="assets/images/top/mv_3@2x.jpg" />
+          <div class="list__item__title">Everyone</div>
+          <div class="list__item__titleOutline">Everyone</div>
+          <!-- <ul class="list__item__infos flex">
+        <li><span>AGENCY</span> OKADA AGENTS</li>
+        <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+        <li><span>CLIENT</span> ROBERTO STUDIO</li>
+        <li><span>YEAR</span> 2023</li>
+      </ul>
+      <div class="list__item__type">WEBSITE</div>
+      <div class="list__item__project">PORTFOLIO</div> -->
+        </div>
+        <div class="list__item flex">
+          <img src="assets/images/top/mv_4@2x.jpg" />
+          <div class="list__item__title">is so.</div>
+          <div class="list__item__titleOutline">is so.</div>
+          <!-- <ul class="list__item__infos flex">
+        <li><span>AGENCY</span> OKADA AGENTS</li>
+        <li><span>ROLE</span> LEAD DESIGNER / DEVELOPER</li>
+        <li><span>CLIENT</span> ROBERTO STUDIO</li>
+        <li><span>YEAR</span> 2023</li>
+      </ul>
+      <div class="list__item__type">WEBSITE</div>
+      <div class="list__item__project">PORTFOLIO</div> -->
+        </div>
+      </section>
+    </main>
+    <script>
+      var items = document.querySelectorAll(".list__item");
+
+      items.forEach((item) => {
+        var itemTitle = item.querySelector(".list__item__title");
+        var itemTitleOutline = item.querySelector(".list__item__titleOutline");
+        var itemImg = item.querySelector(".list__item img");
+
+        var itemTL = gsap.timeline({
+          scrollTrigger: {
+            trigger: item,
+            start: "0% 75%",
+            end: "25% 50%",
+            scrub: 3,
+          },
+        });
+
+        itemTL.fromTo(
+          itemTitle,
+          { scale: 2, y: "100%" },
+          { scale: 1, y: "0%", ease: "power2.inOut" },
+          0
+        );
+        itemTL.fromTo(
+          itemTitleOutline,
+          { scale: 2, y: "100%" },
+          { scale: 1, y: "0%", ease: "power2.inOut" },
+          0
+        );
+
+        gsap.fromTo(
+          itemImg,
+          { x: "60vw", y: "60vh", rotate: -30 },
+          {
+            x: "-60vw",
+            y: "-60vh",
+            rotate: 30,
+            ease: "none",
+            scrollTrigger: {
+              trigger: item,
+              start: "50% 100%",
+              end: "100% 50%",
+              scrub: 3,
+            },
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

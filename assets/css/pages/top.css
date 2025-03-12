@@ -285,7 +285,7 @@ a {
 
 :root {
 	--color-dark: #333;
-	--color-accent: #db0000;
+	--color-accent: #113c8c;
 	--color-gray: #c2ccd0;
 	--color-darkgray: #848e91;
 	--color-lightgray: #f5f8fa;
@@ -4207,17 +4207,6 @@ button:focus {
 	display: none;
 }
 
-* {
-	margin: 0;
-	padding: 0;
-	color: var(--ColorDarkA);
-}
-
-body {
-	background: var(--ColorWhiteA);
-	opacity: 0;
-}
-
 #wrapper {
 	width: 100vw;
 	height: 100vh;
@@ -4225,16 +4214,18 @@ body {
 	flex-flow: column;
 	align-items: center;
 	justify-content: center;
+	background-color: #113c8c;
 }
 
 #wrapper h1 {
 	position: absolute;
 	left: var(--GoldenRatio7);
 	font-size: var(--FontH2);
+	color: #ff6f23;
 }
 
 #wrapper h1 span {
-	color: var(--ColorDarkB);
+	color: #ff6f23;
 }
 
 #wrapper p {
@@ -4242,6 +4233,7 @@ body {
 	bottom: var(--GoldenRatio7);
 	color: var(--ColorDarkB);
 	font-size: var(--FontParagraph);
+	color: #ff6f23;
 }
 
 #ImgWrapper {
@@ -4313,6 +4305,7 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	background-color: #ff6f23;
 }
 
 #codeby a {

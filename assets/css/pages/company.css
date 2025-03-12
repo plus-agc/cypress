@@ -285,7 +285,7 @@ a {
 
 :root {
   --color-dark: #333;
-  --color-accent: #db0000;
+  --color-accent: #113C8C;
   --color-gray: #c2ccd0;
   --color-darkgray: #848e91;
   --color-lightgray: #f5f8fa;
@@ -592,6 +592,7 @@ button:focus {
   color: var(--color-st-jpn);
   font-size: 4vw;
   font-weight: 700;
+  margin-top:1.2rem;
 }
 
 @media all and (min-width: 768px) {
@@ -2169,7 +2170,7 @@ button:focus {
   transition: all 0.3s ease;
 }
 .p-company__navi ul li a:hover {
-  color: #DB0000;
+  color: #113C8C;
 }
 .p-company__navi ul li a:hover:after {
   top: 0.8rem;
@@ -2225,7 +2226,7 @@ button:focus {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   border-bottom: 1px solid #C2CCD0;
   padding: 3rem 0;
 }
@@ -2441,7 +2442,7 @@ button:focus {
   width: 1.6rem;
   height: 1.6rem;
   border-radius: 50%;
-  background-color: #DB0000;
+  background-color: #113C8C;
   position: absolute;
   top: 1rem;
   left: -0.8rem;
@@ -2464,7 +2465,7 @@ button:focus {
   height: calc(100% - 1rem);
 }
 #history .p-history__item-year {
-  color: #DB0000;
+  color: #113C8C;
   font-size: 3.6rem;
   letter-spacing: -0.02em;
   line-height: 1;
@@ -2597,9 +2598,12 @@ button:focus {
   margin-top: -2rem;
 }
 #group .p-group-item {
-  width: calc(50% - 2rem);
+  width: calc(25% - 2rem);
   margin-left: 2rem;
   margin-top: 2rem;
+  & img{
+    width:100%;
+  }
 }
 #group .p-group-item a {
   height: 18.7rem;
@@ -2637,7 +2641,7 @@ button:focus {
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
-  background-color: #DB0000;
+  background-color: #113C8C;
   position: absolute;
   right: -1.6rem;
   bottom: -1.6rem;
