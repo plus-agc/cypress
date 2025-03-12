@@ -878,7 +878,7 @@ button:focus {
   top: -81vh;
   aspect-ratio: 4410/2098;
   height: 262vh;
-  background-image: url("/assets/images/common/splash_effect.svg");
+  background-image: url("./assets/images/common/splash_effect.svg");
   background-size: auto 100%;
   -webkit-animation-timing-function: ease-in-out;
   animation-timing-function: ease-in-out;
@@ -2504,7 +2504,7 @@ button:focus {
 
 @media all and (max-width: 767px) {
   .p-recruit__content {
-    background: url(../../images/recruit.htmlbg_intro_sp.png) 0 0 no-repeat;
+    background: url(../../images./recruit.htmlbg_intro_sp.png) 0 0 no-repeat;
     background-size: cover;
     margin-top: -26.6666666667vw;
   }
@@ -2815,7 +2815,7 @@ button:focus {
 #interview:before {
   content: "";
   width: 100%;
-  background-image: url("../../images/recruit.htmlbg_recruit.svg");
+  background-image: url("../../images./recruit.htmlbg_recruit.svg");
   background-size: auto 100%;
   background-position: center bottom;
   min-height: 118.2rem;
@@ -3046,7 +3046,7 @@ button:focus {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background: url(../../images/recruit.htmlarrow.svg) center center no-repeat #113C8C;
+  background: url(../../images./recruit.htmlarrow.svg) center center no-repeat #113C8C;
   background-size: 1.9rem;
   z-index: 10;
 }
@@ -3256,7 +3256,7 @@ button:focus {
   top: 1rem;
   width: 6rem;
   height: 6rem;
-  background: url("../../images/recruit.htmlclose.svg") 0 0 no-repeat;
+  background: url("../../images./recruit.htmlclose.svg") 0 0 no-repeat;
   background-size: 100% auto;
   cursor: pointer;
   z-index: 20;
@@ -3319,7 +3319,7 @@ button:focus {
     bottom: 48vw;
     width: 100%;
     min-height: 160vw;
-    background-image: url("../../images/recruit.htmlbg_recruit_sp.svg");
+    background-image: url("../../images./recruit.htmlbg_recruit_sp.svg");
     background-size: auto 100%;
     background-position: center bottom;
     -webkit-animation-duration: 600ms;
@@ -3624,7 +3624,7 @@ button:focus {
   content: "";
   width: 1.9rem;
   height: 1.5rem;
-  background: url(../../images/recruit.htmlarrow.svg) 0 0 no-repeat;
+  background: url(../../images./recruit.htmlarrow.svg) 0 0 no-repeat;
   background-size: 100% auto;
   position: absolute;
   right: 0;
@@ -3674,7 +3674,7 @@ button:focus {
 
 @media all and (max-width: 767px) {
   .bg_entry {
-    background: url(../../images/recruit.htmlbg_entry_sp.png) 0 0 no-repeat;
+    background: url(../../images./recruit.htmlbg_entry_sp.png) 0 0 no-repeat;
     background-size: cover;
   }
 }
@@ -3993,7 +3993,7 @@ button:focus {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background: url(../../images/company/icon_link.svg) 0 0 no-repeat;
+  background: url(../../images./company/icon_link.svg) 0 0 no-repeat;
   background-size: 100% auto;
   opacity: 0;
   -webkit-transition: all 0.3s ease;

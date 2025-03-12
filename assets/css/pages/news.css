@@ -384,7 +384,7 @@ button:focus {
 	top: -81vh;
 	aspect-ratio: 4410 / 2098;
 	height: 262vh;
-	background-image: url("/assets/images/common/splash_effect.svg");
+	background-image: url("./assets/images/common/splash_effect.svg");
 	background-size: auto 100%;
 	-webkit-animation-timing-function: ease-in-out;
 	animation-timing-function: ease-in-out;
@@ -736,7 +736,7 @@ button:focus {
 	height: 11.2vw;
 	font-size: 3.2vw;
 	padding-left: 1em;
-	background-image: url("/assets/images/common/icon-angle.svg");
+	background-image: url("./assets/images/common/icon-angle.svg");
 	background-position: right 2.6666666667vw center;
 	background-size: 2.6666666667vw auto;
 	-webkit-transition-property: border-color;
@@ -2201,7 +2201,7 @@ button:focus {
 	text-underline-offset: 0.4em;
 	font-size: 3.7333333333vw;
 	padding-right: 4.2666666667vw;
-	background-image: url("/assets/images/common/external-link.svg");
+	background-image: url("./assets/images/common/external-link.svg");
 	background-size: 2.6666666667vw 2.6666666667vw;
 	background-position: right center;
 }

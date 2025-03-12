@@ -384,7 +384,7 @@ button:focus {
 	top: -81vh;
 	aspect-ratio: 4410 / 2098;
 	height: 262vh;
-	background-image: url("/assets/images/common/splash_effect.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/common/splash_effect.svg");
 	background-size: auto 100%;
 	-webkit-animation-timing-function: ease-in-out;
 	animation-timing-function: ease-in-out;
@@ -816,7 +816,7 @@ button:focus {
 	height: 11.2vw;
 	font-size: 3.2vw;
 	padding-left: 1em;
-	background-image: url("/assets/images/common/icon-angle.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/icon-angle.svg");
 	background-position: right 2.6666666667vw center;
 	background-size: 2.6666666667vw auto;
 	-webkit-transition-property: border-color;
@@ -2278,7 +2278,7 @@ button:focus {
 	bottom: 0;
 	width: 100%;
 	height: 288vw;
-	background-image: url("/assets/images/top/bg_intro_sp.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/bg_intro_sp.svg");
 	background-size: auto 100%;
 	background-position: center bottom;
 }
@@ -2291,7 +2291,7 @@ button:focus {
 	.p-main-intro::before {
 		bottom: -5rem;
 		height: 141.6rem;
-		background-image: url("/assets/images/top/bg_intro_copy.svg");
+		background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/bg_intro_copy.svg");
 		background-size: auto auto;
 	}
 }
@@ -2774,7 +2774,7 @@ button:focus {
 	animation-fill-mode: both;
 	-webkit-animation-timing-function: ease-out;
 	animation-timing-function: ease-out;
-	background-image: url("/assets/images/top/bg_products.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/bg_products.svg");
 }
 .p-products__inner {
 	position: relative;
@@ -3338,16 +3338,16 @@ button:focus {
 	}
 }
 .p-data__item-name--data1::before {
-	background-image: url("/assets/images/top/data_1_icon.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/data_1_icon.svg");
 }
 .p-data__item-name--data2::before {
-	background-image: url("/assets/images/top/data_2_icon.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/data_2_icon.svg");
 }
 .p-data__item-name--data3::before {
-	background-image: url("/assets/images/top/data_3_icon.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/data_3_icon.svg");
 }
 .p-data__item-name--data4::before {
-	background-image: url("/assets/images/top/data_4_icon.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/data_4_icon.svg");
 }
 .p-data__item-name::before {
 	content: "";
@@ -3552,13 +3552,13 @@ button:focus {
 	bottom: 13.3333333333vw;
 	width: 100%;
 	min-height: 280vw;
-	background-image: url("/assets/images/top/bg_recruit_sp.svg");
+	background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/bg_recruit_sp.svg");
 	background-size: auto 100%;
 	background-position: center bottom;
 }
 @media all and (min-width: 768px) {
 	.p-recruit::before {
-		background-image: url("/assets/images/top/bg_recruit.svg");
+		background-image: url("https://plus-agc.sakura.ne.jp/plus-demo/cypress/assets/images/top/bg_recruit.svg");
 		min-height: 136rem;
 		bottom: 0;
 	}
