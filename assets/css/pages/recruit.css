@@ -3993,7 +3993,7 @@ button:focus {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background: url(../../images./company/icon_link.svg) 0 0 no-repeat;
+  background: url(../../images/company/icon_link.svg) 0 0 no-repeat;
   background-size: 100% auto;
   opacity: 0;
   -webkit-transition: all 0.3s ease;
@@ -4253,4 +4253,16 @@ button:focus {
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
+}
+.cta__inner {
+	background: #113c8c;
+	width: 1440px;
+	height: 500px;
+	margin: 64px auto;
+	border-radius: 16px;
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 36px;
 }

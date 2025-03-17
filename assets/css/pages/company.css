@@ -2161,7 +2161,7 @@ button:focus {
   content: "";
   width: 1.5rem;
   height: 0.8rem;
-  background: url(../../images./company/navi_arrow_down.svg) 0 0 no-repeat;
+  background: url(../../images/company/navi_arrow_down.svg) 0 0 no-repeat;
   background-size: 100% auto;
   position: absolute;
   right: 0;
@@ -2338,7 +2338,7 @@ button:focus {
   display: none;
 }
 .p-profile__acdn.is-open .p-profile__acdn_btn {
-  background: url(../../images./company/acdn_close.svg) center center no-repeat #fff;
+  background: url(../../images/company/acdn_close.svg) center center no-repeat #fff;
   background-size: 1.2rem auto;
 }
 .p-profile__acdn:before {
@@ -2367,7 +2367,7 @@ button:focus {
   height: 3.6rem;
   overflow: hidden;
   border-radius: 50%;
-  background: url(../../images./company/acdn.svg) center center no-repeat #fff;
+  background: url(../../images/company/acdn.svg) center center no-repeat #fff;
   background-size: 1.2rem auto;
   border: 1px solid #C2CCD0;
   position: absolute;
@@ -2629,7 +2629,7 @@ button:focus {
   position: absolute;
   right: 1rem;
   bottom: 1rem;
-  background: url(../../images./company/icon_link.svg) 0 0 no-repeat;
+  background: url(../../images/company/icon_link.svg) 0 0 no-repeat;
   background-size: 100% auto;
   opacity: 0;
   -webkit-transition: all 0.3s ease;
@@ -2921,21 +2921,21 @@ button:focus {
   background-color: #3AAF3F;
 }
 #sustainability .p-sustainability-tab .tab-environment:after {
-  background: url(../../images./company/s_arrow01.svg) 0 0 no-repeat;
+  background: url(../../images/company/s_arrow01.svg) 0 0 no-repeat;
   background-size: 100% auto;
 }
 #sustainability .p-sustainability-tab .tab-society {
   background-color: #2B52BC;
 }
 #sustainability .p-sustainability-tab .tab-society:after {
-  background: url(../../images./company/s_arrow02.svg) 0 0 no-repeat;
+  background: url(../../images/company/s_arrow02.svg) 0 0 no-repeat;
   background-size: 100% auto;
 }
 #sustainability .p-sustainability-tab .tab-governance {
   background-color: #EDAD00;
 }
 #sustainability .p-sustainability-tab .tab-governance:after {
-  background: url(../../images./company/s_arrow03.svg) 0 0 no-repeat;
+  background: url(../../images/company/s_arrow03.svg) 0 0 no-repeat;
   background-size: 100% auto;
 }
 #sustainability .p-sustainability-panel {
@@ -3223,4 +3223,16 @@ button:focus {
   #sustainability #governance h4 {
     font-size: 4.5333333333vw;
   }
+}
+.cta__inner {
+	background: #113c8c;
+	width: 1440px;
+	height: 500px;
+	margin: 64px auto;
+	border-radius: 16px;
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 36px;
 }

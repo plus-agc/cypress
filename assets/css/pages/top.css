@@ -4221,11 +4221,14 @@ button:focus {
 	position: absolute;
 	left: var(--GoldenRatio7);
 	font-size: var(--FontH2);
-	color: #ff6f23;
+	color: #ffffff;
+	font-family: "din-2014", sans-serif;
+	font-weight: 700;
+	font-style: normal;
 }
 
 #wrapper h1 span {
-	color: #ff6f23;
+	color: #ffffff;
 }
 
 #wrapper p {
@@ -4233,7 +4236,7 @@ button:focus {
 	bottom: var(--GoldenRatio7);
 	color: var(--ColorDarkB);
 	font-size: var(--FontParagraph);
-	color: #ff6f23;
+	color: #ffffff;
 }
 
 #ImgWrapper {
@@ -4412,6 +4415,19 @@ button:focus {
 	#codeby a {
 		font-size: var(--FontParagraph);
 	}
+}
+
+.cta__inner {
+	background: #113c8c;
+	width: 1440px;
+	height: 500px;
+	margin: 64px auto;
+	border-radius: 16px;
+	padding: 32px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 36px;
 }
 
 /*-------------/@media (max-width: 400px)------------- */
