@@ -265,22 +265,28 @@
       </button>
     </header>
     <!----------------------------------------------------LandingPage Intro--------------------------------------------------->
-    <div id="wrapper">
+    <!-- <div id="wrapper">
       <h1>
         EAT to live.<br />
         <span>Everyone is so.</span>
       </h1>
       <p>Scroll Down</p>
-    </div>
+    </div> -->
     <!----------------------------------------------------/LandingPage Intro--------------------------------------------------->
     <!----------------------------------------------------LandingPage--------------------------------------------------->
     <div id="ImgWrapper">
-      <img id="img1" src="assets/images/top/pixta_85862333.jpg" alt="" />
+      <h1>
+        EAT to live.<br />
+        <span>Everyone is so.</span>
+      </h1>
+      <p>Scroll Down</p>
+
+      <!-- <img id="img1" src="assets/images/top/pixta_85862333.jpg" alt="" />
       <img id="img2" src="assets/images/top/pixta_121384525.jpg" alt="" />
       <img id="img3" src="assets/images/top/pixta_33006706.jpg" alt="" />
       <img id="img4" src="assets/images/top/pixta_96895950.jpg" alt="" />
       <img id="img5" src="assets/images/top/pixta_95020464.jpg" alt="" />
-      <img id="img6" src="assets/images/top/pixta_98070456.jpg" alt="" />
+      <img id="img6" src="assets/images/top/pixta_98070456.jpg" alt="" /> -->
       <img id="img7" src="assets/images/top/donburi.jpg" alt="" />
 
       <!------------CodeBy------------>
@@ -2039,13 +2045,6 @@
     </footer>
 
     <div class="c-splash" id="js-splash">
-      <img
-        src="./assets/images/common/splash_logo.svg"
-        alt=""
-        decoding="async"
-        class="c-splash__logo is-play"
-        id="js-splash-logo"
-      />
       <div class="c-splash__effect is-play" id="js-splash-effect"></div>
       <svg>
         <symbol id="arrow" viewBox="0 0 19 14">
@@ -2111,9 +2110,11 @@
             scrub: 2.2,
           },
         });
+
+        // メイン画像のアニメーション
         LandingPageScrollTrigger.to(
           "#ImgWrapper #img7",
-          { transform: "translateZ(4500px)" },
+          { transform: "translateZ(4500px) translateX(-1000px)" },
           0
         )
           .to("#ImgWrapper #img6", { transform: "translateZ(3700px)" }, 0)
@@ -2123,6 +2124,15 @@
           .to("#ImgWrapper #img2", { transform: "translateZ(2400px)" }, 0)
           .to("#ImgWrapper #img1", { transform: "translateZ(2200px)" }, 0)
           .from("#codeby a", { y: 130, opacity: 0 }, 0.31);
+
+        // テキスト要素を非表示にするアニメーションを追加
+        LandingPageScrollTrigger.to(
+          "#ImgWrapper h1",
+          { opacity: 0, duration: 0.5 },
+          0
+        ) // "EAT to live. Everyone is so."
+          .to("#ImgWrapper p", { opacity: 0, duration: 0.5 }, 0) // "Scroll Down"
+          .to("#codeby a", { opacity: 0, duration: 0.5 }, 0.1); // "CYPRESS HOLDINGS"
       }
 
       //---------------------/Landing Page ScrollTrigger---------------------

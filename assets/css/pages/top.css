@@ -4240,6 +4240,36 @@ button:focus {
 }
 
 #ImgWrapper {
+	display: flex;
+	flex-flow: column;
+	align-items: center;
+	justify-content: center;
+	background-color: #113c8c;
+}
+
+#ImgWrapper h1 {
+	position: absolute;
+	left: var(--GoldenRatio7);
+	font-size: var(--FontH2);
+	color: #ffffff;
+	font-family: "din-2014", sans-serif;
+	font-weight: 700;
+	font-style: normal;
+}
+
+#ImgWrapper h1 span {
+	color: #ffffff;
+}
+
+#ImgWrapper p {
+	position: absolute;
+	bottom: var(--GoldenRatio7);
+	color: var(--ColorDarkB);
+	font-size: var(--FontParagraph);
+	color: #ffffff;
+}
+
+#ImgWrapper {
 	position: relative;
 	width: 100vw;
 	height: 100vh;
@@ -4297,8 +4327,11 @@ button:focus {
 
 #ImgWrapper #img7 {
 	z-index: 7;
-	height: 31vh;
-	bottom: 10%;
+	height: 30vh;
+	top: 50%;
+	transform: translateY(-50%);
+	-webkit-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
 	right: 13%;
 }
 
@@ -4308,7 +4341,7 @@ button:focus {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: #ff6f23;
+	background-color: #113c8c;
 }
 
 #codeby a {
