@@ -287,7 +287,7 @@
       <img id="img4" src="assets/images/top/pixta_96895950.jpg" alt="" />
       <img id="img5" src="assets/images/top/pixta_95020464.jpg" alt="" />
       <img id="img6" src="assets/images/top/pixta_98070456.jpg" alt="" /> -->
-      <img id="img7" src="assets/images/top/donburi.jpg" alt="" />
+      <img id="img7" src="assets/images/top/mv_1@2x.jpg" alt="" />
 
       <!------------CodeBy------------>
       <div id="codeby">
@@ -2111,19 +2111,12 @@
           },
         });
 
-        // メイン画像のアニメーション
+        // メイン画像のアニメーション（img7のみ）
         LandingPageScrollTrigger.to(
           "#ImgWrapper #img7",
           { transform: "translateZ(4500px) translateX(-1000px)" },
           0
-        )
-          .to("#ImgWrapper #img6", { transform: "translateZ(3700px)" }, 0)
-          .to("#ImgWrapper #img5", { transform: "translateZ(3100px)" }, 0)
-          .to("#ImgWrapper #img4", { transform: "translateZ(2800px)" }, 0)
-          .to("#ImgWrapper #img3", { transform: "translateZ(2600px)" }, 0)
-          .to("#ImgWrapper #img2", { transform: "translateZ(2400px)" }, 0)
-          .to("#ImgWrapper #img1", { transform: "translateZ(2200px)" }, 0)
-          .from("#codeby a", { y: 130, opacity: 0 }, 0.31);
+        ).from("#codeby a", { y: 130, opacity: 0 }, 0.31);
 
         // テキスト要素を非表示にするアニメーションを追加
         LandingPageScrollTrigger.to(

@@ -4327,7 +4327,7 @@ button:focus {
 
 #ImgWrapper #img7 {
 	z-index: 7;
-	height: 30vh;
+	height: 50vh;
 	top: 50%;
 	transform: translateY(-50%);
 	-webkit-transform: translateY(-50%);
