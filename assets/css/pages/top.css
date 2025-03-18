@@ -4255,6 +4255,7 @@ button:focus {
 	font-family: "din-2014", sans-serif;
 	font-weight: 700;
 	font-style: normal;
+	z-index: 8;
 }
 
 #ImgWrapper h1 span {
@@ -4327,12 +4328,7 @@ button:focus {
 
 #ImgWrapper #img7 {
 	z-index: 7;
-	height: 50vh;
-	top: 50%;
-	transform: translateY(-50%);
-	-webkit-transform: translateY(-50%);
-	-ms-transform: translateY(-50%);
-	right: 13%;
+	width: 100vw;
 }
 
 #codeby {
@@ -4349,6 +4345,8 @@ button:focus {
 	font-size: var(--FontH5);
 	font-weight: 400;
 	color: var(--ColorWhiteB);
+	display: flex;
+	gap: 16px;
 }
 
 #codeby a span {
