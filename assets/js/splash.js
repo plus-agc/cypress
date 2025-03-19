@@ -1,15 +1,3 @@
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-	/* harmony export */ splashWindow: function () {
-		return /* binding */ splashWindow;
-	},
-	/* harmony export */
-});
-/* harmony import */ var _swiperOptions__WEBPACK_IMPORTED_MODULE_0__ =
-	__webpack_require__(
-		/*! ./_swiperOptions */ "./src/js/modules/_swiperOptions.js",
-	);
-
 function splashWindow() {
 	const body = document.querySelector("body");
 	const splash = document.getElementById("js-splash");
@@ -22,22 +10,33 @@ function splashWindow() {
 			hideSplash();
 		} else {
 			sessionStorage.setItem("visited", true);
-			splashLogo.classList.add("is-play");
-			splashLogo.addEventListener("animationend", () => {
-				splashEffect.classList.add("is-play");
-			});
-			splashEffect.addEventListener("animationend", hideSplash);
+			if (splashLogo) {
+				splashLogo.classList.add("is-play");
+				splashLogo.addEventListener("animationend", () => {
+					if (splashEffect) {
+						splashEffect.classList.add("is-play");
+					}
+				});
+			}
+			if (splashEffect) {
+				splashEffect.addEventListener("animationend", hideSplash);
+			}
 		}
 	}
 
 	function hideSplash() {
-		splash.classList.add("is-hide");
-		body.classList.remove("is-fixed");
-		mainVisual.classList.add("is-animated");
-		(0, _swiperOptions__WEBPACK_IMPORTED_MODULE_0__.autoplayStart)(
-			_swiperOptions__WEBPACK_IMPORTED_MODULE_0__.mvSlider,
-		);
+		if (splash) splash.classList.add("is-hide");
+		if (body) body.classList.remove("is-fixed");
+		if (mainVisual) mainVisual.classList.add("is-animated");
+
+		// `window.swiperOptions` が正しく読み込まれているかチェック
+		if (window.swiperOptions && window.swiperOptions.autoplayStart) {
+			window.swiperOptions.autoplayStart(window.swiperOptions.mvSlider);
+		} else {
+			console.error("swiperOptions が正しく読み込まれていません");
+		}
 	}
 }
 
-//# sourceURL=webpack://kineyacp/./src/js/modules/_splash.js?
+// グローバル変数に登録
+window.splashWindow = splashWindow;
