@@ -16,11 +16,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
     <!-- eir_common.js を最初にロード -->
-    <script
-      charset="utf-8"
-      src="https://ssl4.eir-parts.net/Custom/public/v5parts/9850/jp/20230905/core/eir_common.js"
-      defer
-    ></script>
+    <script src="./assets/js/eir_common.js" defer></script>
 
     <!-- CSS -->
     <link rel="stylesheet" href="./assets/css/pages/top.css" />
@@ -30,7 +26,7 @@
     <!-- 遅延読み込みするスクリプト -->
     <script src="./assets/js/main.js" defer></script>
     <script src="./assets/js/accordion.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./assets/js/splash.js" defer></script>
   </head>
 
   <body id="pagetop" class="" cz-shortcut-listen="true">
@@ -1859,7 +1855,7 @@
             charset="utf-8"
           ></script>
           <script type="text/javascript">
-            scriptLoader.setSrc(eirPassCore + "eir_common.js");
+            scriptLoader.setSrc(eirPassCore + "./assets/js/eir_common.js");
             scriptLoader.load(function () {
               setParts("file_top_001");
             }, showMaintenanceMessage);
