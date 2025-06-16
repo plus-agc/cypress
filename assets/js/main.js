@@ -1757,11 +1757,11 @@
 			var getter =
 				module && module.__esModule
 					? function () {
-							return module["default"];
-						}
+						return module["default"];
+					}
 					: function () {
-							return module;
-						};
+						return module;
+					};
 			__webpack_require__.d(getter, { a: getter });
 			return getter;
 		};

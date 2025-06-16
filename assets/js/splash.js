@@ -15,18 +15,11 @@ function splashWindow() {
 				splashLogo.addEventListener("animationend", () => {
 					if (splashEffect) {
 						splashEffect.classList.add("is-play");
-					} else {
-						console.warn("#js-splash-effect が見つかりません");
 					}
 				});
-			} else {
-				console.warn("#js-splash-logo が見つかりません");
 			}
-
 			if (splashEffect) {
 				splashEffect.addEventListener("animationend", hideSplash);
-			} else {
-				console.warn("#js-splash-effect が見つかりません（イベント未登録）");
 			}
 		}
 	}
