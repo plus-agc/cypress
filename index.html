@@ -24,10 +24,17 @@
   <!-- 遅延読み込みするスクリプト -->
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
-  <script src="./assets/js/splash.js" defer></script>
 </head>
 
 <body id="pagetop" class="">
+  <!-- splashWindow() をDOMContentLoadedで実行する -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      if (window.splashWindow) {
+        window.splashWindow();
+      }
+    });
+  </script>
   <header class="l-header">
     <h1 hidden="">株式会社 株式会社サイプレス</h1>
     <div class="l-header__logo">
@@ -1323,3 +1330,8 @@
 </body>
 
 </html>
+<!-- Splash Screen Elements (required for splash.js) -->
+<div id="js-splash">
+  <div id="js-splash-logo"></div>
+  <div id="js-splash-effect"></div>
+</div>
