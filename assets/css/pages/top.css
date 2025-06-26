@@ -2525,7 +2525,7 @@ button:focus {
 
 @media all and (min-width: 824px) {
 	.p-main-intro {
-		padding-top: 60rem;
+		padding-top: 70.4rem;
 	}
 }
 
@@ -2707,7 +2707,6 @@ button:focus {
 @media all and (min-width: 768px) {
 	.p-business {
 		padding-top: 16rem;
-		padding-bottom: 6rem;
 	}
 }
 
@@ -2731,13 +2730,12 @@ button:focus {
 
 .p-business__grid {
 	display: grid;
-	margin-bottom: 5.3333333333vw;
 }
 
 @media all and (min-width: 768px) {
 	.p-business__grid {
-		grid-template-columns: 1fr 0.5fr 0.5fr 1fr;
-		margin-bottom: 6rem;
+		grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+
 	}
 }
 
@@ -2927,6 +2925,7 @@ button:focus {
 @media not all and (min-width: 768px) {
 	.p-business__logo {
 		height: 20.2666666667vw;
+		display: none;
 	}
 }
 
