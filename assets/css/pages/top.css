@@ -4661,7 +4661,7 @@ button:focus {
 
 #ImgWrapper #img7 {
 	z-index: 7;
-	width: 100vw;
+	width: 100%;
 }
 
 #codeby {
@@ -4724,11 +4724,11 @@ button:focus {
 
 /*-------------@media (max-width: 400px)------------- */
 
-@media (max-width: 400px) {
+@media (max-width: 430px) {
 	:root {
 		/*-------------GoldenRatio (1.618) (Viewport Width 400px) Base Size 13px------------- */
 		--FontH1: 58.313vw;
-		--FontH2: 36.040vw;
+		--FontH2: 20.040vw;
 		--FontH3: 22.275vw;
 		--FontH4: 13.768vw;
 		--FontH5: 8.508vw;
@@ -4787,7 +4787,7 @@ button:focus {
 	}
 
 	#ImgWrapper #img7 {
-		height: 35vh;
+		width: 100%;
 		left: 22%;
 	}
 
@@ -4811,17 +4811,20 @@ button:focus {
 	gap: 36px;
 }
 
-/* .desc li:before {
-	content: "・";
-	display: inline-block;
-	flex-direction: row;
-} */
+.desc {
+	position: absolute;
+	z-index: 4;
+	padding: 1.5rem;
+	bottom: 0;
+}
 
 .desc li {
+	font-size: 12px;
 	line-height: 1.5;
 	margin: .09vw 0;
 	list-style-type: disc;
 	margin-left: 1.2em;
+	color: #FFF;
 }
 
 

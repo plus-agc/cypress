@@ -3151,7 +3151,7 @@ color: ##333;
 #interview #mainslide .swiper-slide .photo:before {
   content: "";
   width: 100%;
-  height: 12.6rem;
+  height: 20.6rem;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0)), to(#000));
   background: linear-gradient(rgba(0, 0, 0, 0) 0%, #000 100%);
   position: absolute;
@@ -3161,7 +3161,6 @@ color: ##333;
 }
 
 #interview #mainslide .swiper-slide .photo p {
-  position: absolute;
   z-index: 4;
   left: 1.5rem;
   bottom: 1.5rem;
@@ -3175,7 +3174,7 @@ color: ##333;
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.06em;
-  /* padding-left: 1.2rem; */
+  line-height: 1.2;
 }
 
 #interview #mainslide .swiper-slide .photo .img {
@@ -3669,7 +3668,7 @@ color: ##333;
     /*width:calc(163 / 375 * 100vw);*/
     -webkit-transform: scale(0.815);
     transform: scale(0.815);
-    width: 53.3333333333vw;
+    width: 73.3333333333vw;
     -webkit-transform-origin: top left;
     transform-origin: top left;
     -webkit-box-sizing: border-box;
@@ -3691,7 +3690,7 @@ color: ##333;
   }
 
   #interview #mainslide .swiper-slide .photo:before {
-    height: 30.9333333333vw;
+    height: 45.9333333333vw;
   }
 
   #interview #mainslide .swiper-slide .photo p {

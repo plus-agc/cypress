@@ -27,6 +27,15 @@
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/vivus/dist/vivus.min.js"></script>
+  <script>
+    new Vivus('my-svg', {
+      type: 'delayed',
+      duration: 200,
+      start: 'autostart',
+      animTimingFunction: Vivus.EASE
+    });
+  </script>
 </head>
 
 <body id="pagetop" class="">
@@ -175,8 +184,30 @@
     </h1>
     <p>Scroll Down</p>
     <!-- <img id="img7" src="assets/images/top/mv_1@2x.jpg" alt="" /> -->
-    <video id="img7" src="assets/images/top/mv_1@2x.mp4" autoplay loop muted playsinline
-      style="width:100%;height:auto;"></video>
+    <video id="img7" src="assets/images/top/mv_1@2x.mp4" autoplay loop muted playsinline></video>
+    <script>
+      // 画面幅400px以下で動画ソースを切り替え
+      function setVideoSource() {
+        const video = document.getElementById('img7');
+        if (!video) return;
+        if (window.matchMedia('(max-width: 430px)').matches) {
+          if (video.src.indexOf('mv_1@1x.mp4') === -1) {
+            video.src = 'assets/images/top/mv_1@1x.mp4';
+            video.load();
+            video.play();
+          }
+        } else {
+          if (video.src.indexOf('mv_1@2x.mp4') === -1) {
+            video.src = 'assets/images/top/mv_1@2x.mp4';
+            video.load();
+            video.play();
+          }
+        }
+      }
+      window.addEventListener('DOMContentLoaded', setVideoSource);
+      window.addEventListener('resize', setVideoSource);
+    </script>
+    // ...existing code...
 
 
     <div id="codeby">
@@ -247,6 +278,8 @@
 
               今後も全国への出店が拡大するなか、物流網もさらなる拡充を図り、全国各地のお客様にいつでも最高の鮮度と品質をお届けできるよう、配送能力を強化し続けていきます。
             </p>
+            <div id="svg-container"></div>
+            <object id="my-svg" type="image/svg+xml" data="intro_photo_1.svg"></object>
             <picture>
               <source media="(min-width: 768px)" srcset="
                     ./assets/images/top/intro_photo.png 1x,
@@ -271,154 +304,164 @@
                 data-swiper-slide-index="0">
                 <div id="slide1" data-modal="0">
                   <div class="photo">
-                    <p><span>準備<br>23:00〜2:00</span></p>
-                    <img src="/assets/images/recruit/01.webp" alt="S.M." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>準備<br>23:00〜2:00</span></p>
+                      <ul>
+                        <li>翌日メニューと顧客予測数をもとに本社で発注を確定。</li>
+                        <li>市場の仕入担当者が仕入れ計画を立て、必要な資材や機材を準備。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/01.webp" alt="S.M." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>翌日メニューと顧客予測数をもとに本社で発注を確定。</li>
-                      <li>市場の仕入担当者が仕入れ計画を立て、必要な資材や機材を準備。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 17" data-swiper-slide-index="1">
                 <div id="slide2" data-modal="1">
                   <div class="photo">
-                    <p><span>受注処理<br>2:00〜4:00</span></p>
-                    <img src="/assets/images/recruit/02.webp" alt="A.N." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>受注処理<br>2:00〜4:00</span></p>
+                      <ul>
+                        <li>店舗からの発注情報を取りまとめて、仕入担当者が仕入れリストを作成。</li>
+                        <li>仲卸との取引内容を事前確認、仕入れの調整を実施。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/02.webp" alt="A.N." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>店舗からの発注情報を取りまとめて、仕入担当者が仕入れリストを作成。</li>
-                      <li>仲卸との取引内容を事前確認、仕入れの調整を実施。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="3 / 17" data-swiper-slide-index="2">
                 <div id="slide3" data-modal="2">
                   <div class="photo">
-                    <p><span>競り・買付<br>4:00〜5:00</span></p>
-                    <img src="/assets/images/recruit/04.webp" alt="S.A." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>競り・買付<br>4:00〜5:00</span></p>
+                      <ul>
+                        <li>豊洲市場で鮮魚の競りが始まり、仕入担当者が最適な品質と価格の魚介類を厳選して購入。</li>
+                        <li>状況に応じてボリュームディスカウント等を活用し、鮮度とコストを最適化。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/04.webp" alt="S.A." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>豊洲市場で鮮魚の競りが始まり、仕入担当者が最適な品質と価格の魚介類を厳選して購入。</li>
-                      <li>状況に応じてボリュームディスカウント等を活用し、鮮度とコストを最適化。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="4 / 17" data-swiper-slide-index="3">
                 <div id="slide4" data-modal="3">
                   <div class="photo">
-                    <p><span>自社加工場での加工<br>5:00〜6:00</span></p>
-                    <img src="/assets/images/recruit/06.webp" alt="H.H." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>自社加工場での加工<br>5:00〜6:00</span></p>
+                      <ul>
+                        <li>買い付けた魚介類を自社加工場に運び込み、店舗ごとの注文に合わせて下処理を実施。</li>
+                        <li>店舗での調理工程を短縮できるよう、盛り付け直前までの加工を行う。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/06.webp" alt="H.H." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>買い付けた魚介類を自社加工場に運び込み、店舗ごとの注文に合わせて下処理を実施。</li>
-                      <li>店舗での調理工程を短縮できるよう、盛り付け直前までの加工を行う。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="5 / 17" data-swiper-slide-index="4">
                 <div id="slide5" data-modal="4">
                   <div class="photo">
-                    <p><span>配送・発送<br>6:00〜8:00</span></p>
-                    <img src="/assets/images/recruit/07.webp" alt="T.I." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>配送・発送<br>6:00〜8:00</span></p>
+                      <ul>
+                        <li>加工した鮮魚を自社トラックおよび協力運送業者に迅速に引き渡し。</li>
+                        <li>店舗に向けた即日配送を開始、首都圏および近隣地域の店舗には午前中に到着。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/07.webp" alt="T.I." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>加工した鮮魚を自社トラックおよび協力運送業者に迅速に引き渡し。</li>
-                      <li>店舗に向けた即日配送を開始、首都圏および近隣地域の店舗には午前中に到着。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="6 / 17" data-swiper-slide-index="5">
                 <div id="slide6" data-modal="5">
                   <div class="photo">
-                    <p><span>店舗到着<br>8:00〜9:00</span></p>
-                    <img src="/assets/images/recruit/08.webp" alt="K.T." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>店舗到着<br>8:00〜9:00</span></p>
+                      <ul>
+                        <li>各店舗で仕入れた鮮魚の数量や状態を確認。</li>
+                        <li>店舗スタッフが当日のメニュー提供準備を開始。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/08.webp" alt="K.T." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>各店舗で仕入れた鮮魚の数量や状態を確認。</li>
-                      <li>店舗スタッフが当日のメニュー提供準備を開始。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="7 / 17" data-swiper-slide-index="6">
                 <div id="slide7" data-modal="6">
                   <div class="photo">
-                    <p><span>仕込み作業<br>9:00〜10:00</span></p>
-                    <img src="/assets/images/recruit/09.webp" alt="N.D." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>仕込み作業<br>9:00〜10:00</span></p>
+                      <ul>
+                        <li>到着した鮮魚の最終的な調理や盛り付けを店舗スタッフが行う。</li>
+                        <li>開店準備を整え、店舗での提供体制を確立。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/09.webp" alt="N.D." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>到着した鮮魚の最終的な調理や盛り付けを店舗スタッフが行う。</li>
-                      <li>開店準備を整え、店舗での提供体制を確立。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="8 / 17" data-swiper-slide-index="7">
                 <div id="slide8" data-modal="7">
                   <div class="photo">
-                    <p><span>ランチタイム<br>11:00〜14:00</span></p>
-                    <img src="/assets/images/recruit/10.webp" alt="T.R." width="364" height="515" class="img">
-                  </div>
-                  <div class="desc">
-                    <ul>
-                      <li>ランチタイムがスタート。店舗スタッフが注文に応じて迅速に調理・提供を行う。</li>
-                      <li>提供後の顧客の反応や食材の状態を記録し、仕入れ改善に活かす。</li>
-                    </ul>
+                    <div class="desc">
+                      <p><span>ランチタイム<br>11:00〜14:00</span></p>
+                      <ul>
+                        <li>ランチタイムがスタート。店舗スタッフが注文に応じて迅速に調理・提供を行う。</li>
+                        <li>提供後の顧客の反応や食材の状態を記録し、仕入れ改善に活かす。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/10.webp" alt="T.R." width="364" height="515" class="img">
                   </div>
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="9 / 17" data-swiper-slide-index="8">
                 <div id="slide9" data-modal="8">
                   <div class="photo">
-                    <p><span>午後の仕込み・メニュー調整<br>14:00〜16:00</span></p>
-                    <img src="/assets/images/recruit/pixta_8331719.jpg" alt="T.N." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>午後の仕込み・メニュー調整<br>14:00〜16:00</span></p>
+                      <ul>
+                        <li>午後の提供に向けて再度食材のチェックと追加仕込みを実施。</li>
+                        <li>当日の売れ行きを踏まえ、ディナータイムのメニュー調整を行う。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/pixta_8331719.jpg" alt="T.N." width="364" height="515"
+                      class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>午後の提供に向けて再度食材のチェックと追加仕込みを実施。</li>
-                      <li>当日の売れ行きを踏まえ、ディナータイムのメニュー調整を行う。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="10 / 17" data-swiper-slide-index="9">
                 <div id="slide10" data-modal="9">
                   <div class="photo">
-                    <p><span>ディナータイム準備<br>16:00〜17:00</span></p>
-                    <img src="/assets/images/recruit/14.webp" alt="M.K." width="364" height="515" class="img">
+                    <div class="desc">
+                      <p><span>ディナータイム準備<br>16:00〜17:00</span></p>
+                      <ul>
+                        <li>夜のピークタイムに向けて、店舗内の調理場を再整理し、ディナー向け食材の仕込みを最終調整。</li>
+                        <li>顧客への迅速なサービス提供のため、スタッフがスタンバイし、準備完了。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/14.webp" alt="M.K." width="364" height="515" class="img">
                   </div>
-                  <div class="desc">
-                    <ul>
-                      <li>夜のピークタイムに向けて、店舗内の調理場を再整理し、ディナー向け食材の仕込みを最終調整。</li>
-                      <li>顧客への迅速なサービス提供のため、スタッフがスタンバイし、準備完了。</li>
-                    </ul>
-                  </div>
+
                 </div>
               </div><!--swiper-slide-->
               <div class="swiper-slide" role="group" aria-label="11 / 17" data-swiper-slide-index="10">
                 <div id="slide11" data-modal="10">
                   <div class="photo">
-                    <p><span>ディナータイム<br>17:00〜</span></p>
-                    <img src="/assets/images/recruit/13.webp" alt="M.Y." width="364" height="515" class="img">
-                  </div>
-                  <div class="desc">
-                    <ul>
-                      <li>本格的なディナータイムが始まり、ピーク時の迅速な調理と接客サービスを実施。</li>
-                      <li>顧客満足度を高めるために鮮度と味を最高の状態で提供し、一日の流れが完結。</li>
-                    </ul>
+                    <div class="desc">
+                      <p><span>ディナータイム<br>17:00〜</span></p>
+                      <ul>
+                        <li>本格的なディナータイムが始まり、ピーク時の迅速な調理と接客サービスを実施。</li>
+                        <li>顧客満足度を高めるために鮮度と味を最高の状態で提供し、一日の流れが完結。</li>
+                      </ul>
+                    </div>
+                    <img src="./assets/images/recruit/13.webp" alt="M.Y." width="364" height="515" class="img">
                   </div>
                 </div>
               </div><!--swiper-slide-->
@@ -997,7 +1040,7 @@
               :2024年 5月期 を終点とした、 3年間の年平均成長率</span>
           </li>
           <li class="p-data__item js-scroll-effect">
-            <h3 class="p-data__item-name p-data__item-name--data1">
+            <h3 class="p-data__item-name p-data__item-name--data2">
               EBITDAマージン比較<sup>※2</sup>
             </h3>
             <figure class="p-data__graph">
@@ -1014,7 +1057,7 @@
               :2024年 5月期</span>
           </li>
           <li class="p-data__item js-scroll-effect">
-            <h3 class="p-data__item-name p-data__item-name--data1">
+            <h3 class="p-data__item-name p-data__item-name--data3">
               ROIC比較<sup>※3</sup>
             </h3>
             <figure class="p-data__graph">
