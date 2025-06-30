@@ -2656,6 +2656,7 @@ button:focus {
 
 @media all and (min-width: 768px) {
   .p-recruit__mv {
+    margin-top: 24.6rem;
     margin-bottom: -24.6rem;
     padding-right: 3rem;
     height: 49.2rem;
@@ -3044,8 +3045,9 @@ button:focus {
 #interview {
   position: relative;
   margin-bottom: 6rem;
-  padding-bottom: 16rem;
+  padding: 16rem 0;
   z-index: 2;
+  overflow-x: hidden;
 }
 
 #interview.is-animated:before {
@@ -3056,7 +3058,7 @@ button:focus {
 #interview:before {
   content: "";
   width: 100%;
-  background-image: url("../../images./recruit.htmlbg_recruit.svg");
+  background-image: url("../../images/recruit/bg_recruit.svg");
   background-size: auto 100%;
   background-position: center bottom;
   min-height: 118.2rem;
@@ -3083,8 +3085,13 @@ button:focus {
 }
 
 #interview .p-recruit-segment__title-jpn,
-#interview .p-recruit-segment__title-eng {
-  color: #fff;
+{
+color: #113c8c;
+}
+
+#interview .p-recruit-segment__title-eng,
+{
+color: ##333;
 }
 
 #interview .p-interview__txt {
@@ -3122,9 +3129,6 @@ button:focus {
   margin-right: 7.15rem;
 }
 
-#interview #mainslide .swiper-slide .modalOpen {
-  cursor: pointer;
-}
 
 #interview #mainslide .swiper-slide .modalOpen.disable {
   cursor: auto;
@@ -3171,7 +3175,7 @@ button:focus {
   font-weight: 500;
   font-size: 1.8rem;
   letter-spacing: 0.06em;
-  padding-left: 1.2rem;
+  /* padding-left: 1.2rem; */
 }
 
 #interview #mainslide .swiper-slide .photo .img {
@@ -3319,7 +3323,7 @@ button:focus {
   width: 6rem;
   height: 6rem;
   border-radius: 50%;
-  background: url(../../images./recruit.htmlarrow.svg) center center no-repeat #113C8C;
+  background: url(../../images/recruit/arrow.svg) center center no-repeat #113C8C;
   background-size: 1.9rem;
   z-index: 10;
 }
@@ -3558,7 +3562,7 @@ button:focus {
   top: 1rem;
   width: 6rem;
   height: 6rem;
-  background: url("../../images./recruit.htmlclose.svg") 0 0 no-repeat;
+  background: url("../../images./close.svg") 0 0 no-repeat;
   background-size: 100% auto;
   cursor: pointer;
   z-index: 20;
@@ -3633,7 +3637,7 @@ button:focus {
     bottom: 48vw;
     width: 100%;
     min-height: 160vw;
-    background-image: url("../../images./recruit.htmlbg_recruit_sp.svg");
+    background-image: url("../../images./bg_recruit_sp.svg");
     background-size: auto 100%;
     background-position: center bottom;
     -webkit-animation-duration: 600ms;
@@ -3698,7 +3702,6 @@ button:focus {
 
   #interview #mainslide .swiper-slide .photo p span {
     font-size: 4.2666666667vw;
-    padding-left: 2.6666666667vw;
   }
 
   #interview #mainslide .swiper-slide .step {
@@ -3985,7 +3988,7 @@ button:focus {
   content: "";
   width: 1.9rem;
   height: 1.5rem;
-  background: url(../../images./recruit.htmlarrow.svg) 0 0 no-repeat;
+  background: url(../../images/recruit/arrow.svg) 0 0 no-repeat;
   background-size: 100% auto;
   position: absolute;
   right: 0;

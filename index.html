@@ -16,7 +16,9 @@
   <!-- eir_common.js を最初にロード -->
   <script src="./assets/js/eir_common.js" defer></script>
 
+
   <!-- CSS -->
+  <link rel="stylesheet" href="./assets/css/pages/recruit.css" />
   <link rel="stylesheet" href="./assets/css/pages/top.css" />
   <link rel="stylesheet" href="./assets/css/pages/common.css" />
   <link rel="stylesheet" href="https://use.typekit.net/inp4wft.css" />
@@ -24,6 +26,7 @@
   <!-- 遅延読み込みするスクリプト -->
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
+  <script src="./assets/js/recruit.js" defer></script>
 </head>
 
 <body id="pagetop" class="">
@@ -171,7 +174,9 @@
       <span>Everyone is so.</span>
     </h1>
     <p>Scroll Down</p>
-    <img id="img7" src="assets/images/top/output.gif" alt="" />
+    <!-- <img id="img7" src="assets/images/top/mv_1@2x.jpg" alt="" /> -->
+    <video id="img7" src="assets/images/top/mv_1@2x.mp4" autoplay loop muted playsinline
+      style="width:100%;height:auto;"></video>
 
 
     <div id="codeby">
@@ -199,7 +204,7 @@
           商品やサービスを通じて、<br class="c-break-sp" />あなたのより良いLifeを彩るため、<br />
           高い付加価値を提供し続けます。
 
-          <a href="#" class="p-main-intro__more c-arrow-link">
+          <a href="./company.html#message" class="p-main-intro__more c-arrow-link">
             <span class="c-arrow-link__icon">
               <svg class="c-arrow-link__svg" width="19" height="14">
                 <use xlink:href="#arrow"></use>
@@ -213,6 +218,245 @@
   </section>
 
   <div class="l-container">
+    <section class="p-recruit">
+      <div class="p-recruit__mv">
+        <picture>
+          <source media="(min-width: 768px)" srcset="
+                ./assets/images/top/recruit.jpg 1x,
+                ./assets/images/top/recruit.jpg 2x
+              " width="1290" height="492" />
+          <img src="./assets/images/top/recruit.jpg" srcset="./assets/images/top/recruit.jpg 2x" alt="採用情報"
+            class="p-recruit__mv-image" width="355" height="200" />
+        </picture>
+      </div>
+      <div class="p-recruit__content">
+        <div class="p-recruit__inner">
+          <section class="p-recruit_intro">
+            <h2 class="slideup js-scroll-effect">
+              <span>サイプレスの強み</span>
+              全国どこでも新鮮なままお届けする<br>即日配送システム
+            </h2>
+            <p class="slideup js-scroll-effect">
+              私たちサイプレス・ホールディングスでは、全国各地の市場で仕入れた新鮮な魚介類を、仕入れたその日のうちに各店舗へお届けしています。<br class="pci" />
+
+              早朝に買い付けた魚介類は、そのまま迅速に出荷され、午前中には店舗に到着。こうした迅速な即日配送システムによって、鮮度を最大限に維持し、「非加熱提供」など、新鮮だからこそ可能なメニュー展開を実現しています。<br
+                class="pci" />
+
+              また、私たちの物流ネットワークは今も成長を続けています。東京の豊洲市場では、自社トラックをはじめとする計7社の物流業者と連携し、大量かつスピーディーな配送を行っています。地方市場でも専属配送業者を各地に配置し、効率的かつ確実な配送体制を整備しています。<br
+                class="pci" />
+
+              今後も全国への出店が拡大するなか、物流網もさらなる拡充を図り、全国各地のお客様にいつでも最高の鮮度と品質をお届けできるよう、配送能力を強化し続けていきます。
+            </p>
+            <picture>
+              <source media="(min-width: 768px)" srcset="
+                    ./assets/images/top/intro_photo.png 1x,
+                    ./assets/images/top/intro_photo.png 2x
+                  " width="480" height="541" />
+              <img src="./assets/images/top/intro_photo.png" srcset="./assets/images/top/intro_photo.png 2x" alt=""
+                width="375" height="599" class="slideup js-scroll-effect" />
+            </picture>
+          </section>
+        </div>
+      </div>
+      <section id="interview" class="js-scroll-effect">
+        <div class="interview_inner">
+          <h2 class="p-recruit-segment__title slideup js-scroll-effect">
+            <span class="p-recruit-segment__title-jpn">豊洲市場での鮮魚仕入れから店舗提供までの流れ</span>
+            <span class="p-recruit-segment__title-eng">Flow</span>
+          </h2>
+          <div id="mainslide" class="swiper-container swiper-initialized swiper-horizontal">
+            <div class="swiper-wrapper" id="swiper-wrapper-4d0809b1d5a84463" aria-live="polite"
+              style="transition-duration: 0ms; transform: translate3d(0px, 0px, 0px); transition-delay: 0ms;">
+              <div class="swiper-slide swiper-slide-active" role="group" aria-label="1 / 17"
+                data-swiper-slide-index="0">
+                <div id="slide1" data-modal="0">
+                  <div class="photo">
+                    <p><span>準備<br>23:00〜2:00</span></p>
+                    <img src="/assets/images/recruit/01.webp" alt="S.M." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>翌日メニューと顧客予測数をもとに本社で発注を確定。</li>
+                      <li>市場の仕入担当者が仕入れ計画を立て、必要な資材や機材を準備。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 17" data-swiper-slide-index="1">
+                <div id="slide2" data-modal="1">
+                  <div class="photo">
+                    <p><span>受注処理<br>2:00〜4:00</span></p>
+                    <img src="/assets/images/recruit/02.webp" alt="A.N." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>店舗からの発注情報を取りまとめて、仕入担当者が仕入れリストを作成。</li>
+                      <li>仲卸との取引内容を事前確認、仕入れの調整を実施。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="3 / 17" data-swiper-slide-index="2">
+                <div id="slide3" data-modal="2">
+                  <div class="photo">
+                    <p><span>競り・買付<br>4:00〜5:00</span></p>
+                    <img src="/assets/images/recruit/04.webp" alt="S.A." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>豊洲市場で鮮魚の競りが始まり、仕入担当者が最適な品質と価格の魚介類を厳選して購入。</li>
+                      <li>状況に応じてボリュームディスカウント等を活用し、鮮度とコストを最適化。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="4 / 17" data-swiper-slide-index="3">
+                <div id="slide4" data-modal="3">
+                  <div class="photo">
+                    <p><span>自社加工場での加工<br>5:00〜6:00</span></p>
+                    <img src="/assets/images/recruit/06.webp" alt="H.H." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>買い付けた魚介類を自社加工場に運び込み、店舗ごとの注文に合わせて下処理を実施。</li>
+                      <li>店舗での調理工程を短縮できるよう、盛り付け直前までの加工を行う。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="5 / 17" data-swiper-slide-index="4">
+                <div id="slide5" data-modal="4">
+                  <div class="photo">
+                    <p><span>配送・発送<br>6:00〜8:00</span></p>
+                    <img src="/assets/images/recruit/07.webp" alt="T.I." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>加工した鮮魚を自社トラックおよび協力運送業者に迅速に引き渡し。</li>
+                      <li>店舗に向けた即日配送を開始、首都圏および近隣地域の店舗には午前中に到着。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="6 / 17" data-swiper-slide-index="5">
+                <div id="slide6" data-modal="5">
+                  <div class="photo">
+                    <p><span>店舗到着<br>8:00〜9:00</span></p>
+                    <img src="/assets/images/recruit/08.webp" alt="K.T." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>各店舗で仕入れた鮮魚の数量や状態を確認。</li>
+                      <li>店舗スタッフが当日のメニュー提供準備を開始。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="7 / 17" data-swiper-slide-index="6">
+                <div id="slide7" data-modal="6">
+                  <div class="photo">
+                    <p><span>仕込み作業<br>9:00〜10:00</span></p>
+                    <img src="/assets/images/recruit/09.webp" alt="N.D." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>到着した鮮魚の最終的な調理や盛り付けを店舗スタッフが行う。</li>
+                      <li>開店準備を整え、店舗での提供体制を確立。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="8 / 17" data-swiper-slide-index="7">
+                <div id="slide8" data-modal="7">
+                  <div class="photo">
+                    <p><span>ランチタイム<br>11:00〜14:00</span></p>
+                    <img src="/assets/images/recruit/10.webp" alt="T.R." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>ランチタイムがスタート。店舗スタッフが注文に応じて迅速に調理・提供を行う。</li>
+                      <li>提供後の顧客の反応や食材の状態を記録し、仕入れ改善に活かす。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="9 / 17" data-swiper-slide-index="8">
+                <div id="slide9" data-modal="8">
+                  <div class="photo">
+                    <p><span>午後の仕込み・メニュー調整<br>14:00〜16:00</span></p>
+                    <img src="/assets/images/recruit/pixta_8331719.jpg" alt="T.N." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>午後の提供に向けて再度食材のチェックと追加仕込みを実施。</li>
+                      <li>当日の売れ行きを踏まえ、ディナータイムのメニュー調整を行う。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="10 / 17" data-swiper-slide-index="9">
+                <div id="slide10" data-modal="9">
+                  <div class="photo">
+                    <p><span>ディナータイム準備<br>16:00〜17:00</span></p>
+                    <img src="/assets/images/recruit/14.webp" alt="M.K." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>夜のピークタイムに向けて、店舗内の調理場を再整理し、ディナー向け食材の仕込みを最終調整。</li>
+                      <li>顧客への迅速なサービス提供のため、スタッフがスタンバイし、準備完了。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+              <div class="swiper-slide" role="group" aria-label="11 / 17" data-swiper-slide-index="10">
+                <div id="slide11" data-modal="10">
+                  <div class="photo">
+                    <p><span>ディナータイム<br>17:00〜</span></p>
+                    <img src="/assets/images/recruit/13.webp" alt="M.Y." width="364" height="515" class="img">
+                  </div>
+                  <div class="desc">
+                    <ul>
+                      <li>本格的なディナータイムが始まり、ピーク時の迅速な調理と接客サービスを実施。</li>
+                      <li>顧客満足度を高めるために鮮度と味を最高の状態で提供し、一日の流れが完結。</li>
+                    </ul>
+                  </div>
+                </div>
+              </div><!--swiper-slide-->
+            </div><!--swiper-wrapper-->
+            <div class="pagers">
+              <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
+                aria-controls="swiper-wrapper-4d0809b1d5a84463"></div>
+              <div class="swiper-button-next" tabindex="0" role="button" aria-label="Next slide"
+                aria-controls="swiper-wrapper-4d0809b1d5a84463"></div>
+              <div class="swiper-pagination-number">
+                <span class="pagination-number-current">1</span> - <span class="pagination-number-total">17</span>
+              </div>
+              <div
+                class="swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal">
+                <span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button"
+                  aria-label="Go to slide 1" aria-current="true"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 2"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 3"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 4"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 5"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 6"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 7"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 8"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 9"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 10"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 11"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 12"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 13"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 14"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 15"></span><span class="swiper-pagination-b
+                  tabindex=" 0" role="button" aria-label="Go to slide 17"></span>
+              </div>
+            </div>
+            <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+          </div><!--mainslide-->
+        </div><!--interview_inner-->
+      </section>
+    </section>
 
     <section class="p-business js-scroll-effect">
       <header class="p-business__title c-section-title">
@@ -302,6 +546,48 @@
           <div class="p-business__text">
             <h3 class="p-business__name">
               和食を中心にした日常外食のブランド展開
+            </h3>
+          </div>
+        </a>
+        <a href="seven.html" class="p-business__item">
+          <img src="./assets/images/top/pixta_84158321.jpg" srcset="./assets/images/top/pixta_84158321.jpg" alt=""
+            class="p-business__image" />
+          <div class="p-business__overlay"></div>
+          <div class="p-business__logo">
+            <img src="./assets/images/top/icon_business_1.svg" alt=""
+              class="p-business__logo-icon p-business__logo--6" />
+          </div>
+          <div class="p-business__text">
+            <h3 class="p-business__name">
+              女性が輝き続けられるキャリア支援
+            </h3>
+          </div>
+        </a>
+        <a href="eight.html" class="p-business__item">
+          <img src="./assets/images/top/pixta_99637125.jpg" srcset="./assets/images/top/pixta_99637125.jpg" alt=""
+            class="p-business__image" />
+          <div class="p-business__overlay"></div>
+          <div class="p-business__logo">
+            <img src="./assets/images/top/icon_business_1.svg" alt=""
+              class="p-business__logo-icon p-business__logo--6" />
+          </div>
+          <div class="p-business__text">
+            <h3 class="p-business__name">
+              多様な人材が活躍できる職場環境
+            </h3>
+          </div>
+        </a>
+        <a href="nine.html" class="p-business__item">
+          <img src="./assets/images/top/pixta_74273168.jpg" srcset="./assets/images/top/pixta_74273168.jpg" alt=""
+            class="p-business__image" />
+          <div class="p-business__overlay"></div>
+          <div class="p-business__logo">
+            <img src="./assets/images/top/icon_business_1.svg" alt=""
+              class="p-business__logo-icon p-business__logo--6" />
+          </div>
+          <div class="p-business__text">
+            <h3 class="p-business__name">
+              資格取得を会社が全面的にサポート
             </h3>
           </div>
         </a>
@@ -431,7 +717,6 @@
             </div>
           </li>
         </ul>
-
         <div class="p-products__accordion js-accordion-container" style="--open-height: 603px; --collapse-height: 0px">
           <ul class="p-products__list p-products__list--collapsed js-accordion-body">
             <li class="p-products__item">
