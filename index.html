@@ -13,10 +13,6 @@
   <!-- lodash を追加 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
-  <!-- eir_common.js を最初にロード -->
-  <script src="./assets/js/eir_common.js" defer></script>
-
-
   <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/pages/recruit.css" />
   <link rel="stylesheet" href="./assets/css/pages/top.css" />
@@ -27,19 +23,7 @@
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
-  <script src="https://cdn.jsdelivr.net/npm/vivus/dist/vivus.min.js"></script>
-  <script>
-    new Vivus('my-svg', {
-      type: 'delayed',
-      duration: 200,
-      start: 'autostart',
-      animTimingFunction: Vivus.EASE
-    });
-  </script>
-</head>
-
-<body id="pagetop" class="">
-  <!-- splashWindow() をDOMContentLoadedで実行する -->
+  <script src="./assets/js/splash.js" defer></script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       if (window.splashWindow) {
@@ -47,6 +31,46 @@
       }
     });
   </script>
+  <script>
+    // 画面幅400px以下で動画ソースを切り替え
+    function setVideoSource() {
+      const video = document.getElementById('img7');
+      if (!video) return;
+      if (window.matchMedia('(max-width: 430px)').matches) {
+        if (video.src.indexOf('mv_1@1x.mp4') === -1) {
+          video.src = 'assets/images/top/mv_1@1x.mp4';
+          video.load();
+          video.play();
+        }
+      } else {
+        if (video.src.indexOf('mv_1@2x.mp4') === -1) {
+          video.src = 'assets/images/top/mv_1@2x.mp4';
+          video.load();
+          video.play();
+        }
+      }
+    }
+    window.addEventListener('DOMContentLoaded', setVideoSource);
+    window.addEventListener('resize', setVideoSource);
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const video = document.getElementById('img7');
+      const codeby = document.getElementById('codeby');
+      function showCodeby() {
+        if (codeby) codeby.style.opacity = '1';
+      }
+      if (video) {
+        video.addEventListener('canplay', showCodeby);
+        video.addEventListener('playing', showCodeby);
+        // 動画がキャッシュ済みの場合も考慮
+        if (video.readyState >= 3) showCodeby();
+      }
+    });
+  </script>
+</head>
+
+<body id="pagetop" class="">
   <header class="l-header">
     <h1 hidden="">株式会社 株式会社サイプレス</h1>
     <div class="l-header__logo">
@@ -183,33 +207,15 @@
       <span>Everyone is so.</span>
     </h1>
     <p>Scroll Down</p>
-    <!-- <img id="img7" src="assets/images/top/mv_1@2x.jpg" alt="" /> -->
+    <div id="video-cover" style="
+    position:absolute;
+    left:0;top:0;width:100%;height:100%;
+    background:#113c8c;
+    z-index:2;
+    transition:opacity 0.5s;
+    pointer-events:none;
+  "></div>
     <video id="img7" src="assets/images/top/mv_1@2x.mp4" autoplay loop muted playsinline></video>
-    <script>
-      // 画面幅400px以下で動画ソースを切り替え
-      function setVideoSource() {
-        const video = document.getElementById('img7');
-        if (!video) return;
-        if (window.matchMedia('(max-width: 430px)').matches) {
-          if (video.src.indexOf('mv_1@1x.mp4') === -1) {
-            video.src = 'assets/images/top/mv_1@1x.mp4';
-            video.load();
-            video.play();
-          }
-        } else {
-          if (video.src.indexOf('mv_1@2x.mp4') === -1) {
-            video.src = 'assets/images/top/mv_1@2x.mp4';
-            video.load();
-            video.play();
-          }
-        }
-      }
-      window.addEventListener('DOMContentLoaded', setVideoSource);
-      window.addEventListener('resize', setVideoSource);
-    </script>
-    // ...existing code...
-
-
     <div id="codeby">
       <a target="_blank" href="https://cyp-jp.com/">
         <span>食の喜びを 全ての人へ</span>
