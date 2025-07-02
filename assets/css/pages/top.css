@@ -2964,6 +2964,7 @@ button:focus {
 		animation-duration: 320ms;
 		-webkit-animation-timing-function: ease-out;
 		animation-timing-function: ease-out;
+		width: calc(100% - 70%);
 	}
 }
 
@@ -3139,8 +3140,10 @@ button:focus {
 	.p-products__visual {
 		display: block;
 		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
 		right: 83.6rem;
-		width: 102.9rem;
+		width: 62rem;
 		height: auto;
 		margin-bottom: 0;
 	}
@@ -3192,7 +3195,7 @@ button:focus {
 		-webkit-box-align: stretch;
 		-ms-flex-align: stretch;
 		align-items: stretch;
-		margin-bottom: 4.8rem;
+		margin-bottom: 2.8rem;
 		padding-left: 0;
 		padding-right: 0;
 		grid-column: 1 / 2;

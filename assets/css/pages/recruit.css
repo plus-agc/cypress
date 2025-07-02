@@ -2648,10 +2648,9 @@ button:focus {
 }
 
 .p-recruit__mv {
-  max-width: 1440px;
+  width: 100%;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 5.3333333333vw;
 }
 
 @media all and (min-width: 768px) {
