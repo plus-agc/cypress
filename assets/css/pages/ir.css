@@ -2393,8 +2393,8 @@ button:focus {
 	max-width: 120rem;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 5.3333333333vw;
-	padding-left: 5.3333333333vw;
+	padding-right: 10.6666666667vw;
+	padding-left: 10.6666666667vw;
 	padding-top: 3.2vw;
 }
 
@@ -2420,7 +2420,7 @@ button:focus {
 	max-width: 1440px;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 5.3333333333vw;
+
 }
 
 @media all and (min-width: 768px) {
@@ -2484,7 +2484,7 @@ button:focus {
 
 .p-ir-segment {
 	background-color: #fff;
-	padding: 10.6666666667vw 5.3333333333vw;
+	padding: 10.6666666667vw;
 }
 
 @media all and (min-width: 768px) {

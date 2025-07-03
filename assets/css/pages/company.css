@@ -3482,12 +3482,12 @@ button:focus {
   }
 
   #sustainability .p-sustainability-tab {
-    margin-left: -5.3333333333vw;
+    margin-left: -5.333333vw;
     margin-right: -5.3333333333vw;
   }
 
   #sustainability .p-sustainability-tab>div {
-    width: 32vw;
+    width: 29vw;
     height: 12.2666666667vw;
     font-size: 3.2vw;
     line-height: 1.4;
@@ -3643,6 +3643,7 @@ button:focus {
   justify-content: center;
   align-items: center;
   gap: 36px;
+  box-sizing: border-box;
 }
 
 @media(max-width:430px) {
@@ -3653,6 +3654,7 @@ button:focus {
 
 .cta__inner div:nth-of-type(1) {
   flex: 2;
+  width: 100%;
 }
 
 .cta__inner div:nth-of-type(1) img {
