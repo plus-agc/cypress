@@ -4586,7 +4586,7 @@ button:focus {
 
 @media(max-width:400px) {
 	#ImgWrapper h1 {
-		font-size: var(--FontH3);
+		font-size: var(--FontH2);
 	}
 }
 
