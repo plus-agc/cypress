@@ -4681,6 +4681,7 @@ button:focus {
 	color: var(--ColorWhiteB);
 	display: flex;
 	gap: 16px;
+	z-index: 10
 }
 
 @media (max-width:768px) {

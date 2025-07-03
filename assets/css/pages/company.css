@@ -3672,3 +3672,27 @@ button:focus {
   width: fit-content;
   margin: 0 auto;
 }
+
+.p-company-message {
+  display: flex;
+  gap: 6vw;
+  flex-wrap: wrap;
+}
+
+.p-company-message img {
+  width: 12vw;
+}
+
+.p-company-message__content {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: start;
+  justify-content: space-between;
+}
+
+.p-company-message__content p {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.8;
+}
