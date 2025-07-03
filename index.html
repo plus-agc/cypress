@@ -24,6 +24,31 @@
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
   <script src="./assets/js/splash.js" defer></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
+    defer></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const players = document.querySelectorAll('dotlottie-player');
+
+      if (players.length === 0) return;
+
+      // 全プレイヤーを最初は停止
+      players.forEach(player => player.stop());
+
+      // 1つのObserverで全てのプレイヤーを監視
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.play();
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      // 全プレイヤーを監視対象に追加
+      players.forEach(player => observer.observe(player));
+    });
+  </script>
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       if (window.splashWindow) {
@@ -327,7 +352,7 @@
       <section id="interview" class="js-scroll-effect">
         <div class="interview_inner">
           <h2 class="p-recruit-segment__title slideup js-scroll-effect">
-            <span class="p-recruit-segment__title-jpn">豊洲市場での鮮魚仕入れから店舗提供までの流れ</span>
+            <span class="p-recruit-segment__title-jpn">仕入れから提供までの流れ</span>
             <span class="p-recruit-segment__title-eng">Flow</span>
           </h2>
           <div id="mainslide" class="swiper-container swiper-initialized swiper-horizontal">
@@ -1001,7 +1026,7 @@
     <section class="p-data js-scroll-effect">
       <div class="p-data__inner">
         <header class="p-data__title c-section-title">
-          <span class="c-section-title__jpn">競合と比較し、高水準の成長性・収益性・効率性</span>
+          <span class="c-section-title__jpn">高水準の成長性・収益性・効率性</span>
           <h2 class="c-section-title__eng">Data</h2>
         </header>
         <ul class="p-data__list">
@@ -1010,8 +1035,8 @@
               売上成長率比較<sup>※1</sup>
             </h3>
             <figure class="p-data__graph">
-              <img src="./assets/images/top/data_graph.svg" srcset="./assets/images/top/data_graph.svg 2x" width="314"
-                height="330" alt="売上高構成比のグラフ" class="p-data__graph-image" />
+              <dotlottie-player src="https://lottie.host/bd454840-a2e3-4a02-a359-efef21f5071c/e7lx7n8vyB.lottie"
+                background="transparent" speed="0.5" style="width: 314px; height: 330px"></dotlottie-player>
             </figure>
             <div class="p-data__item-column">
               <p class="p-data__item-label">サイプレス</p>
@@ -1027,8 +1052,8 @@
               EBITDAマージン比較<sup>※2</sup>
             </h3>
             <figure class="p-data__graph">
-              <img src="./assets/images/top/data_graph_2.svg" srcset="./assets/images/top/data_graph_2.svg 2x"
-                width="314" height="330" alt="売上高構成比のグラフ" class="p-data__graph-image" />
+              <dotlottie-player src="https://lottie.host/b734058d-e29a-4ea7-ba82-be05eb945a18/fsT3YI6MoW.lottie"
+                background="transparent" speed="0.5" style="width: 314px; height: 330px"></dotlottie-player>
             </figure>
             <div class="p-data__item-column">
               <p class="p-data__item-label">サイプレス</p>
@@ -1044,8 +1069,8 @@
               ROIC比較<sup>※3</sup>
             </h3>
             <figure class="p-data__graph">
-              <img src="./assets/images/top/data_graph_3.svg" srcset="./assets/images/top/data_graph_3.svg 2x"
-                width="314" height="330" alt="売上高構成比のグラフ" class="p-data__graph-image" />
+              <dotlottie-player src="https://lottie.host/bd27430b-89e2-4216-8cf9-cd0cbebaab13/ZDveHJbxXj.lottie"
+                background="transparent" speed="0.5" style="width: 314px; height: 330px"></dotlottie-player>
             </figure>
             <div class="p-data__item-column">
               <p class="p-data__item-label">サイプレス</p>
@@ -1162,7 +1187,7 @@
   <div class="cta">
     <div class="cta__inner">
       <div>
-        <img src="assets/images/top/cta.svg" alt="" width="100%" />
+        <img src="assets/images/top/cta.svg" alt="" />
       </div>
       <div>
         <a href="./contact.html">

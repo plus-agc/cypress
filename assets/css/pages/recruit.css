@@ -2427,7 +2427,7 @@ button:focus {
 .l-footer-menu__link {
   color: #fff;
   font-weight: 700;
-  font-size: 4.2666666667vw;
+  font-size: 3vw;
   letter-spacing: 0.06em;
 }
 
@@ -2865,9 +2865,9 @@ button:focus {
   }
 
   .p-recruit_intro h2 {
-    padding-left: 5.3333333333vw;
-    padding-right: 5.3333333333vw;
-    font-size: 8vw;
+    padding-left: 10.6666666667vw;
+    padding-right: 10.6666666667vw;
+    font-size: 7vw;
     line-height: 1.6;
     padding-bottom: 9.3333333333vw;
   }
@@ -2878,8 +2878,8 @@ button:focus {
   }
 
   .p-recruit_intro p {
-    padding-left: 5.3333333333vw;
-    padding-right: 5.3333333333vw;
+    padding-left: 10.6666666667vw;
+    padding-right: 10.6666666667vw;
     font-size: 3.7333333333vw;
     line-height: 2;
     max-width: 100%;
@@ -2887,9 +2887,11 @@ button:focus {
 
   .p-recruit_intro img {
     padding-top: 16vw;
-    width: 100%;
     height: auto;
     position: static;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
   }
 }
 
@@ -3649,7 +3651,7 @@ color: ##333;
 
   #interview .p-recruit-segment__title {
     margin-bottom: 9.3333333333vw;
-    padding-left: 5.3333333333vw;
+    padding-left: 10.6666666667vw;
   }
 
   #interview .p-interview__txt {
@@ -3660,7 +3662,7 @@ color: ##333;
 
   #interview #mainslide {
     overflow: hidden;
-    margin-left: 3.7333333333vw;
+    margin-left: 10.6666666667vw;
   }
 
   #interview #mainslide .swiper-slide {
@@ -4704,19 +4706,4 @@ color: ##333;
   opacity: 1;
   -webkit-transform: translateY(0);
   transform: translateY(0);
-}
-
-.cta__inner {
-  background: #113c8c;
-  width: calc(100% - 32px);
-  max-width: 1340px;
-  height: 500px;
-  margin: 64px auto;
-  border-radius: 16px;
-  padding: 32px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 36px;
 }

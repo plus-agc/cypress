@@ -2107,7 +2107,7 @@ button:focus {
 .l-footer-menu__link {
 	color: #fff;
 	font-weight: 700;
-	font-size: 4.2666666667vw;
+	font-size: 3vw;
 	letter-spacing: 0.06em;
 }
 
@@ -2300,7 +2300,7 @@ button:focus {
 .p-main-visual {
 	position: relative;
 	z-index: 3;
-	padding-top: calc(100dvh - 112vw);
+	padding-top: calc(100dvh - 180vw);
 	padding-bottom: 85.3333333333vw;
 	margin-bottom: -85.3333333333vw;
 }
@@ -2422,7 +2422,8 @@ button:focus {
 .p-main-visual__text {
 	position: absolute;
 	top: 0;
-	left: 10.6666666667vw;
+	left: 50%;
+	transform: translateX(-50%);
 	z-index: 3;
 	display: -webkit-box;
 	display: -ms-flexbox;
@@ -2432,12 +2433,14 @@ button:focus {
 	-ms-flex-direction: column;
 	flex-direction: column;
 	height: 100%;
-	font-size: 14.4vw;
+	font-size: 10.4vw;
+	width: max-content;
 }
 
 @media all and (min-width: 768px) {
 	.p-main-visual__text {
 		font-size: 10.6666666667vw;
+		transform: translateX(0);
 	}
 }
 
@@ -2461,13 +2464,6 @@ button:focus {
 	padding-top: 6.4vw;
 	font-weight: 700;
 	line-height: 1.37;
-}
-
-@media all and (min-width: 768px) {
-	.p-main-visual__sticky {
-		top: 8vw;
-		padding-top: 3.2vw;
-	}
 }
 
 @media all and (min-width: 824px) {
@@ -2698,8 +2694,8 @@ button:focus {
 @media not all and (min-width: 768px) {
 	.p-business {
 		padding-top: 26.6666666667vw;
-		padding-right: 2.6666666667vw;
-		padding-left: 2.6666666667vw;
+		padding-right: 10.6666666667vw;
+		padding-left: 10.6666666667vw;
 		padding-bottom: 26.6666666667vw;
 	}
 }
@@ -3156,8 +3152,8 @@ button:focus {
 
 @media not all and (min-width: 768px) {
 	.p-products__title {
-		padding-left: 5.3333333333vw;
-		padding-right: 5.3333333333vw;
+		padding-left: 10.6666666667vw;
+		padding-right: 10.6666666667vw;
 		margin-bottom: 16vw;
 	}
 }
@@ -3179,8 +3175,8 @@ button:focus {
 	grid-template-columns: 100%;
 	grid-row-gap: 6.4vw;
 	margin-bottom: 10.6666666667vw;
-	padding-left: 5.3333333333vw;
-	padding-right: 5.3333333333vw;
+	padding-left: 10.6666666667vw;
+	padding-right: 10.6666666667vw;
 	grid-template-columns: 1fr 1fr 1fr;
 	gap: 1rem;
 }
@@ -3532,8 +3528,8 @@ button:focus {
 	max-width: 120rem;
 	margin-right: auto;
 	margin-left: auto;
-	padding-left: 5.3333333333vw;
-	padding-right: 5.3333333333vw;
+	padding-left: 10.6666666667vw;
+	padding-right: 10.6666666667vw;
 }
 
 @media all and (min-width: 768px) {
@@ -3802,7 +3798,7 @@ button:focus {
 	font-weight: 500;
 	letter-spacing: -0.02em;
 	line-height: 1;
-	text-align: right;
+	text-align: center;
 	font-size: 14.9333333333vw;
 	margin-right: auto;
 	margin-left: auto;
@@ -3853,7 +3849,7 @@ button:focus {
 }
 
 .p-data__item-count {
-	font-size: 24vw;
+	font-size: 14vw;
 	font-family: var(--font-poppins);
 	font-weight: 500;
 }
@@ -3997,8 +3993,8 @@ button:focus {
 }
 
 .p-news__inner {
-	padding-left: 5.3333333333vw;
-	padding-right: 5.3333333333vw;
+	padding-left: 10.6666666667vw;
+	padding-right: 10.6666666667vw;
 }
 
 @media all and (min-width: 768px) {
@@ -4030,12 +4026,13 @@ button:focus {
 
 .p-news__grid {
 	display: grid;
-	grid-template-columns: repeat(2, 43.2vw);
+	grid-template-columns: 1fr 1fr;
 	-webkit-box-pack: justify;
 	-ms-flex-pack: justify;
 	justify-content: space-between;
 	grid-row-gap: 7.4666666667vw;
 	margin-bottom: 6.4vw;
+	gap: 1rem;
 }
 
 @media all and (min-width: 768px) {
@@ -4253,8 +4250,8 @@ button:focus {
 	max-width: 120rem;
 	margin-right: auto;
 	margin-left: auto;
-	padding-right: 5.3333333333vw;
-	padding-left: 5.3333333333vw;
+	padding-right: 10.6666666667vw;
+	padding-left: 10.6666666667vw;
 }
 
 @media all and (min-width: 768px) {
@@ -4731,7 +4728,7 @@ button:focus {
 	:root {
 		/*-------------GoldenRatio (1.618) (Viewport Width 400px) Base Size 13px------------- */
 		--FontH1: 58.313vw;
-		--FontH2: 20.040vw;
+		--FontH2: 13.04vw;
 		--FontH3: 22.275vw;
 		--FontH4: 13.768vw;
 		--FontH5: 8.508vw;
@@ -4799,12 +4796,18 @@ button:focus {
 	}
 }
 
+.cta {
+	padding-right: 10.6666666667vw;
+	padding-left: 10.6666666667vw;
+}
+
 .cta__inner {
 	background: #113c8c;
-	width: calc(100% - 32px);
+	width: fit-content;
 	max-width: 1340px;
-	height: 500px;
-	margin: 64px auto;
+	max-height: 500px;
+	height: auto;
+	margin: 64px auto 88px auto;
 	border-radius: 16px;
 	padding: 32px;
 	display: flex;
@@ -4812,6 +4815,32 @@ button:focus {
 	justify-content: center;
 	align-items: center;
 	gap: 36px;
+}
+
+@media(max-width:430px) {
+	.cta__inner {
+		flex-direction: column;
+	}
+}
+
+.cta__inner div:nth-of-type(1) {
+	flex: 2;
+}
+
+.cta__inner div:nth-of-type(1) img {
+	width: 80%;
+	display: block;
+	margin: 0 auto;
+}
+
+.cta__inner div:nth-of-type(2) {
+	flex: 2;
+}
+
+.cta__inner div a {
+	display: block;
+	width: fit-content;
+	margin: 0 auto;
 }
 
 .desc {

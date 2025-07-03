@@ -1983,7 +1983,7 @@ button:focus {
 .l-footer-menu__link {
   color: #fff;
   font-weight: 700;
-  font-size: 4.2666666667vw;
+  font-size: 3vw;
   letter-spacing: 0.06em;
 }
 
@@ -2180,8 +2180,8 @@ button:focus {
   max-width: 120rem;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 5.3333333333vw;
-  padding-left: 5.3333333333vw;
+  padding-right: 10.6666666667vw;
+  padding-left: 10.6666666667vw;
   padding-top: 3.2vw;
 }
 
@@ -2207,7 +2207,7 @@ button:focus {
   max-width: 1440px;
   margin-right: auto;
   margin-left: auto;
-  padding-right: 5.3333333333vw;
+  /* padding-right: 5.3333333333vw; */
 }
 
 @media all and (min-width: 768px) {
@@ -2424,8 +2424,8 @@ button:focus {
 @media all and (max-width: 767px) {
   #profile {
     margin-top: 20vw;
-    padding-left: 5.3333333333vw;
-    padding-right: 5.3333333333vw;
+    padding-left: 10.6666666667vw;
+    padding-right: 10.6666666667vw;
   }
 }
 
@@ -2670,8 +2670,8 @@ button:focus {
   .p-company-segment {
     margin-top: 21.3333333333vw;
     padding-bottom: 21.3333333333vw;
-    padding-left: 5.3333333333vw;
-    padding-right: 5.3333333333vw;
+    padding-left: 10.6666666667vw;
+    padding-right: 10.6666666667vw;
   }
 }
 
@@ -3623,12 +3623,19 @@ button:focus {
   }
 }
 
+.cta {
+  padding-right: 10.6666666667vw;
+  padding-left: 10.6666666667vw;
+}
+
+
 .cta__inner {
   background: #113c8c;
-  width: calc(100% - 32px);
+  width: fit-content;
   max-width: 1340px;
-  height: 500px;
-  margin: 64px auto;
+  max-height: 500px;
+  height: auto;
+  margin: 64px auto 88px auto;
   border-radius: 16px;
   padding: 32px;
   display: flex;
@@ -3636,4 +3643,30 @@ button:focus {
   justify-content: center;
   align-items: center;
   gap: 36px;
+}
+
+@media(max-width:430px) {
+  .cta__inner {
+    flex-direction: column;
+  }
+}
+
+.cta__inner div:nth-of-type(1) {
+  flex: 2;
+}
+
+.cta__inner div:nth-of-type(1) img {
+  width: 80%;
+  display: block;
+  margin: 0 auto;
+}
+
+.cta__inner div:nth-of-type(2) {
+  flex: 2;
+}
+
+.cta__inner div a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
 }

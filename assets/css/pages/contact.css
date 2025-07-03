@@ -1618,7 +1618,7 @@ button:focus {
 .l-footer-menu__link {
 	color: #fff;
 	font-weight: 700;
-	font-size: 4.2666666667vw;
+	font-size: 3vw;
 	letter-spacing: 0.06em;
 }
 
@@ -2886,7 +2886,7 @@ button:focus {
 	width: calc(100% - 32px);
 	max-width: 1340px;
 	height: 500px;
-	margin: 64px auto;
+	margin: 64px auto 88px auto;
 	border-radius: 16px;
 	padding: 32px;
 	display: flex;
