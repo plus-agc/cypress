@@ -3679,8 +3679,13 @@ button:focus {
   flex-wrap: wrap;
 }
 
-.p-company-message img {
+.p-company-message__message {
   width: 12vw;
+}
+
+.p-company-message__sign {
+  width: 20vw;
+  align-self: end;
 }
 
 .p-company-message__content {
@@ -3688,11 +3693,70 @@ button:focus {
   flex: 1;
   flex-direction: column;
   align-items: start;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .p-company-message__content p {
-  font-size: 20px;
+  font-size: 1.8rem;
   font-weight: 400;
   line-height: 1.8;
+}
+
+.p-company-message__title {
+  margin-bottom: 0;
+}
+
+.p-company-message__title span {
+  font-size: 5rem;
+  font-weight: 600;
+}
+
+@media(max-width:430px) {
+  .p-company-message {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .p-company-message__content p {
+    font-size: 3.333336vw;
+  }
+
+  .p-company-message__title {
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
+  .p-company-message__title span {
+    font-size: 6.333337vw;
+  }
+
+  .p-company-message__message {
+    width: 20vw;
+  }
+
+  .p-company-message__sign {
+    width: 40vw;
+    align-self: end;
+    margin-top: 3rem;
+  }
+}
+
+.pci {
+  display: inline-block;
+}
+
+.spi {
+  display: none;
+}
+
+@media all and (max-width: 767px) {
+  .pci {
+    display: none;
+  }
+
+  .spi {
+    display: inline-block;
+  }
 }
