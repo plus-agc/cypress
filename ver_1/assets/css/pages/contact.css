@@ -698,7 +698,7 @@ button:focus {
 
 @media all and (min-width: 768px) {
 	.l-header__logo {
-		height: 6rem;
+		height: 4rem;
 	}
 }
 
