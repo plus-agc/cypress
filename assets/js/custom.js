@@ -1,122 +1,236 @@
-// 画面幅400px以下で動画ソースを切り替え
-function setVideoSource() {
-    const video = document.getElementById('img7');
-    if (!video) return;
-    if (window.matchMedia('(max-width: 430px)').matches) {
-        if (video.src.indexOf('mv_1@1x.mp4') === -1) {
-            video.src = 'assets/images/top/mv_1@1x.mp4';
-            video.load();
-            video.play();
-        }
-    } else {
-        if (video.src.indexOf('mv_1@2x.mp4') === -1) {
-            video.src = 'assets/images/top/mv_1@2x.mp4';
-            video.load();
-            video.play();
+// 環境設定
+const ENV = {
+    VIDEO_PATH: 'assets/images/top',
+    VIDEO_1X: 'mv_1@1x.mp4',
+    VIDEO_2X: 'mv_1@2x.mp4',
+    MOBILE_BREAKPOINT: 430
+};
+
+// エラーハンドリング
+function handleError(error, message = 'An error occurred') {
+    console.error(`${message}:`, error);
+}
+
+// ユーティリティ関数
+const utils = {
+    isMobile: () => window.innerWidth <= ENV.MOBILE_BREAKPOINT,
+    getVideoPath: () => utils.isMobile() ? ENV.VIDEO_1X : ENV.VIDEO_2X,
+    getVideoElement: () => document.getElementById('img7'),
+    getCodebyElement: () => document.getElementById('codeby')
+};
+
+// 動画管理
+const videoManager = {
+    setup: () => {
+        const video = utils.getVideoElement();
+        if (!video) return;
+
+        const currentPath = video.src.split('/').pop();
+        const targetPath = utils.getVideoPath();
+
+        if (currentPath !== targetPath) {
+            try {
+                video.src = `${ENV.VIDEO_PATH}/${targetPath}`;
+                video.load();
+                video.play();
+            } catch (error) {
+                handleError(error, 'Failed to set video source');
+            }
         }
     }
-}
-document.addEventListener('DOMContentLoaded', function () {
-    // 動画ソースの設定
-    setVideoSource();
+};
 
-    // dotlottie-playerの設定
-    const players = document.querySelectorAll('dotlottie-player');
-    if (players.length > 0) {
-        // 全プレイヤーを最初は停止
-        players.forEach(player => player.stop());
+// アニメーション管理
+class AnimationManager {
+    constructor() {
+        this.players = [];
+        this.observer = null;
+        this.initialize();
+    }
 
-        // 1つのObserverで全てのプレイヤーを監視
-        const observer = new IntersectionObserver((entries) => {
+    initialize() {
+        this.players = Array.from(document.querySelectorAll('dotlottie-player'));
+        this.setupPlayers();
+        this.setupObserver();
+    }
+
+    setupPlayers() {
+        this.players.forEach(player => {
+            try {
+                player.stop();
+            } catch (error) {
+                handleError(error, 'Failed to stop player');
+            }
+        });
+    }
+
+    setupObserver() {
+        this.observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.play();
-                    observer.unobserve(entry.target);
+                    try {
+                        entry.target.play();
+                        this.observer.unobserve(entry.target);
+                    } catch (error) {
+                        handleError(error, 'Failed to play animation');
+                    }
                 }
             });
         }, { threshold: 0.5 });
 
-        // 全プレイヤーを監視対象に追加
-        players.forEach(player => observer.observe(player));
+        this.players.forEach(player => this.observer.observe(player));
     }
+}
 
-    // splashWindowの設定
-    if (window.splashWindow) {
-        window.splashWindow();
+// スプラッシュウィンドウ管理
+const splashManager = {
+    init: () => {
+        if (typeof window.splashWindow === 'function') {
+            try {
+                window.splashWindow();
+            } catch (error) {
+                handleError(error, 'Failed to initialize splash window');
+            }
+        }
     }
+};
 
-    // 動画とcodebyの設定
-    const video = document.getElementById('img7');
-    const codeby = document.getElementById('codeby');
-    function showCodeby() {
-        if (codeby) codeby.style.opacity = '1';
-    }
-    if (video) {
+// コードバイ管理
+const codebyManager = {
+    setup: () => {
+        const video = utils.getVideoElement();
+        const codeby = utils.getCodebyElement();
+        if (!video || !codeby) return;
+
+        const showCodeby = () => {
+            codeby.style.opacity = '1';
+        };
+
         video.addEventListener('canplay', showCodeby);
         video.addEventListener('playing', showCodeby);
-        // 動画がキャッシュ済みの場合も考慮
-        if (video.readyState >= 3) showCodeby();
+
+        if (video.readyState >= 3) {
+            showCodeby();
+        }
+    }
+};
+
+// イベントハンドラー
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        videoManager.setup();
+        new AnimationManager();
+        splashManager.init();
+        codebyManager.setup();
+    } catch (error) {
+        handleError(error, 'Failed to initialize DOMContentLoaded handlers');
     }
 });
 
-// リサイズイベントリスナーの設定
-window.addEventListener('resize', setVideoSource);
+window.addEventListener('resize', () => {
+    try {
+        videoManager.setup();
+    } catch (error) {
+        handleError(error, 'Failed to handle resize event');
+    }
+});
 
 
-gsap.registerPlugin(ScrollTrigger);
+// GSAP設定
+const gsapConfig = {
+    scrollTrigger: {
+        trigger: "#ImgWrapper",
+        start: "0% 0%",
+        end: "100% 0%",
+        pin: "#ImgWrapper",
+        scrub: 2.2
+    }
+};
 
-//---------------------Landing Page ScrollTrigger---------------------
-function LandingPageScrollTrigger() {
-    gsap.to("body", {
-        // LoadingAnimation---------------------
-        opacity: 1,
-        duration: 1.3,
-    }); // /LoadingAnimation---------------------
+// アニメーション管理
+class AnimationController {
+    constructor() {
+        this.timeline = null;
+        this.init();
+    }
 
-    $("#codeby a").mouseenter(function () {
-        // HoverAnimation---------------------
-        gsap.to("#ImgWrapper", { backgroundColor: "#f0f0f0" });
-        gsap.to("#codeby a", { color: "#113C8C" });
-        gsap.to("#codeby a span", { color: "#113C8C" });
-    });
-    $("#codeby a").mouseout(function () {
-        gsap.to("#ImgWrapper", { backgroundColor: "#000000" });
-        gsap.to("#codeby a", { color: "#e6e6e6" });
-        gsap.to("#codeby a span", { color: "#f0f0f0" });
-    }); // /HoverAnimation---------------------
+    init() {
+        // GSAPの初期化
+        gsap.registerPlugin(ScrollTrigger);
 
-    let LandingPageScrollTrigger = gsap.timeline({
-        scrollTrigger: {
-            trigger: "#ImgWrapper",
-            start: "0% 0%",
-            end: "100% 0%",
-            pin: "#ImgWrapper",
-            scrub: 2.2,
-        },
-    });
+        // ローディングアニメーション
+        gsap.to("body", {
+            opacity: 1,
+            duration: 1.3
+        });
 
-    // メイン画像のアニメーション（img7のみ）
-    LandingPageScrollTrigger.to(
-        "#ImgWrapper #img7",
-        { transform: "translateZ(4500px) translateX(-1000px)" },
-        0
-    ).from("#codeby a", { y: 130, opacity: 0 }, 0.31);
+        // ホバーイベントの設定
+        this.setupHoverEvents();
 
-    // テキスト要素を非表示にするアニメーションを追加
-    LandingPageScrollTrigger.to(
-        "#ImgWrapper h1",
-        { opacity: 0, duration: 0.5 },
-        0
-    ) // "EAT to live. Everyone is so."
-        .to("#ImgWrapper p", { opacity: 0, duration: 0.5 }, 0) // "Scroll Down"
-        .to("#codeby a", { opacity: 0, duration: 0.5 }, 0.1); // "CYPRESS HOLDINGS"
+        // スクロールトリガーの設定
+        this.setupScrollTrigger();
+    }
+
+    setupHoverEvents() {
+        const codebyLink = document.querySelector("#codeby a");
+        if (!codebyLink) return;
+
+        const handleMouseEnter = () => {
+            gsap.to("#ImgWrapper", { backgroundColor: "#f0f0f0" });
+            gsap.to("#codeby a", { color: "#113C8C" });
+            gsap.to("#codeby a span", { color: "#113C8C" });
+        };
+
+        const handleMouseLeave = () => {
+            gsap.to("#ImgWrapper", { backgroundColor: "#000000" });
+            gsap.to("#codeby a", { color: "#e6e6e6" });
+            gsap.to("#codeby a span", { color: "#f0f0f0" });
+        };
+
+        codebyLink.addEventListener('mouseenter', handleMouseEnter);
+        codebyLink.addEventListener('mouseleave', handleMouseLeave);
+    }
+
+    setupScrollTrigger() {
+        this.timeline = gsap.timeline({
+            scrollTrigger: gsapConfig.scrollTrigger
+        });
+
+        // メイン画像のアニメーション
+        this.timeline.to("#ImgWrapper #img7", {
+            transform: "translateZ(4500px) translateX(-1000px)",
+            duration: 1
+        }, 0)
+            .from("#codeby a", {
+                y: 130,
+                opacity: 0,
+                duration: 0.31
+            }, 0.31);
+
+        // テキスト要素のアニメーション
+        this.timeline.to("#ImgWrapper h1", {
+            opacity: 0,
+            duration: 0.5
+        }, 0)
+            .to("#ImgWrapper p", {
+                opacity: 0,
+                duration: 0.5
+            }, 0)
+            .to("#codeby a", {
+                opacity: 0,
+                duration: 0.5
+            }, 0.1);
+    }
 }
 
-//---------------------/Landing Page ScrollTrigger---------------------
-
-window.onload = () => {
-    LandingPageScrollTrigger();
-};
+// 初期化
+document.addEventListener('DOMContentLoaded', () => {
+    try {
+        new AnimationController();
+    } catch (error) {
+        handleError(error, 'Failed to initialize animation controller');
+    }
+});
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -178,7 +292,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 // 既存のコードを削除または置き換えて、以下のコードに変更
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', () => {
     // 既存のモーダル機能を初期化
     const modal = document.getElementById('imageModal');
     const modalImg = modal.querySelector('img');
@@ -192,13 +306,11 @@ document.addEventListener('DOMContentLoaded', function () {
     let startY = 0;
     let translateX = 0;
     let translateY = 0;
-    let lastTranslateX = 0;
-    let lastTranslateY = 0;
     let isDragging = false;
     let isPinching = false; // ピンチ操作中かどうかのフラグ
 
     // 画像クリックでモーダルを開く
-    function openModal(src, alt = '') {
+    const openModal = (src, alt = '') => {
         modalImg.src = src;
         modalImg.alt = alt;
 
@@ -212,10 +324,10 @@ document.addEventListener('DOMContentLoaded', function () {
         requestAnimationFrame(() => {
             resetTransform(true); // isOpeningフラグを立てて初期化
         });
-    }
+    };
 
     // モーダルを閉じる
-    function closeModal() {
+    const closeModal = () => {
         modal.classList.remove('show');
         document.body.style.overflow = '';
         // transitionの完了を待ってから画像をリセット
@@ -223,11 +335,10 @@ document.addEventListener('DOMContentLoaded', function () {
             modal.style.display = 'none'; // 先に非表示にする
             resetTransform(false);
         }, 300);
-    }
-
+    };
 
     // トランスフォームをリセット
-    function resetTransform(isOpening = false) {
+    const resetTransform = (isOpening = false) => {
         scale = 1;
         lastScale = 1;
         translateX = 0;
@@ -243,23 +354,23 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         updateTransform();
-    }
+    };
 
     // トランスフォームを更新
-    function updateTransform() {
+    const updateTransform = () => {
         const transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
         modalImg.style.transform = transform;
-    }
+    };
 
     // 2点間の距離を計算
-    function getDistance(touch1, touch2) {
+    const getDistance = (touch1, touch2) => {
         const dx = touch1.clientX - touch2.clientX;
         const dy = touch1.clientY - touch2.clientY;
         return Math.sqrt(dx * dx + dy * dy);
-    }
+    };
 
     // タッチイベントハンドラー
-    function handleTouchStart(e) {
+    const handleTouchStart = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
@@ -273,9 +384,9 @@ document.addEventListener('DOMContentLoaded', function () {
             startX = e.touches[0].clientX - translateX;
             startY = e.touches[0].clientY - translateY;
         }
-    }
+    };
 
-    function handleTouchMove(e) {
+    const handleTouchMove = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
@@ -291,9 +402,9 @@ document.addEventListener('DOMContentLoaded', function () {
             translateY = e.touches[0].clientY - startY;
             updateTransform();
         }
-    }
+    };
 
-    function handleTouchEnd(e) {
+    const handleTouchEnd = (e) => {
         e.preventDefault();
         e.stopPropagation();
 
@@ -303,7 +414,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (e.touches.length < 1) {
             isDragging = false;
         }
-    }
+    };
 
     // イベントリスナーの設定
     document.querySelectorAll('.p-recruit_intro picture, .p-recruit_intro img').forEach(el => {
@@ -332,22 +443,22 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // SP用タッチイベント
-    function setupTouchEvents() {
+    const setupTouchEvents = () => {
         modalImg.addEventListener('touchstart', handleTouchStart, { passive: false });
         modalImg.addEventListener('touchmove', handleTouchMove, { passive: false });
         modalImg.addEventListener('touchend', handleTouchEnd, { passive: false });
         modalImg.addEventListener('touchcancel', handleTouchEnd, { passive: false });
-    }
+    };
 
-    function removeTouchEvents() {
+    const removeTouchEvents = () => {
         modalImg.removeEventListener('touchstart', handleTouchStart);
         modalImg.removeEventListener('touchmove', handleTouchMove);
         modalImg.removeEventListener('touchend', handleTouchEnd);
         modalImg.removeEventListener('touchcancel', handleTouchEnd);
-    }
+    };
 
     // 初期読み込み時とリサイズ時の処理
-    function handleResize() {
+    const handleResize = () => {
         if (window.innerWidth <= 767) {
             setupTouchEvents();
         } else {
@@ -356,7 +467,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 resetTransform(false); // PC表示に切り替わったら変形をリセット
             }
         }
-    }
+    };
 
     // 初期化
     handleResize();
