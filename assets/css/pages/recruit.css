@@ -1516,8 +1516,15 @@ button:focus {
 }
 
 .l-header__logo-image {
+  width: 30vw;
   height: 100%;
-  width: auto;
+}
+
+@media all and (min-width: 768px) {
+  .l-header__logo-image {
+    width: auto;
+    height: 100%;
+  }
 }
 
 .l-header__menu {
@@ -2834,6 +2841,7 @@ button:focus {
   top: 5rem;
   right: -9.5rem;
   height: auto;
+  /* aspect-ratio: 16 / 9; */
 }
 
 .p-recruit_intro .animation {
@@ -2843,6 +2851,14 @@ button:focus {
   right: -9.5rem;
   height: auto;
 }
+
+/* .p-recruit_intro .animation canvas {
+  width: 48rem;
+  position: absolute;
+  top: 5rem;
+  right: -9.5rem;
+  height: auto;
+} */
 
 @media all and (max-width: 1060px) {
   .p-recruit_intro img {
@@ -2854,6 +2870,11 @@ button:focus {
     width: 40rem;
     right: 0;
   }
+
+  /* .p-recruit_intro .animation canvas {
+    width: 40rem;
+    right: 0;
+  } */
 }
 
 @media all and (max-width: 815px) {
@@ -2897,7 +2918,7 @@ button:focus {
   }
 
   .p-recruit_intro img {
-    padding-top: 16vw;
+    padding: 16vw 0;
     height: auto;
     position: static;
     display: block;
@@ -2913,6 +2934,15 @@ button:focus {
     width: 80%;
     margin: 0 auto;
   }
+
+  /* .p-recruit_intro .animation canvas {
+    padding: 16vw 0;
+    height: auto;
+    position: static;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  } */
 }
 
 #environment {

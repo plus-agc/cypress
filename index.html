@@ -6,27 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社サイプレス</title>
 
-  <!-- 最初に jQuery を読み込む -->
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous"></script>
 
-  <!-- lodash を追加 -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
 
-  <!-- CSS -->
   <link rel="stylesheet" href="./assets/css/pages/recruit.css" />
   <link rel="stylesheet" href="./assets/css/pages/top.css" />
   <link rel="stylesheet" href="./assets/css/pages/common.css" />
   <link rel="stylesheet" href="https://use.typekit.net/inp4wft.css" />
 
-  <!-- 遅延読み込みするスクリプト -->
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
   <script src="./assets/js/splash.js" defer></script>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
     defer></script>
-  <!-- Bodymovin/Lottie ライブラリ -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
@@ -95,6 +90,115 @@
       }
     });
   </script>
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(245, 248, 250, 0.95);
+      justify-content: center;
+      align-items: center;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .modal.show {
+      display: flex;
+      opacity: 1;
+    }
+
+    .modal-content {
+      position: relative;
+      max-width: 90%;
+      max-height: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+      transition: transform 0.3s ease;
+      cursor: grab;
+    }
+
+    .modal img:active {
+      cursor: grabbing;
+    }
+
+    /* PC時のスタイル - 原寸表示 */
+    @media (min-width: 768px) {
+      .modal img {
+        max-width: none;
+        max-height: none;
+        width: auto;
+        height: auto;
+      }
+    }
+
+    /* SP時のスタイル - ピンチイン・ピンチアウト対応 */
+    @media (max-width: 767px) {
+      .modal-content {
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        touch-action: none;
+        position: relative;
+      }
+
+      .modal img {
+        /* JavaScriptでtransformを制御するため、widthとheightをautoに設定 */
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        /* はみ出さないように最大幅を指定 */
+        max-height: 100%;
+        /* はみ出さないように最大高さを指定 */
+        object-fit: contain;
+        transform-origin: center;
+        user-select: none;
+        -webkit-user-select: none;
+        -webkit-touch-callout: none;
+        -webkit-user-drag: none;
+        -khtml-user-drag: none;
+        -moz-user-drag: none;
+        -o-user-drag: none;
+        pointer-events: auto;
+        position: relative;
+        z-index: 1;
+        /* transitionを追加してスムーズな動きに */
+        transition: transform 0.2s ease-out;
+      }
+    }
+
+    .modal-close {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      border: none;
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      font-size: 20px;
+      cursor: pointer;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .modal-close:hover {
+      background: rgba(0, 0, 0, 0.9);
+    }
+  </style>
 </head>
 
 <body id="pagetop" class="">
@@ -311,8 +415,14 @@
 
               今後も全国への出店が拡大するなか、物流網もさらなる拡充を図り、全国各地のお客様にいつでも最高の鮮度と品質をお届けできるよう、配送能力を強化し続けていきます。
             </p>
-            <!-- Bodymovin/Lottie アニメーション -->
-            <div id="lottie-animation" class="p-recruit_intro animation slideup js-scroll-effect"></div>
+            <picture>
+              <source media="(min-width: 768px)" srcset="
+                    ./assets/images/top/data.svg 1x,
+                    ./assets/images/top/data.svg 2x
+                  " width="480" height="541" />
+              <img src="./assets/images/top/data.svg" srcset="./assets/images/top/data.svg 2x" alt="" width="375"
+                height="599" class="slideup js-scroll-effect" />
+            </picture>
           </section>
           <section class="p-recruit_intro" style="margin:4.6vw 0;">
             <h2 class="slideup js-scroll-effect">
@@ -366,7 +476,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide swiper-slide-next" role="group" aria-label="2 / 17" data-swiper-slide-index="1">
                 <div id="slide2" data-modal="1">
                   <div class="photo">
@@ -379,9 +489,8 @@
                     </div>
                     <img src="./assets/images/recruit/02.webp" alt="A.N." width="364" height="515" class="img">
                   </div>
-
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="3 / 17" data-swiper-slide-index="2">
                 <div id="slide3" data-modal="2">
                   <div class="photo">
@@ -396,7 +505,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="4 / 17" data-swiper-slide-index="3">
                 <div id="slide4" data-modal="3">
                   <div class="photo">
@@ -411,7 +520,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="5 / 17" data-swiper-slide-index="4">
                 <div id="slide5" data-modal="4">
                   <div class="photo">
@@ -426,7 +535,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="6 / 17" data-swiper-slide-index="5">
                 <div id="slide6" data-modal="5">
                   <div class="photo">
@@ -441,7 +550,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="7 / 17" data-swiper-slide-index="6">
                 <div id="slide7" data-modal="6">
                   <div class="photo">
@@ -456,7 +565,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="8 / 17" data-swiper-slide-index="7">
                 <div id="slide8" data-modal="7">
                   <div class="photo">
@@ -470,7 +579,7 @@
                     <img src="./assets/images/recruit/10.webp" alt="T.R." width="364" height="515" class="img">
                   </div>
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="9 / 17" data-swiper-slide-index="8">
                 <div id="slide9" data-modal="8">
                   <div class="photo">
@@ -486,7 +595,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="10 / 17" data-swiper-slide-index="9">
                 <div id="slide10" data-modal="9">
                   <div class="photo">
@@ -501,7 +610,7 @@
                   </div>
 
                 </div>
-              </div><!--swiper-slide-->
+              </div>
               <div class="swiper-slide" role="group" aria-label="11 / 17" data-swiper-slide-index="10">
                 <div id="slide11" data-modal="10">
                   <div class="photo">
@@ -515,8 +624,8 @@
                     <img src="./assets/images/recruit/13.webp" alt="M.Y." width="364" height="515" class="img">
                   </div>
                 </div>
-              </div><!--swiper-slide-->
-            </div><!--swiper-wrapper-->
+              </div>
+            </div>
             <div class="pagers">
               <div class="swiper-button-prev" tabindex="0" role="button" aria-label="Previous slide"
                 aria-controls="swiper-wrapper-4d0809b1d5a84463"></div>
@@ -547,8 +656,8 @@
               </div>
             </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
-          </div><!--mainslide-->
-        </div><!--interview_inner-->
+          </div>
+        </div>
       </section>
     </section>
 
@@ -1060,15 +1169,6 @@
             </button>
           </div>
         </div>
-
-        <!-- <a href="./contact.html" class="p-products__contact c-arrow-button">
-          <span class="c-arrow-button__label">商品や出店などの<br class="p-products__contact-break" />お問い合わせはこちら</span>
-          <span class="c-arrow-button__icon c-arrow-link__icon">
-            <svg class="c-arrow-button__svg c-arrow-link__svg" width="19" height="14.37">
-              <use xlink:href="#arrow"></use>
-            </svg>
-          </span>
-        </a> -->
       </div>
     </section>
 
@@ -1353,9 +1453,7 @@
     </svg>
   </div>
 
-  <!-- gsap-latest-beta.min.js -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
-  <!-- ScrollTrigger.min.js -->
   <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
   <script>
     gsap.registerPlugin(ScrollTrigger);
@@ -1413,7 +1511,6 @@
       LandingPageScrollTrigger();
     };
   </script>
-  <!-- Bodymovin/Lottie アニメーション初期化（IntersectionObserver使用で表示時に初期化） -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const target = document.getElementById('lottie-animation');
@@ -1423,9 +1520,10 @@
 
       if (!target) return;
 
+      const isSafari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+
       const playWithInterval = () => {
         if (!isVisible || !animation) return;
-
         animation.goToAndPlay(0, true);
       };
 
@@ -1437,19 +1535,22 @@
             if (!animation) {
               animation = lottie.loadAnimation({
                 container: target,
-                renderer: 'svg',
-                loop: false,              // 自動ループはしない
+                renderer: isSafari ? 'canvas' : 'svg', // Safari は canvas
+                loop: false,
                 autoplay: true,
                 path: './assets/animation/animation.json'
               });
-              animation.setSpeed(0.36);   // 再生速度
+              animation.setSpeed(0.36);
+              // --- Insert canvas resolution adjustment here ---
+              const canvas = target.querySelector('canvas');
+              if (canvas) {
+                const rect = target.getBoundingClientRect();
+                canvas.width = rect.width;
+                canvas.height = rect.height;
+              }
+              // --- End inserted code ---
               animation.addEventListener('complete', () => {
-                if (!isVisible) return;
-
-                // 3秒待ってから再生
-                loopTimeout = setTimeout(() => {
-                  playWithInterval();
-                }, 3000);
+                // no loop
               });
             } else {
               playWithInterval();
@@ -1466,6 +1567,200 @@
       }, { threshold: 0.5 });
 
       observer.observe(target);
+    });
+  </script>
+  <div id="imageModal" class="modal">
+    <button class="modal-close" aria-label="閉じる">&times;</button>
+    <div class="modal-content">
+      <img src="" alt="">
+    </div>
+  </div>
+  <script>
+    // 既存のコードを削除または置き換えて、以下のコードに変更
+    document.addEventListener('DOMContentLoaded', function () {
+      // 既存のモーダル機能を初期化
+      const modal = document.getElementById('imageModal');
+      const modalImg = modal.querySelector('img');
+      const closeBtn = modal.querySelector('.modal-close');
+
+      // タッチ操作用の変数
+      let scale = 1;
+      let lastScale = 1;
+      let startDistance = 0;
+      let startX = 0;
+      let startY = 0;
+      let translateX = 0;
+      let translateY = 0;
+      let lastTranslateX = 0;
+      let lastTranslateY = 0;
+      let isDragging = false;
+      let isPinching = false; // ピンチ操作中かどうかのフラグ
+
+      // 画像クリックでモーダルを開く
+      function openModal(src, alt = '') {
+        modalImg.src = src;
+        modalImg.alt = alt;
+
+        // モーダル表示
+        modal.style.display = 'flex'; // 先にflexにしておく
+        modal.classList.add('show');
+        document.body.style.overflow = 'hidden';
+
+        // 表示が完了してからトランスフォームをリセット
+        // requestAnimationFrameを使用して、ブラウザの描画タイミングに合わせる
+        requestAnimationFrame(() => {
+          resetTransform(true); // isOpeningフラグを立てて初期化
+        });
+      }
+
+      // モーダルを閉じる
+      function closeModal() {
+        modal.classList.remove('show');
+        document.body.style.overflow = '';
+        // transitionの完了を待ってから画像をリセット
+        setTimeout(() => {
+          modal.style.display = 'none'; // 先に非表示にする
+          resetTransform(false);
+        }, 300);
+      }
+
+
+      // トランスフォームをリセット
+      function resetTransform(isOpening = false) {
+        scale = 1;
+        lastScale = 1;
+        translateX = 0;
+        translateY = 0;
+        lastTranslateX = 0;
+        lastTranslateY = 0;
+        isDragging = false;
+        isPinching = false;
+
+        // SPで開くときだけ少し拡大する
+        if (isOpening && window.innerWidth <= 767) {
+          scale = 1.2;
+        }
+
+        updateTransform();
+      }
+
+      // トランスフォームを更新
+      function updateTransform() {
+        const transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        modalImg.style.transform = transform;
+      }
+
+      // 2点間の距離を計算
+      function getDistance(touch1, touch2) {
+        const dx = touch1.clientX - touch2.clientX;
+        const dy = touch1.clientY - touch2.clientY;
+        return Math.sqrt(dx * dx + dy * dy);
+      }
+
+      // タッチイベントハンドラー
+      function handleTouchStart(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (e.touches.length === 2) {
+          isPinching = true;
+          isDragging = false; // ピンチ中はドラッグを無効に
+          startDistance = getDistance(e.touches[0], e.touches[1]);
+          lastScale = scale;
+        } else if (e.touches.length === 1 && !isPinching) {
+          isDragging = true;
+          startX = e.touches[0].clientX - translateX;
+          startY = e.touches[0].clientY - translateY;
+        }
+      }
+
+      function handleTouchMove(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (e.touches.length === 2 && isPinching) {
+          const currentDistance = getDistance(e.touches[0], e.touches[1]);
+          if (startDistance > 0) {
+            const scaleChange = currentDistance / startDistance;
+            scale = Math.max(1, lastScale * scaleChange); // 最小スケールを1に制限
+            updateTransform();
+          }
+        } else if (e.touches.length === 1 && isDragging) {
+          translateX = e.touches[0].clientX - startX;
+          translateY = e.touches[0].clientY - startY;
+          updateTransform();
+        }
+      }
+
+      function handleTouchEnd(e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (e.touches.length < 2) {
+          isPinching = false;
+        }
+        if (e.touches.length < 1) {
+          isDragging = false;
+        }
+      }
+
+      // イベントリスナーの設定
+      document.querySelectorAll('.p-recruit_intro picture, .p-recruit_intro img').forEach(el => {
+        el.addEventListener('click', (e) => {
+          e.preventDefault();
+          // picture要素内の一番最適なimg要素を取得
+          const img = e.currentTarget.querySelector('img');
+          if (img && img.src) {
+            openModal(img.src, img.alt);
+          }
+        });
+      });
+
+      // モーダルを閉じる
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e) => {
+        // 画像以外のモーダル背景クリックで閉じる
+        if (e.target === modal) closeModal();
+      });
+
+      // ESCキーで閉じる
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && modal.classList.contains('show')) {
+          closeModal();
+        }
+      });
+
+      // SP用タッチイベント
+      function setupTouchEvents() {
+        modalImg.addEventListener('touchstart', handleTouchStart, { passive: false });
+        modalImg.addEventListener('touchmove', handleTouchMove, { passive: false });
+        modalImg.addEventListener('touchend', handleTouchEnd, { passive: false });
+        modalImg.addEventListener('touchcancel', handleTouchEnd, { passive: false });
+      }
+
+      function removeTouchEvents() {
+        modalImg.removeEventListener('touchstart', handleTouchStart);
+        modalImg.removeEventListener('touchmove', handleTouchMove);
+        modalImg.removeEventListener('touchend', handleTouchEnd);
+        modalImg.removeEventListener('touchcancel', handleTouchEnd);
+      }
+
+      // 初期読み込み時とリサイズ時の処理
+      function handleResize() {
+        if (window.innerWidth <= 767) {
+          setupTouchEvents();
+        } else {
+          removeTouchEvents();
+          if (modal.classList.contains('show')) {
+            resetTransform(false); // PC表示に切り替わったら変形をリセット
+          }
+        }
+      }
+
+      // 初期化
+      handleResize();
+      // リサイズ時の処理
+      window.addEventListener('resize', handleResize);
     });
   </script>
 </body>

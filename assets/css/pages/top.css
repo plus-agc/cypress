@@ -1191,8 +1191,15 @@ button:focus {
 }
 
 .l-header__logo-image {
+	width: 30vw;
 	height: 100%;
-	width: auto;
+}
+
+@media all and (min-width: 768px) {
+	.l-header__logo-image {
+		width: auto;
+		height: 100%;
+	}
 }
 
 .l-header__menu {
@@ -4869,6 +4876,11 @@ button:focus {
 .p-products__image a:hover {
 	opacity: .5;
 	transition: .2s;
+}
+
+#lottie-animation canvas {
+	aspect-ratio: 16 / 9;
+	width: fit-content;
 }
 
 
