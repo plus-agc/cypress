@@ -2836,8 +2836,21 @@ button:focus {
   height: auto;
 }
 
+.p-recruit_intro .animation {
+  width: 48rem;
+  position: absolute;
+  top: 5rem;
+  right: -9.5rem;
+  height: auto;
+}
+
 @media all and (max-width: 1060px) {
   .p-recruit_intro img {
+    width: 40rem;
+    right: 0;
+  }
+
+  .p-recruit_intro .animation {
     width: 40rem;
     right: 0;
   }
@@ -2885,6 +2898,15 @@ button:focus {
 
   .p-recruit_intro img {
     padding-top: 16vw;
+    height: auto;
+    position: static;
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  .p-recruit_intro .animation {
+    padding: 16vw 0;
     height: auto;
     position: static;
     display: block;

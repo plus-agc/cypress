@@ -26,6 +26,8 @@
   <script src="./assets/js/splash.js" defer></script>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"
     defer></script>
+  <!-- Bodymovin/Lottie ライブラリ -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
   <script>
     document.addEventListener('DOMContentLoaded', function () {
       const players = document.querySelectorAll('dotlottie-player');
@@ -309,16 +311,8 @@
 
               今後も全国への出店が拡大するなか、物流網もさらなる拡充を図り、全国各地のお客様にいつでも最高の鮮度と品質をお届けできるよう、配送能力を強化し続けていきます。
             </p>
-            <div id="svg-container"></div>
-            <object id="my-svg" type="image/svg+xml" data="intro_photo_1.svg"></object>
-            <picture>
-              <source media="(min-width: 768px)" srcset="
-                    ./assets/images/top/intro_photo.png 1x,
-                    ./assets/images/top/intro_photo.png 2x
-                  " width="480" height="541" />
-              <img src="./assets/images/top/intro_photo.png" srcset="./assets/images/top/intro_photo.png 2x" alt=""
-                width="375" height="599" class="slideup js-scroll-effect" />
-            </picture>
+            <!-- Bodymovin/Lottie アニメーション -->
+            <div id="lottie-animation" class="p-recruit_intro animation slideup js-scroll-effect"></div>
           </section>
           <section class="p-recruit_intro" style="margin:4.6vw 0;">
             <h2 class="slideup js-scroll-effect">
@@ -1418,6 +1412,19 @@
     window.onload = () => {
       LandingPageScrollTrigger();
     };
+  </script>
+  <!-- Bodymovin/Lottie アニメーション初期化 -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const animation = lottie.loadAnimation({
+        container: document.getElementById('lottie-animation'),
+        renderer: 'svg',
+        loop: false,
+        autoplay: true,
+        path: './assets/animation/animation.json' // 適宜パスを変更
+      });
+      animation.setSpeed(0.5); // 速度を0.5倍に調整
+    });
   </script>
 </body>
 
