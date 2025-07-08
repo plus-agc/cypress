@@ -1413,17 +1413,59 @@
       LandingPageScrollTrigger();
     };
   </script>
-  <!-- Bodymovin/Lottie アニメーション初期化 -->
+  <!-- Bodymovin/Lottie アニメーション初期化（IntersectionObserver使用で表示時に初期化） -->
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      const animation = lottie.loadAnimation({
-        container: document.getElementById('lottie-animation'),
-        renderer: 'svg',
-        loop: false,
-        autoplay: true,
-        path: './assets/animation/animation.json' // 適宜パスを変更
-      });
-      animation.setSpeed(0.5); // 速度を0.5倍に調整
+      const target = document.getElementById('lottie-animation');
+      let animation = null;
+      let isVisible = false;
+      let loopTimeout = null;
+
+      if (!target) return;
+
+      const playWithInterval = () => {
+        if (!isVisible || !animation) return;
+
+        animation.goToAndPlay(0, true);
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting && entry.intersectionRatio >= 0.5) {
+            isVisible = true;
+
+            if (!animation) {
+              animation = lottie.loadAnimation({
+                container: target,
+                renderer: 'svg',
+                loop: false,              // 自動ループはしない
+                autoplay: true,
+                path: './assets/animation/animation.json'
+              });
+              animation.setSpeed(0.36);   // 再生速度
+              animation.addEventListener('complete', () => {
+                if (!isVisible) return;
+
+                // 3秒待ってから再生
+                loopTimeout = setTimeout(() => {
+                  playWithInterval();
+                }, 3000);
+              });
+            } else {
+              playWithInterval();
+            }
+          } else {
+            isVisible = false;
+            if (animation) animation.stop();
+            if (loopTimeout) {
+              clearTimeout(loopTimeout);
+              loopTimeout = null;
+            }
+          }
+        });
+      }, { threshold: 0.5 });
+
+      observer.observe(target);
     });
   </script>
 </body>

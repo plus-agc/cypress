@@ -4866,6 +4866,11 @@ button:focus {
 	color: #FFF;
 }
 
+.p-products__image a:hover {
+	opacity: .5;
+	transition: .2s;
+}
+
 
 /*-------------/@media (max-width: 400px)------------- */
 
