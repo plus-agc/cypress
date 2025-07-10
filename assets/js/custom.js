@@ -348,9 +348,21 @@ document.addEventListener('DOMContentLoaded', () => {
         isDragging = false;
         isPinching = false;
 
-        if (isOpening && window.innerWidth <= 767) {
-            scale = 1.5; // SPは少し拡大
+        if (isOpening) {
+            if (window.innerWidth <= 767) {
+                scale = 2; // SPは少し拡大
+            } else {
+                scale = 0.9; // PCは90%表示
+            }
         }
+
+        updateTransform();
+    };
+
+    // トランスフォームを更新
+    const updateTransform = () => {
+        const transform = `translate(${translateX}px, ${translateY}px) scale(${scale})`;
+        modalImg.style.transform = transform;
     };
 
     // 2点間の距離を計算
@@ -454,7 +466,9 @@ document.addEventListener('DOMContentLoaded', () => {
             setupTouchEvents();
         } else {
             removeTouchEvents();
-            // PC表示時はリセットしない
+            if (modal.classList.contains('show')) {
+                resetTransform(false); // PC表示に切り替わったら変形をリセット
+            }
         }
     };
 
