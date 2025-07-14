@@ -3109,7 +3109,6 @@ button:focus {
 #interview:before {
   content: "";
   width: 100%;
-  background-image: url("../../images/recruit/bg_recruit.svg");
   background-size: auto 100%;
   background-position: center bottom;
   min-height: 118.2rem;

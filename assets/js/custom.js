@@ -1,8 +1,8 @@
 // 環境設定
 const ENV = {
     VIDEO_PATH: 'assets/images/top',
-    VIDEO_1X: 'mv_1@1x.mp4',
-    VIDEO_2X: 'mv_1@2x.mp4',
+    VIDEO_1X: 'mv.mp4',
+    VIDEO_2X: 'mv.mp4',
     MOBILE_BREAKPOINT: 430
 };
 
