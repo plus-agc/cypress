@@ -45,7 +45,7 @@ module.exports = {
 	logSnippet: true,
 	rewriteRules: [],
 	open: "local",
-	browser: "Google Chrome",
+	browser: "dia", // 任意のブラウザ名を配列で指定
 	cors: false,
 	hostnameSuffix: false,
 	reloadOnRestart: false,
