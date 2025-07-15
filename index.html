@@ -6,16 +6,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>株式会社サイプレス</title>
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js"></script>
+    crossorigin="anonymous" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" async></script>
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
+  <script src="./assets/js/splash.js" defer></script>
   <script src="./assets/js/custom.js" defer></script>
   <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426"></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" async></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426" async></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js" async></script>
   <link rel="stylesheet" href="./assets/css/pages/recruit.css" />
   <link rel="stylesheet" href="./assets/css/pages/top.css" />
   <link rel="stylesheet" href="./assets/css/pages/common.css" />
@@ -911,8 +912,8 @@
               <div class="p-products__image">
                 <a href="https://cyp-jp.com/" target="_blank" rel="noopener noreferrer">
                   <picture>
-                    <img src="./assets/images/top/product_27@2x.webp" srcset="./assets/images/top/product_27@2x.webp 2x"
-                      alt="EatiT!" decoding="async" class="p-products__image-thumbnail" />
+                    img src="./assets/images/top/product_27@2x.webp" srcset="./assets/images/top/product_27@2x.webp 2x"
+                    alt="EatiT!" decoding="async" class="p-products__image-thumbnail" />
                   </picture>
                 </a>
               </div>
@@ -1267,6 +1268,16 @@
       <img src="" alt="">
     </div>
   </div>
+  <!--
+  全ての<img>要素にloading="lazy"属性を付与するJavaScript
+  -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      document.querySelectorAll('img').forEach(function (img) {
+        img.setAttribute('loading', 'lazy');
+      });
+    });
+  </script>
 </body>
 
 </html>
