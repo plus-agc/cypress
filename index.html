@@ -8,15 +8,19 @@
   <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
     crossorigin="anonymous" async></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.21/lodash.min.js" async></script>
+  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" async></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426" defer></script>
+  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js" async></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="https://unpkg.com/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./assets/js/splash.js" defer></script>
   <script src="./assets/js/main.js" defer></script>
   <script src="./assets/js/accordion.js" defer></script>
   <script src="./assets/js/recruit.js" defer></script>
-  <script src="./assets/js/splash.js" defer></script>
   <script src="./assets/js/custom.js" defer></script>
-  <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lottie-web/5.12.2/lottie.min.js" async></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/gsap-latest-beta.min.js?r=5426" async></script>
-  <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/16327/ScrollTrigger.min.js" async></script>
+
   <link rel="stylesheet" href="./assets/css/pages/recruit.css" />
   <link rel="stylesheet" href="./assets/css/pages/top.css" />
   <link rel="stylesheet" href="./assets/css/pages/common.css" />
@@ -46,7 +50,7 @@
                   IR情報
                   <span class="l-nav-nest__parent-icon c-icon__arrow">
                     <svg class="l-nav-nest__parent-svg" width="19" height="14">
-                      <use xlink:href="#arrow"></use>
+                      <use href="#arrow"></use>
                     </svg>
                   </span>
                 </a>
@@ -55,7 +59,7 @@
                     <a href="ir.html" class="l-nav-nest__primary-link">IRニュース
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -64,7 +68,7 @@
                     <a href="/ir/material/" class="l-nav-nest__primary-link">IR資料
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -73,7 +77,7 @@
                     <a href="/ir/highlight/" class="l-nav-nest__primary-link">財務ハイライト
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -82,7 +86,7 @@
                     <a href="/ir/monthly/" class="l-nav-nest__primary-link">月次売上
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -91,7 +95,7 @@
                     <a href="/ir/governance/" class="l-nav-nest__primary-link">コーポレートガバナンス
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -100,7 +104,7 @@
                     <a href="/ir/shareholder/" class="l-nav-nest__primary-link">株主優待情報
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -109,7 +113,7 @@
                     <a href="/ir/disclosure/" class="l-nav-nest__primary-link">ディスクロージャーポリシー
                       <span class="l-nav-nest__primary-icon c-icon__arrow">
                         <svg class="l-nav-nest__primary-svg" width="19" height="14">
-                          <use xlink:href="#arrow"></use>
+                          <use href="#arrow"></use>
                         </svg>
                       </span>
                     </a>
@@ -119,7 +123,7 @@
                       class="l-nav-nest__primary-link">株主総会のご報告
                       <span class="l-nav-nest__primary-icon is-pc c-icon__pdf">
                         <svg class="l-nav-nest__primary-svg" width="15" height="20">
-                          <use xlink:href="#icon-pdf"></use>
+                          <use href="#icon-pdf"></use>
                         </svg>
                       </span>
                     </a>
@@ -159,14 +163,7 @@
       <span>Everyone is so.</span>
     </h1>
     <p>Scroll Down</p>
-    <div id="video-cover" style="
-    position:absolute;
-    left:0;top:0;width:100%;height:100%;
-    background:#113c8c;
-    z-index:2;
-    transition:opacity 0.5s;
-    pointer-events:none;
-  "></div>
+    <div id="video-cover"></div>
     <video id="img7" src="./assets/images/top/mv_h264.mp4" autoplay loop muted playsinline preload="auto"></video>
     <div id="codeby">
       <a target="_blank" href="https://cyp-jp.com/">
@@ -195,7 +192,7 @@
           <a href="./company.html#message" class="p-main-intro__more c-arrow-link">
             <span class="c-arrow-link__icon">
               <svg class="c-arrow-link__svg" width="19" height="14">
-                <use xlink:href="#arrow"></use>
+                <use href="#arrow"></use>
               </svg>
             </span>
             <span class="c-arrow-link__label">代表メッセージ</span>
@@ -467,8 +464,8 @@
                   tabindex="0" role="button" aria-label="Go to slide 12"></span><span class="swiper-pagination-bullet"
                   tabindex="0" role="button" aria-label="Go to slide 13"></span><span class="swiper-pagination-bullet"
                   tabindex="0" role="button" aria-label="Go to slide 14"></span><span class="swiper-pagination-bullet"
-                  tabindex="0" role="button" aria-label="Go to slide 15"></span><span class="swiper-pagination-b
-                  tabindex=" 0" role="button" aria-label="Go to slide 17"></span>
+                  tabindex="0" role="button" aria-label="Go to slide 15"></span><span class="swiper-pagination-bullet"
+                  tabindex="0" role="button" aria-label="Go to slide 17"></span>
               </div>
             </div>
             <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
@@ -1068,7 +1065,7 @@
             </h3>
             <a href="https://cyp-jp.com/news/post-7493/" target="_blank" class="p-news__link">
               <svg class="p-news__link-arrow" width="19" height="14">
-                <use xlink:href="#arrow"></use>
+                <use href="#arrow"></use>
               </svg>
             </a>
           </article>
@@ -1087,7 +1084,7 @@
             </h3>
             <a href="https://cyp-jp.com/news/post-7491/" target="_blank" class="p-news__link">
               <svg class="p-news__link-arrow" width="19" height="14">
-                <use xlink:href="#arrow"></use>
+                <use href="#arrow"></use>
               </svg>
             </a>
           </article>
@@ -1106,7 +1103,7 @@
             </h3>
             <a href="https://cyp-jp.com/news/post-7487/" target="_blank" class="p-news__link">
               <svg class="p-news__link-arrow" width="19" height="14">
-                <use xlink:href="#arrow"></use>
+                <use href="#arrow"></use>
               </svg>
             </a>
           </article>
@@ -1125,7 +1122,7 @@
             </h3>
             <a href="https://cyp-jp.com/news/post-7240/" target="_blank" class="p-news__link">
               <svg class="p-news__link-arrow" width="19" height="14">
-                <use xlink:href="#arrow"></use>
+                <use href="#arrow"></use>
               </svg>
             </a>
           </article>
@@ -1157,7 +1154,7 @@
   <div class="c-pagetop">
     <a href="#pagetop" class="c-pagetop__link js-anchor-link">
       <svg class="c-pagetop__link-svg" width="19" height="14">
-        <use xlink:href="#arrow"></use>
+        <use href="#arrow"></use>
       </svg>
     </a>
   </div>
@@ -1209,7 +1206,7 @@
                 株主総会のご報告
                 <span class="l-footer-menu__nest-icon">
                   <svg class="l-footer-menu__nest-svg" width="15" height="20">
-                    <use xlink:href="#icon-pdf"></use>
+                    <use href="#icon-pdf"></use>
                   </svg>
                 </span>
               </a>
@@ -1241,23 +1238,20 @@
   </footer>
 
   <div class="c-splash" id="js-splash">
+    <img src="./assets/images/common/splash_logo.svg" alt="" decoding="async" class="c-splash__logo"
+      id="js-splash-logo">
     <div class="c-splash__effect" id="js-splash-effect"></div>
     <svg>
       <symbol id="arrow" viewBox="0 0 19 14">
         <g transform="translate(13606 13692.797)">
           <path d="M-13587.6-13748.514h-18.527v-.987h18.527Z" transform="translate(0.129 63.396)"></path>
-          <path d="M-13594.036-13741.428l-.7-.7,6.486-6.486-6.486,6.486.7.7-7.185,7.185Z"
+          <path d="M-13594.036-13741.428l-.7-.7,6.486-6.486-6.486-6.486.7-.7,7.185,7.185Z"
             transform="translate(-0.149 63.001)"></path>
         </g>
       </symbol>
       <symbol id="icon-pdf" viewBox="0 0 15 20.004">
         <path
-          d="M14.449,3.728,11.172.451A1.875,1.875,0,0,0,9.848-.1H1.875A1.881,1.881,0,0,0,0,1.779v16.25A1.875,1.875,0,0,0,1.875,19.9h11.25A1.875,1.875,0,0,0,15,18.029V5.056a1.884,1.884,0,0,0-.551-1.328Zm-.883.887a.615.615,0,0,1,.164.289H10V1.173a.615.615,0,0,1,.289.164Zm-.441,14.039H1.875a.627.627,0,0,1-.625-.625V1.779a.627.627,0,0,1,.625-.625H8.75V5.216a.935.935,0,0,0,.938.938H13.75V18.029A.627.627,0,0,1,13.125,18.654Zm-.859-6.688c-.527-.52-2.148-.359-2.879-.262A4.089,4.089,0,0,1,7.625,9.494a5.708,5.708,0,0,0,.25-2.535.914.914,0,0,0-1.742-.266,6.571,6.571,0,0,0,.328,3.039,37.607,37.607,0,0,1-1.645,3.461C4,13.611,2.7,14.337,2.52,15.24c-.137.656.895,1.539,2.074.25a10.452,10.452,0,0,0,1.223-1.777,22.708,22.708,0,0,1,3.2-.937,5.96,5.96,0,0,0,2.523.777.947.947,0,0,0,.723-1.586ZM3.313,15.443A5.456,5.456,0,0,1,4.7,13.849C3.836,15.228,3.313,15.47,3.313,15.443ZM7.031,6.759c.34,0,.3,1.465.082,1.859A3.8,3.8,0,0,1,7.031,6.759ZM5.922,12.982a18.323,18.323,0,0,0,1.125-2.488,5.089,5.089,0,0,0,1.371,1.621A14.279,14.279,0,0,0,5.922,12.982Zm5.992-.23s-.227.273-1.7-.355C11.816,12.279,12.078,12.646,11.914,12.752Z"
-          transform="translate(0 0.1)"></path>
-      </symbol>
-      <symbol id="icon-external" viewBox="0 0 10 10">
-        <path
-          d="M6.889,4.667V5.778H4.111v6.111h6.111V9.111h1.111v3.333a.556.556,0,0,1-.556.556H3.556A.556.556,0,0,1,3,12.444V5.222a.556.556,0,0,1,.556-.556ZM13,3V7.444H11.889V4.9L7.559,9.226l-.786-.786L11.1,4.111H8.556V3Z"
+          d="M14.449,3.728,11.172.451A1.875,1.875,0,0,0,9.848-.1H1.875A1.881,1.881,0,0,0,0,1.779v16.25A1.875,1.875,0,0,0,1.875,19.9h11.25A1.875,1.875,0,0,0,15,18.029V5.056a1.884,1.884,0,0,0-.551-1.328Zm-.883.887a.615.615,0,0,1,.164.289H10V1.173a.615.615,0,0,1,.289.164Zm-.441,14.039H1.875a.627.627,0,0,1-.625-.625V1.779a.627.627,0,0,1,.625-.625H8.556V3Z"
           transform="translate(-3 -3)"></path>
       </symbol>
     </svg>

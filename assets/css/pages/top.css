@@ -4883,6 +4883,18 @@ button:focus {
 	width: fit-content;
 }
 
+#video-cover {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #113c8c;
+	z-index: 2;
+	transition: opacity 0.5s;
+	pointer-events: none;
+}
+
 
 /*-------------/@media (max-width: 400px)------------- */
 
