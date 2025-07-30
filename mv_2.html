@@ -8,7 +8,6 @@
     <script src="./assets/js/vendor/jquery.min.js" async></script>
     <script src="./assets/js/vendor/lodash.min.js" async></script>
     <script src="./assets/js/vendor/dotlottie-player.mjs" type="module"></script>
-    <link rel="stylesheet" href="./assets/js/vendor/dotlottie-player.styles.js">
     <script src="./assets/js/vendor/lottie.min.js" async></script>
     <script src="./assets/js/vendor/gsap.min.js"></script>
     <script src="./assets/js/vendor/ScrollTrigger.min.js"></script>
@@ -1086,8 +1085,6 @@
                             5,365百万円(2024年 8月期の期首期末平均 )が控除対象。比較企業も同様にのれんを全額控除、吉野家HDの 1,177百万円 (2024年 2月期の期首期末平均
                             )が控除対象</span>
                     </li>
-
-
                 </ul>
             </div>
         </section>
@@ -1206,6 +1203,20 @@
                 <use href="#arrow"></use>
             </svg>
         </a>
+        <svg>
+            <symbol id="arrow" viewBox="0 0 19 14">
+                <g transform="translate(13606 13692.797)">
+                    <path d="M-13587.6-13748.514h-18.527v-.987h18.527Z" transform="translate(0.129 63.396)"></path>
+                    <path d="M-13594.036-13741.428l-.7-.7,6.486-6.486-6.486-6.486.7-.7,7.185,7.185Z"
+                        transform="translate(-0.149 63.001)"></path>
+                </g>
+            </symbol>
+            <symbol id="icon-pdf" viewBox="0 0 15 20.004">
+                <path
+                    d="M14.449,3.728,11.172.451A1.875,1.875,0,0,0,9.848-.1H1.875A1.881,1.881,0,0,0,0,1.779v16.25A1.875,1.875,0,0,0,1.875,19.9h11.25A1.875,1.875,0,0,0,15,18.029V5.056a1.884,1.884,0,0,0-.551-1.328Zm-.883.887a.615.615,0,0,1,.164.289H10V1.173a.615.615,0,0,1,.289.164Zm-.441,14.039H1.875a.627.627,0,0,1-.625-.625V1.779a.627.627,0,0,1,.625-.625H8.556V3Z"
+                    transform="translate(-3 -3)"></path>
+            </symbol>
+        </svg>
     </div>
     <footer class="l-footer">
         <div class="l-footer__inner">
@@ -1292,20 +1303,7 @@
         <img src="./assets/images/common/splash_logo.svg" alt="" decoding="async" class="c-splash__logo"
             id="js-splash-logo">
         <div class="c-splash__effect" id="js-splash-effect"></div>
-        <svg>
-            <symbol id="arrow" viewBox="0 0 19 14">
-                <g transform="translate(13606 13692.797)">
-                    <path d="M-13587.6-13748.514h-18.527v-.987h18.527Z" transform="translate(0.129 63.396)"></path>
-                    <path d="M-13594.036-13741.428l-.7-.7,6.486-6.486-6.486-6.486.7-.7,7.185,7.185Z"
-                        transform="translate(-0.149 63.001)"></path>
-                </g>
-            </symbol>
-            <symbol id="icon-pdf" viewBox="0 0 15 20.004">
-                <path
-                    d="M14.449,3.728,11.172.451A1.875,1.875,0,0,0,9.848-.1H1.875A1.881,1.881,0,0,0,0,1.779v16.25A1.875,1.875,0,0,0,1.875,19.9h11.25A1.875,1.875,0,0,0,15,18.029V5.056a1.884,1.884,0,0,0-.551-1.328Zm-.883.887a.615.615,0,0,1,.164.289H10V1.173a.615.615,0,0,1,.289.164Zm-.441,14.039H1.875a.627.627,0,0,1-.625-.625V1.779a.627.627,0,0,1,.625-.625H8.556V3Z"
-                    transform="translate(-3 -3)"></path>
-            </symbol>
-        </svg>
+
     </div>
     <div id="imageModal" class="modal">
         <button class="modal-close" aria-label="閉じる">&times;</button>
@@ -1313,6 +1311,7 @@
             <img src="" alt="">
         </div>
     </div>
+
     <!--
   全ての<img>要素にloading="lazy"属性を付与するJavaScript
   -->
