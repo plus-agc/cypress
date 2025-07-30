@@ -57,7 +57,10 @@ class AnimationManager {
     setupPlayers() {
         this.players.forEach(player => {
             try {
-                player.stop();
+                // DotLottie Playerの正しいAPIを使用
+                if (player.seekTo) {
+                    player.seekTo(0);
+                }
             } catch (error) {
                 handleError(error, 'Failed to stop player');
             }
@@ -69,7 +72,10 @@ class AnimationManager {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     try {
-                        entry.target.play();
+                        // DotLottie Playerの正しいAPIを使用
+                        if (entry.target.play) {
+                            entry.target.play();
+                        }
                         this.observer.unobserve(entry.target);
                     } catch (error) {
                         handleError(error, 'Failed to play animation');
@@ -155,8 +161,23 @@ class AnimationController {
     }
 
     init() {
-        // GSAPの初期化
-        gsap.registerPlugin(ScrollTrigger);
+        // GSAPとScrollTriggerの初期化
+        if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+            gsap.registerPlugin(ScrollTrigger);
+        } else {
+            console.warn('GSAP or ScrollTrigger not loaded');
+            return;
+        }
+
+        // 必要な要素が存在するかチェック
+        const imgWrapper = document.getElementById('ImgWrapper');
+        const img7 = document.getElementById('img7');
+        const codeby = document.getElementById('codeby');
+
+        if (!imgWrapper || !img7 || !codeby) {
+            console.log('Required elements not found, skipping animation setup');
+            return;
+        }
 
         // ローディングアニメーション
         gsap.to("body", {
@@ -173,7 +194,12 @@ class AnimationController {
 
     setupHoverEvents() {
         const codebyLink = document.querySelector("#codeby a");
-        if (!codebyLink) return;
+        const imgWrapper = document.getElementById('ImgWrapper');
+
+        if (!codebyLink || !imgWrapper) {
+            console.log('Required elements for hover events not found');
+            return;
+        }
 
         const handleMouseEnter = () => {
             gsap.to("#ImgWrapper", { backgroundColor: "#f0f0f0" });
@@ -192,6 +218,25 @@ class AnimationController {
     }
 
     setupScrollTrigger() {
+        // ScrollTriggerが利用可能かチェック
+        if (typeof ScrollTrigger === 'undefined') {
+            console.warn('ScrollTrigger not available');
+            return;
+        }
+
+        // 必要な要素が存在するかチェック
+        const imgWrapper = document.getElementById('ImgWrapper');
+        const img7 = document.getElementById('img7');
+        const codeby = document.getElementById('codeby');
+        const codebyLink = document.querySelector("#codeby a");
+        const imgWrapperH1 = document.querySelector("#ImgWrapper h1");
+        const imgWrapperP = document.querySelector("#ImgWrapper p");
+
+        if (!imgWrapper || !img7 || !codeby || !codebyLink) {
+            console.log('Required elements for scroll trigger not found');
+            return;
+        }
+
         this.timeline = gsap.timeline({
             scrollTrigger: gsapConfig.scrollTrigger
         });
@@ -207,30 +252,51 @@ class AnimationController {
                 duration: 0.31
             }, 0.31);
 
-        // テキスト要素のアニメーション
-        this.timeline.to("#ImgWrapper h1", {
+        // テキスト要素のアニメーション（存在する場合のみ）
+        if (imgWrapperH1) {
+            this.timeline.to("#ImgWrapper h1", {
+                opacity: 0,
+                duration: 0.5
+            }, 0);
+        }
+
+        if (imgWrapperP) {
+            this.timeline.to("#ImgWrapper p", {
+                opacity: 0,
+                duration: 0.5
+            }, 0);
+        }
+
+        this.timeline.to("#codeby a", {
             opacity: 0,
             duration: 0.5
-        }, 0)
-            .to("#ImgWrapper p", {
-                opacity: 0,
-                duration: 0.5
-            }, 0)
-            .to("#codeby a", {
-                opacity: 0,
-                duration: 0.5
-            }, 0.1);
+        }, 0.1);
     }
 }
 
 // 初期化
-document.addEventListener('DOMContentLoaded', () => {
+function initializeAnimationController() {
     try {
         new AnimationController();
     } catch (error) {
         handleError(error, 'Failed to initialize animation controller');
     }
-});
+}
+
+// GSAPとScrollTriggerが読み込まれた後に初期化
+function waitForGSAP() {
+    if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
+        // ScrollTriggerを確実に登録
+        gsap.registerPlugin(ScrollTrigger);
+        initializeAnimationController();
+    } else {
+        // 少し待ってから再試行
+        setTimeout(waitForGSAP, 100);
+    }
+}
+
+// ページ読み込み完了後に初期化
+window.addEventListener('load', waitForGSAP);
 
 
 document.addEventListener('DOMContentLoaded', () => {

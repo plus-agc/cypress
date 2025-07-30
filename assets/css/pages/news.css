@@ -796,7 +796,7 @@ button:focus {
 	height: 11.2vw;
 	font-size: 3.2vw;
 	padding-left: 1em;
-	background-image: url("./assets/images/common/icon-angle.svg");
+	background-image: url("../../images/common/icon-angle.svg");
 	background-position: right 2.6666666667vw center;
 	background-size: 2.6666666667vw auto;
 	-webkit-transition-property: border-color;
