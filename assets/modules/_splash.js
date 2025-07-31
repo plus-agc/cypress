@@ -4,7 +4,7 @@ function splashWindow() {
   const splash = document.getElementById("js-splash");
   const splashLogo = document.getElementById("js-splash-logo");
   const splashEffect = document.getElementById("js-splash-effect");
-  const mainVisual = document.querySelector(".p-main-visual"); // main.js からの変更を考慮し追加
+  const mainVisuals = document.querySelectorAll(".p-main-visual"); // main.js からの変更を考慮し追加
 
   if (splash) {
     if (sessionStorage.getItem("visited")) {
@@ -34,7 +34,7 @@ function splashWindow() {
   function hideSplash() {
     if (splash) splash.classList.add("is-hide");
     if (body) body.classList.remove("is-fixed");
-    if (mainVisual) mainVisual.classList.add("is-animated");
+    if (mainVisuals) mainVisuals.forEach(mainVisual => mainVisual.classList.add("is-animated"));
 
     // `window.swiperOptions` が正しく読み込まれているかチェック
     if (window.swiperOptions && window.swiperOptions.autoplayStart) {

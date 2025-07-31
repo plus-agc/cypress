@@ -3,7 +3,7 @@ function splashWindow() {
 	const splash = document.getElementById('js-splash');
 	const splashLogo = document.getElementById('js-splash-logo');
 	const splashEffect = document.getElementById('js-splash-effect');
-	const mainVisual = document.querySelector('.p-main-visual');
+	const mainVisuals = document.querySelectorAll('.p-main-visual');
 
 	if (splash && splashLogo && splashEffect) {
 		// DOMContentLoadedイベントを待ってから処理を開始
@@ -28,7 +28,7 @@ function splashWindow() {
 	function hideSplash() {
 		splash.classList.add('is-hide');
 		body.classList.remove('is-fixed');
-		mainVisual.classList.add('is-animated');
+		mainVisuals.forEach(mainVisual => mainVisual.classList.add('is-animated'));
 	}
 }
 
