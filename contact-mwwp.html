@@ -1,0 +1,91 @@
+<ul class="p-contact-form__grid">
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head p-contact-form__head--aligntop">
+            <p class="p-contact-form__label">
+                <span class="p-contact-form__required">必須</span>
+                <span class="p-contact-form__label-text">カテゴリ</span>
+            </p>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_radio name="category" class="p-contact-form__radio-button"
+            children="株主優待について,出店のご依頼、食材・備品・ツール等について,その他" vertically="true"]
+        </div>
+    </li>
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head">
+            <label for="contact-name" class="p-contact-form__label">
+                <span class="p-contact-form__required">必須</span>
+                <span class="p-contact-form__label-text">お名前</span>
+            </label>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_text name="name" id="contact-name" class="p-contact-form__input" size="60" placeholder="山田太郎"]
+        </div>
+    </li>
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head">
+            <label for="contact-kana" class="p-contact-form__label">
+                <span class="p-contact-form__optional">任意</span>
+                <span class="p-contact-form__label-text">フリガナ</span>
+            </label>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_text name="kana" id="contact-kana" class="p-contact-form__input" size="60" placeholder="ヤマダタロウ"]
+        </div>
+    </li>
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head">
+            <label for="contact-tel" class="p-contact-form__label">
+                <span class="p-contact-form__optional">任意</span>
+                <span class="p-contact-form__label-text">電話番号</span>
+            </label>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_tel name="tel" class="p-contact-form__input" placeholder="000-1234-5678" id="contact-tel"]
+        </div>
+    </li>
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head">
+            <label for="contact-email" class="p-contact-form__label">
+                <span class="p-contact-form__optional">任意</span>
+                <span class="p-contact-form__label-text">メールアドレス</span>
+            </label>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_email name="email" id="contact-email" class="p-contact-form__input p-contact-form__email" size="60"
+            placeholder="contact@cyp-jp.com"]
+        </div>
+    </li>
+    <li class="p-contact-form__row">
+        <div class="p-contact-form__head p-contact-form__head--alignbase">
+            <label for="contact-message" class="p-contact-form__label">
+                <span class="p-contact-form__required">必須</span>
+                <span class="p-contact-form__label-text">お問い合わせ内容</span>
+            </label>
+        </div>
+        <div class="p-contact-form__body">
+            [mwform_textarea name="detail" id="contact-message" class="p-contact-form__input p-contact-form__textarea"
+            cols="50" rows="5" placeholder="お問い合わせ内容"]
+        </div>
+    </li>
+</ul>
+<div class="p-contact-form__bottom">
+    <p class="p-contact-form__privacypolicy">
+        送信前に、「<a href="./contact.htmlprivacy/" target="_blank"
+            class="p-contact-form__privacypolicy-link">個人情報の取扱いについて</a>」をご確認のうえ、<br class="c-break-pc" />
+        同意いただける場合は、チェックを入れて「入力内容を確認する」を押してください。
+    </p>
+    <label class="p-contact-form__agreement">
+        [mwform_checkbox name="check_policy" class="p-contact-form__agreement-checkbox" children="個人情報の取扱いについて同意する"
+        separator=","]
+        <span class="p-contact-form__agreement-checkbox-text">個人情報の取扱いについて同意する</span>
+    </label>
+    <button type="submit" class="p-contact-form__button" disabled="">
+        <span class="p-contact-form__button-label">入力内容を確認する</span>
+        <span class="p-contact-form__button-icon">
+            <svg class="p-contact-form__button-svg" width="19" height="14">
+                <use xlink:href="#arrow"></use>
+            </svg>
+        </span>
+    </button>
+</div>
