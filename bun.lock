@@ -13,6 +13,7 @@
         "sharp": "^0.34.3",
         "sitemap": "^8.0.0",
         "swiper": "^11.2.10",
+        "vibe-kanban": "^0.0.71",
       },
       "devDependencies": {
         "browser-sync": "^3.0.3",
@@ -389,6 +390,8 @@
     "valibot": ["valibot@0.13.1", "", {}, "sha512-SG2W1RHqE2LShl3p6tyERt6I+G6PQa9ZFVfkyNKXz01HBzL+tBeH5kXw/5AQeAzPJSjI3djVGBl1CyozA1kyBQ=="],
 
     "vary": ["vary@1.1.2", "", {}, "sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg=="],
+
+    "vibe-kanban": ["vibe-kanban@0.0.71", "", { "bin": { "vibe-kanban": "bin/cli.js" } }, "sha512-R2BuFlaD6K+CgA6wfRl5YT80jzaZkjO2CF9XS7zT4nSo+FRa3lmqtR5iTASabNK1sal+/POnCkuTlfiQInbf8A=="],
 
     "wasm-imagemagick": ["wasm-imagemagick@1.2.8", "", { "dependencies": { "p-map": "^2.0.0", "stacktrace-js": "^2.0.0" } }, "sha512-V7u80n7g+iAoV7sYgQKGSdG59J6/aSMGO0DDK0zxKnwOGjmVXyjP0yU4tX4cMrfC0t/Wk3I8TX7cmdbFQOYHpg=="],
 
